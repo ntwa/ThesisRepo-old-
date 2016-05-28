@@ -84,7 +84,8 @@ There were two usage comparisons. In the first comparison, I contrasted usage in
   \end{center}
 \end{table}
 \newline 
-The second comparison entailed contrasting `Logbook'' usage versus ``Gamification'' usage for each pair. I compared usage by counting both the number of days and total number sessions from each pair of users. Since the number of days and total sessions were relative to how many days users were exposed to a particular experimental condition, I divided the number of sessions with total days on which users were exposed to a particular experimental condition to get the ratio of days with respect to the total number of days and number of sessions per day. Therefore, comparison was based on a relative number and not an absolute. For instance, lets say pair one is from a LG group which they had access to a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in Logbook is 50 and the number of sessions in Gamified system is 30 then the relative number of sessions per day spent on logbook is 50 divide by 27 days and the relative number of session spent on  a gamified system is 30 divide by 27. Before comparing the two versions of the system on usage, I had to test if the differences of both the ratio of days and number of sessions per day between the two systems followed a normal distribution in order to identify a proper statistical test to use. The difference between logbook and gamification didn't have a normal distribution in both the ratio of days and number of sessions per day. I applied a natural logarithm transformation on the data and the difference of logs of both cases followed a normal distribution. 
+The second comparison entailed contrasting `Logbook'' usage versus ``Gamification'' usage for each pair. I compared usage by counting both the number of days and total number sessions from each pair of users. Since the number of days and total sessions were relative to how many days users were exposed to a particular experimental condition, I divided the number of sessions with total days on which users were exposed to a particular experimental condition to get the ratio of days with respect to the total number of days and number of sessions per day. Therefore, comparison was based on a relative number and not an absolute. For instance, lets say pair one is from a LG group which they had access to a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in Logbook is 50 and the number of sessions in Gamified system is 30 then the relative number of sessions per day spent on logbook is 50 divide by 27 days and the relative number of session spent on  a gamified system is 30 divide by 27. Before comparing the two versions of the system on usage, I had to test if the differences of both the ratio of days and number of sessions per day between the two systems followed a normal distribution in order to identify a proper statistical test to use. The difference between logbook and gamification had a normal distribution in both the ratio of days and number of sessions per day, therefore I conducted a paired t-test. On comparison of usage between a gamified system and logbook system, the former had a higher mean log of ratio of days  and mean log of number of sessions per day compared to the latter without statistical significance.
+The results are shown on Table \ref{table:usagewellness1}
 \newline 
 \begin{table}[h!]
 
@@ -93,15 +94,15 @@ The second comparison entailed contrasting `Logbook'' usage versus ``Gamificatio
     \label{table:usagewellness1}
 	\begin{tabular}{|c|c|c|}
 		\hline
-		Log mean &Logbook App&Gamified App\\
+		Mean &Logbook App&Gamified App\\
 		\hline
-		 \multirow{2}{*}{Ratio of days}&M=0.16;SD=0.15&M=0.24 ;SD=0.18\\\cline{2-3} 
+		 \multirow{2}{*}{Ratio of days}&M=0.187;SD=0.19&M=0.284 ;SD=0.234\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(13)= 1.4927 ; p=0.1594 ; 95\% CI= -0.184 to 0.034} \\
+		 &\multicolumn{2}{|l|}{t(13)= 1.4714 ; p=0.1650 ; 95\% CI=  -0.239 to 0.0454 } \\
 \hline
-   		 \multirow{2}{*}{ Number of sessions/day}&M=0.22 ;SD=0.22&M=0.36;SD=0.33\\\cline{2-3} 
+   		 \multirow{2}{*}{ Number of sessions/day}&M=0.271 ;SD=0.3&M=0.51;SD=0.55\\\cline{2-3} 
 		
-		 &\multicolumn{2}{|l|}{t(13)=1.5519 ; p=0.1447 ; 95\% CI= -0.341 to 0.056} \\
+		 &\multicolumn{2}{|l|}{t(13)=1.5768 ; p= 0.1388 ; 95\% CI= - -0.565 to 0.088} \\
 \hline
 
 	\end{tabular}
@@ -109,8 +110,7 @@ The second comparison entailed contrasting `Logbook'' usage versus ``Gamificatio
 \end{table}
 \newline  
  
-I carried out a paired student t-test on logarithmic transformed data.  On comparison of usage between a gamified system and logbook system, the former had a higher mean log of ratio of days  and mean log of number of sessions per day compared to the latter without statistical significance.
-The results are shown on Table \ref{table:usagewellness1} above.
+
  
 There were four pairs who faced hurdles on utilizing the app and this affected both their motivation and ability to participate or access the system. These pairs are listed on Table \ref{table:usageproblems}.\newline
 \begin{table}[h!]
@@ -206,10 +206,18 @@ I started by comparing perceived enjoyment by age at midline and endline of the 
 \end{figure}\newline
 I observed the following factors that are important to user experience and their power in motivating intermediaries to interact with the app varied from pair to pair:
 \begin{enumerate}
-\item{\textbf{Self-monitoring task}}: The task itself of self-monitoring without rewards can spark interests of some intermediary users. This might be as the result of the novelty effect of visualization mechanisms. For instance one intermediary user who happened to be the youngest among all intermediaries reported the highest perceived enjoyment during logbook condition compared to other intermediary users. In addition it seems the phone also had an impact on triggering her interests.
+\item{\textbf{Self-monitoring task}}: The task itself of self-monitoring without rewards sparked interests of some intermediary users. This might be as the result of the novelty effect of visualization mechanisms. For instance one intermediary user who happened to be the youngest among all intermediaries reported the highest perceived enjoyment during logbook condition compared to other intermediary users. In addition it seems the phone also had an impact on triggering her interests.
 \item{\textbf{Informal comparisons}}: Comparison on steps graphs can be another source motivation. For intermediaries who were close, they did this form of informal comparison. In the absence of gamification, still intermediaries thought that they were competing with other therefore those who were close had face to face interactions of where they did comparison with one another. 
-\item{\textbf{Gamification comparison}}: This kind of comparison increased the number of times intermediary user checked the app. However, not all intermediaries had enjoyed using the gamification condition.
-\end{enumerate}
+\item{\textbf{Gamification comparison}}: This kind of comparison increased the number of times intermediary user checked the app.
+ The ``Gamified App'' was designed in such a way that a pair will earn rewards based on usage and the average number of steps walked by a beneficiary participant who is a member of the pair. The purpose of rewards was to foster users' intrinsic experiences such as competitiveness and a sense of autonomy which are predictors of intrinsic motivation. Rewards depended on four parameters and these were the number of steps walked by a beneficiary user, the number of days the app has been used by an intermediary to either to record meals or to view feedback on meals, points, steps, gardens, etc.
+\item{\textbf{Request from beneficiary users}}:There were times where intermediary users engaged with the up only upon request from beneficiaries.  
+\end{enumerate} 
+Younger intermediaries appeared to engage with the gamified system more often than older intermediaries as shown on Figure. However, not all young intermediaries had positive user user experience on utilizing gamification. 
+
+
+
+On comparison of competitiveness and autonomy of between gamified condition and logbook condition, there six intermediaries that were excluded.\newline
+
 This suggests the task of helping might be less interesting to younger intermediaries provided that there are no motivational affordances.\newline
 The IMI questionnaire that assessed intrinsic motivation in using the ``The Family Wellness App'' had four sub-scales which where perceived competence, perceived autonomy,perceived enjoyment, and perceived relatedness.  
 Our hypotheses of interest for intermediaries were
@@ -236,7 +244,6 @@ Our hypotheses of interest for intermediaries were
 \end{itemize}
 \end{enumerate}
 
-The ``Gamified App'' was designed in such a way that a pair will earn rewards based on usage points and the average number of steps walked by a beneficiary participant who is a member of the pair. The purpose of rewards was to foster users' intrinsic experiences such as competitiveness and a sense of autonomy which are predictors of intrinsic motivation. Reward depended on four parameters and these were the number of steps walked by a beneficiary user, the number of days the app has been used by an intermediary to either to record meals or to view feedback on meals, points, steps, gardens, etc. On comparison of competitiveness and autonomy of between gamified condition and logbook condition, there six intermediaries that were excluded.\newline
 The first four users are from the pairs on Table \ref{table:usageproblems} above who were listed as having technical/usability problems hence they didn't stand a better chance to participate fully on the experiments.  Apart from the four intermediary users, there was  a very intriguing phenomenon from other two intermediary users from \textbf{Pair E} and \textbf{Pair F} as mentioned on Table \ref{table:negexprnce}. The two intermediary users had used the app more often in gamification condition  compared to when they were in logbook condition but had reported both lower scores in perceived enjoyment, and perceived competence when in gamified condition compared to when they were in logbook condition. Two of these intermediary users were  in LG and GL groups respectively. I examined the performance of these two users in gamification rewards and discovered that two users never managed to make any progress in attaining a single reward despite their efforts in using the ``Gamified App''.This harmed both their perceived enjoyment and perceived competence to use the "Family Wellness App" while in gamification condition. One of these two intermediary participants sent an SMS to the researcher asking what he was supposed to do in order to advance in badges and he was informed that all the information was specified in their given user manual. In addition, SMS reminders were sent out to all intermediaries to inform them of how far they have gone in achieving rewards and what is remaining in terms of usage and steps in order for them to reach the next badge. Their beneficiary participants were not walking enough steps despite the fact that these intermediaries had put  efforts in engaging with the App. One beneficiary who was working with one of these intermediary users also reported in interviews that there was always a contention with her intermediary when this beneficiary wanted to see what was going in the app as the intermediary was not voluntarily willing to help some of the time.\newline
 \begin{table}
   \begin{center}
