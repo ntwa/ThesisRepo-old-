@@ -287,110 +287,166 @@ The results on perceived competence, perceived autonomy,perceived enjoyment, and
 		\hline
 		 \multirow{2}{*}{Perceived competence}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)=3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+		 &\multicolumn{2}{|l|}{t(9)=-3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
 \hline
 		 \multirow{2}{*}{Perceived autonomy}&M=3.95; SD=0.86&M=3.96; SD=0.94\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)= 0.0269; p= 0.9792; 95\% CI= -0.596 to 0.582} \\
+		 &\multicolumn{2}{|l|}{t(9)= -0.0269; p= 0.9792; 95\% CI= -0.596 to 0.582} \\
 \hline
 		 \multirow{2}{*}{Perceived enjoyment}&M=4.18; SD=1.11&M=4.75; SD=1.32\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)= 1.6930;  p=0.1247; ; 95\% CI= -1.343 to 0.193 } \\
+		 &\multicolumn{2}{|l|}{t(9)=-1.6930;  p=0.1247; ; 95\% CI= -1.343 to 0.193 } \\
 \hline
 		 \multirow{2}{*}{Perceived relatedness}&M=4.22; SD=0.63&M=4.37; SD=0.9\\\cline{2-3} 
-		 &\multicolumn{2}{|l|}{t(9)= 0.7193; p=0.0.4902; 95\% CI= -0.622 to 0.322 } \\
+		 &\multicolumn{2}{|l|}{t(9)= -0.7193; p=0.4902; 95\% CI= -0.622 to 0.322 } \\
 \hline
 	\end{tabular}
   \end{center}
 \end{table}
 \newline
-Perceived competence of intermediaries in using the ``Family Wellness App'' was significantly higher in the gamified condition than in the logbook condition in the ten intermediaries that were analysed. Perceived autonomy, perceived enjoyment, and perceived relatedness were all not different between gamification condition and logbook condition. For perceived enjoyment and autonomy, there are cases were the self-monitoring task was interesting enough on itself or when combined with informal comparison of steps among intermediary users. Therefore, there some intermediaries who felt more enjoyment while they were in logbook condition, which is also the same case for perceived autonomy. For perceived relatedness, the app brought users together regardless of an experimental condition especially the ones that already knew each other before.  \newline
+Perceived competence of intermediaries in using the ``Family Wellness App'' was significantly higher in the gamified conditi-.08517on than in the logbook condition in the ten intermediaries that were analysed. Perceived autonomy, perceived enjoyment, and perceived relatedness were all not different between gamification condition and logbook condition. For perceived enjoyment and autonomy, there are cases were the self-monitoring task was interesting enough on itself or when combined with informal comparison of steps among intermediary users. Therefore, there some intermediaries who felt more enjoyment while they were in logbook condition, which is also the same case for perceived autonomy. For perceived relatedness, the app brought users together regardless of an experimental condition especially the ones that already knew each other before.  \newline
 \subsection{Beneficiaries' IMI Scores Health Self-Monitoring}
 I used the IMI (intrinsic motivation inventory) questionnaire to assess motivation of intermediaries in self-monitoring of Diet. I excluded pairs (A,B, C, and D) from Table \ref{table:usageproblems} problems that led discontinuation of usage. In total only ten out of fourteen beneficiaries had their results included for analysis. We have seen from the sub section (\ref{methodsquestionnaire}) that this questionnaire was administered at baseline, midline and endline.\newline
-I compared the IMI score of each participant at baseline, midline, and endline. The IMI score was computed from the average of all scores from sub-scales of perceived competence, perceived autonomy, perceived relatedness, perceived enjoyment, perceived effort,  and perceived usefulness. I  used one way ANOVA with repeated measures to test if there a difference between scores at baseline, midline, and endline. To ensure that we use the correct test, I tested if baseline,midline and endline scores had the same covariance in each case and this helped in deciding of what correction to use on SPSS results among ``Sphericity Assumed'',``Greenhouse-Geisser'', and ``Huynh-Feldt''. The results are reported on the next sub-sections.
+In the first comparison,I compared the IMI score of each participant at baseline, midline, and endline regardless of the experimental condition. In the second comparison I compared scores at baseline, logbook, and gamification condition. The IMI score was computed from the average of all scores from sub-scales of perceived competence, perceived autonomy, perceived relatedness, perceived enjoyment, perceived effort,  and perceived usefulness. I  used one way ANOVA with repeated measures to test if there a difference  between scores at: (1) baseline, midline, and endline, and (2)baseline, logbook and gamification. I used Mauchy's test\footnote{Read more on how Mauchy's test is used from http://www.statisticshell.com/docs/repeatedmeasures.pdf} to check if baseline,midline and endline scores had the same covariance in each ANOVA test I carried out and this helped in deciding of what correction to use on SPSS results among ``Sphericity Assumed'',``Greenhouse-Geisser'', and ``Huynh-Feldt'' as reported on the next sub-sections.
 \subsubsection{IMI in Self-Monitoring of Diet}
-The results on self-monitoring of diet are shown on Table  \ref{table:imidietbenf}. For self-monitoring of diet, I chose the ``Sphericity Assumed'' since the Mauchly’s test indicated that the assumption of sphericity was not violated with  $\chi{}$\SP{2}(2)=3.76, p=0.152. Therefore, the results on  ``Self-monitoring of Diet'' shown on Table \ref{table:imidietbenf} is from ``Sphericity Assumed'' output. ANOVA showed that there was a significant difference of average IMI scores on self-monitoring of diet measured at baseline, midline and endline.\newline
+The results on self-monitoring of diet (baseline, midline, and endline) are shown on Table  \ref{table:imidietbenf}. The Mauchly’s test indicated that the assumption of sphericity was not violated with  $\chi{}$\SP{2}(2)=3.76, p=0.152.\newline
 \begin{table}[h!]
   \begin{center}
     \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of diet at baseline, midline and endline}
     \label{table:imidietbenf}
-	\begin{tabular}{|L{3cm}|L{2cm}|L{2cm}|L{2cm}|}
+	\begin{tabular}{|L{2.8cm}|L{3.2cm}|L{3.2cm}|L{3.2cm}|}
 		\hline
 		Mean IMI Score &Baseline&Midline&Endline\\
 		\hline
-		 \multirow{3}{*}{Self-monitoring }&M=4.48; SD=1.241; N=10&M=5.07; SD=1.19; N=10;&M=5.55; SD=0.95; N=10\\\cline{2-4} 
+		 %\multirow{3}{*}
+		 {Self-monitoring}&M=4.48; SD=1.24&M=5.07; SD=1.19;&M=5.55; SD=0.95\\\cline{2-4} 
 
-		 of Diet&\multicolumn{3}{|l|}{F(2,18)=3.787; p=0.042} \\
+		of Diet &\multicolumn{3}{|l|}{F(2,18)=3.787; p=0.042} \\
 \hline	\end{tabular}
   \end{center}
 \end{table}\newline
-I further conducted a student t-test to see if there is a difference in IMI scores to self-monitor diet  on the followings: baseline versus midline, baseline versus endline, and midline versus endline. The results are shown on Tables \ref{imipairwisediet}, \ref{imipairwisediet1}, and \ref{imipairwisediet2}.
+Therefore, the results (N=10) on  ``Self-monitoring of Diet'' shown on Table \ref{table:imidietbenf} were from ``Sphericity Assumed'' output. ANOVA showed that there was a significant difference of average IMI scores on self-monitoring of diet measured at baseline, midline and endline.\newline
+I further conducted a student t-test to see if there was difference in IMI scores to self-monitor diet by contrasting the following: (1) baseline versus midline; (2) baseline versus endline; and (3) midline versus endline. The results are shown on Tables \ref{table:imipairwisediet}, \ref{table:imipairwisediet1}, and \ref{table:imipairwisediet2}. There was a significant difference between IMI scores on baseline versus endline but not on baseline versus midline and midline versus endline. Motivation to self-monitor diet appeared to increase with time as shown on Figure \ref{figure:imi_diet}
 \begin{table}[h!]
   \begin{center}
     \caption{Pairwise comparisons of IMI scores in self-monitoring of diet: Baseline versus Midline}
     \label{table:imipairwisediet}
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|L{2cm}|L{4cm}|L{4cm}|}
 		\hline
 		Mean &Baseline&Midline\\
 		\hline
-		 \multirow{2}{*}{IMI Score}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
+		 \multirow{2}{*}{IMI Score}&M=4.48; SD=1.24&M=5.07; SD=1.19\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)=3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+		 &\multicolumn{2}{|l|}{t(9)=-1.298; p=0.227 ; 95\% CI= -1.621 to 0.439} \\
 \hline
 	\end{tabular}
   \end{center}
 \end{table}
-\newline
 \begin{table}[h!]
   \begin{center}
     \caption{Pairwise comparisons of IMI scores in self-monitoring of diet: Baseline versus Endline}
-    \label{table:imipairwisediet2}
-	\begin{tabular}{|c|c|c|}
+    \label{table:imipairwisediet1}
+	\begin{tabular}{|L{2cm}|L{4cm}|L{4cm}|}
 		\hline
-		Mean &Baseline&Midline\\
+		Mean &Baseline&Endline\\
 		\hline
-		 \multirow{2}{*}{IMI Score}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
+		 \multirow{2}{*}{IMI Score}&M=4.48; SD=1.24&M=5.55; SD=0.95\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)=3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+		 &\multicolumn{2}{|l|}{t(9)=-2.457; p=0.036 ; 95\% CI= -2.06083 to -0.08517} \\
 \hline
 	\end{tabular}
   \end{center}
 \end{table}
-\newline
 \begin{table}[h!]
   \begin{center}
     \caption{Pairwise comparisons of IMI scores in self-monitoring of diet: Midline versus Endline}
-    \label{table:imipairwisediet3}
-	\begin{tabular}{|c|c|c|}
+    \label{table:imipairwisediet2}
+	\begin{tabular}{|L{2cm}|L{4cm}|L{4cm}|}
 		\hline
-		Mean &Baseline&Midline\\
+		Mean &Midline&Endline\\
 		\hline
-		 \multirow{2}{*}{IMI Score}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
+		 \multirow{2}{*}{IMI Score}&M=5.07; SD=1.19&M=5.55; SD=0.95\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)=3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+		 &\multicolumn{2}{|l|}{t(9)=-1.975; p=0.08 ; 95\% CI= -1.0342 to 0.07017} \\
 \hline
 	\end{tabular}
   \end{center}
 \end{table}
 \newline
-
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{Figures/imi_diet.png}
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Diet at Baseline, Midline, and Endline.}
+  \label{figure:imi_diet}
+\end{figure}\newline
+The aformentonied ANOVA comparison among baseline, midline, and endline doesn't discern between different experimental conditions of which pairs of users were exposed to. The second task was to examine the comparison on IMI scores to self-monitor diet, among baseline, logbook, and gamification conditions. The ANOVA results (N=10) are shown on Table  \ref{table:imidietbenf2}. I chose the ``Sphericity Assumed'' output of the ANOVA test since the Mauchly’s test indicated that the assumption of sphericity was not violated with  $\chi{}$\SP{2}(2)=2.19, p=0.335. Therefore, the results on  ``Self-monitoring of Diet'' shown on Table \ref{table:imidietbenf2} were from ``Sphericity Assumed'' output. ANOVA showed that there was no significant difference of average IMI scores on self-monitoring of diet measured during baseline, logbook and gamification conditions. The trend on averages shows both logbook and gamification to be slightly higher than baseline as shown on Figure \ref{figure:imi_diet2}. \newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of diet at baseline, after logbook, and  after gamification conditions}
+    \label{table:imidietbenf2}
+	\begin{tabular}{|L{2.8cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|}
+		\hline
+		Mean IMI Score &Baseline&Logbook&Gamification\\
+		\hline
+		 %\multirow{3}{*}
+		 Self-monitoring&M=4.48; SD=1.241&M=5.28; SD=1.05&M=5.34; SD=1.16\\\cline{2-4} 
+		 of Diet&\multicolumn{3}{|l|}{F(2,18)=3.787; p=0.087} \\
+\hline	\end{tabular}
+  \end{center}
+\end{table}\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{Figures/imi_diet2.png}
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Diet at Baseline, Logbook, and Gamification.}
+  \label{figure:imi_diet2}
+\end{figure}\newline
 \subsubsection{IMI in Self-Monitoring of Activity}
-The results on self-monitoring of activity are shown on Table  \ref{table:imiactivitybenf}. For self-monitoring of diet, I chose the ``Sphericity Assumed'' since the Mauchly’s test indicated that the assumption of sphericity was not violated with  $\chi{}$\SP{2}(2)=3.76, p=0.152. Therefore, the results on  ``Self-monitoring of Diet'' shown on Table \ref{table:imiactivitybenf} is from ``Sphericity Assumed'' output. ANOVA showed that there was a significant difference of average IMI scores on self-monitoring of diet measured at baseline, midline and endline.\newline
+The results (N=9) on self-monitoring of activity are shown on Table  \ref{table:imiactivitybenf}. The results are based on a sample of nine beneficiary users as one participant didn't complete this part of the questionnaire at baseline.  The Mauchly’s test indicated that the assumption of sphericity was violated with  $\chi{}$\SP{2}(2)=8.248, p=0.016. The value $\epsilon$ on Greenhouse Geisser was ``\textless 0.75'', therefore, the results on  ``Self-monitoring of Diet'' shown on Table \ref{table:imiactivitybenf} were selected from ``Greenhouse-Geisser'' output. ANOVA showed that there was no significant difference of average IMI scores on self-monitoring of activity measured at baseline, midline and endline. The trend of means appears to increase from baseline to endline as shown on Figure \ref{figure:imi_activity}
 \begin{table}[h!]
   \begin{center}
     \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of activity at baseline, midline and endline}
     \label{table:imiactivitybenf}
-	\begin{tabular}{|L{3cm}|L{2cm}|L{2cm}|L{2cm}|}
+	\begin{tabular}{|L{2.8cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|}
 		\hline
 		Mean IMI Score &Baseline&Midline&Endline\\
 		\hline
-		 \multirow{3}{*}{Self-monitoring }&M=4.48; SD=1.241; N=10&M=5.07; SD=1.19; N=10;&M=5.55; SD=0.95; N=10\\\cline{2-4} 
-		 of Diet&\multicolumn{3}{|l|}{F(2,18)=3.787; p=0.042} \\
+		 %\multirow{3}{*}
+		 Self-monitoring&M=4.82; SD=1.002&M=5.28; SD=1.003&M=5.41; SD=0.894\\\cline{2-4} 
+		 of activity&\multicolumn{3}{|l|}{F(1.182, 9.455)=2.936; p=0.116} \\
 \hline	\end{tabular}
   \end{center}
 \end{table}\newline
-
-
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{Figures/imi_activity.png}
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Activity at Baseline, Logbook, and Gamification.}
+  \label{figure:imi_activity}
+\end{figure}\newline
+I conducted another analysis (N=9) to examine if there is a difference among baseline,logbook, and gamification in self-monitoring of activity. The Mauchly’s test indicated that the assumption of sphericity was violated with  $\chi{}$\SP{2}(2)=18.893, p<0.01. The value of $\epsilon$ on Greenhouse Geisser was ``\textless 0.75'', therefore, the results on  ``Self-monitoring of Activity'' shown on Table \ref{table:imiactivity2benf} were selected from ``Greenhouse-Geisser'' output.\newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of activity at baseline, midline and endline}
+    \label{table:imiactivity2benf}
+	\begin{tabular}{|L{2.8cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|}
+		\hline
+		Mean IMI Score &Baseline&Midline&Endline\\
+		\hline
+		 %\multirow{3}{*}
+		 Self-monitoring&M=4.82; SD=1.002&M=5.28; SD=1.003&M=5.41; SD=0.894\\\cline{2-4} 
+		 of activity&\multicolumn{3}{|l|}{F(1.182, 9.455)=2.936; p=0.116} \\
+\hline	\end{tabular}
+  \end{center}
+\end{table}\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{Figures/imi_activity2.png}
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Activity at Baseline, Logbook, and Gamification.}
+  \label{figure:imi_activity2}
+\end{figure}\newline
 \begin{flushright}
 \end{flushright}
 
