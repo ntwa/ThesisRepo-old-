@@ -257,7 +257,19 @@ The hypotheses of interest for intermediaries were:
 \begin{enumerate}
 \item{Hypothesis 1}
 \begin{itemize}
-\item{H\SB{0}}:There is no difference in perceived competence in using  between a Logbook app and Gamified app
+\item{H\SB{0}}:There is no d4.4
+6.15
+
+5.6
+
+4.1
+6.2941176471
+
+4.1
+5.95
+5.4
+6.3
+ifference in perceived competence in using  between a Logbook app and Gamified app
 \item{H\SB{A}}:There is a difference in perceived competence in using  between a Logbook app and Gamified app
 \end{itemize}
 \item{Hypothesis 1}
@@ -425,10 +437,11 @@ The results (N=9) on self-monitoring of activity are shown on Table  \ref{table:
   \caption{Trend on Average IMI Scores of Self-Monitoring of Activity at Baseline, Logbook, and Gamification.}
   \label{figure:imi_activity}
 \end{figure}\newline
-I conducted another analysis (N=9) to examine if there is a difference among baseline,logbook, and gamification in self-monitoring of activity. The Mauchly’s test indicated that the assumption of sphericity was violated with  $\chi{}$\SP{2}(2)=18.893, p<0.01. The value of $\epsilon$ on Greenhouse Geisser was ``\textless 0.75'', therefore, the results on  ``Self-monitoring of Activity'' shown on Table \ref{table:imiactivity2benf} were selected from ``Greenhouse-Geisser'' output.\newline
+I conducted another analysis (N=9) to examine if there is a difference among baseline,logbook, and gamification in self-monitoring of activity. The Mauchly’s test indicated that the assumption of sphericity was violated with  $\chi{}$\SP{2}(2)=6.788, p =0.034. The value of $\epsilon$ on Greenhouse Geisser was ``\textless 0.75'', therefore, the results on  ``Self-monitoring of Activity'' shown on Table \ref{table:imiactivity2benf} were selected from ``Greenhouse-Geisser'' output.\newline
+%epsilon=0.617
 \begin{table}[h!]
   \begin{center}
-    \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of activity at baseline, midline and endline}
+    \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of activity at baseline, logbook and gamification}
     \label{table:imiactivity2benf}
 	\begin{tabular}{|L{2.8cm}|L{2.5cm}|L{2.5cm}|L{2.5cm}|}
 		\hline
@@ -436,13 +449,13 @@ I conducted another analysis (N=9) to examine if there is a difference among bas
 		\hline
 		 %\multirow{3}{*}
 		 Self-monitoring&M=4.82; SD=1.002&M=5.28; SD=1.003&M=5.41; SD=0.894\\\cline{2-4} 
-		 of activity&\multicolumn{3}{|l|}{F(1.182, 9.455)=2.936; p=0.116} \\
+		 of activity&\multicolumn{3}{|l|}{F(1.234, 9.872)=2.783; p=0.123} \\
 \hline	\end{tabular}
   \end{center}
 \end{table}\newline
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.4\textwidth]{Figures/imi_activity2.png}
+    \includegraphics[width=0.4\textwidth]{Figures/imi_activity.png}
     \rule{35em}{0.5pt}
   \caption{Trend on Average IMI Scores of Self-Monitoring of Activity at Baseline, Logbook, and Gamification.}
   \label{figure:imi_activity2}
