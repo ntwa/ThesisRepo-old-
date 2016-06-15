@@ -51,6 +51,7 @@ At endline both intermediary and beneficiary participants filled their respectiv
 \item{\textbf{Beneficiaries}}: Beneficiary participants' endline questionnaire had three sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition.The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
 \end{itemize}
 
+
 I developed the IMI questionnaires with guidance of materials found on a ``Self-Determination Theory''\footnote{http://www.selfdeterminationtheory.org/intrinsic-motivation-inventory/} website which is maintained by researchers working on the theory including Richard Ryan and Edward Deci\citep{deci1985intrinsic} whom were early pioneers in developing the theory. I pretested these questionnaires during the informative evaluation of prototype II in chapter \ref{prototytpe2chapter}.  The most most important sub-scales for our theoretical construct were perceived competence and perceived autonomy which are part of the three basic psychological needs. The relatedness sub-scale is not yet validated but it was included in all questionnaires. Other sub-scale that was included in all questionnaires is perceived enjoyment. In each question from the IMI sub scales, respondents were supposed to rate there experience in a scale of 1 to 7 points which means that 1 implies the statement is "not true at all" and 7 means the statement is "very true". \newline
 Perceived enjoyment is the only direct measure of intrinsic motivation while perceived competence and perceived autonomy are predictors of intrinsic motivation. Self-Determination theory suggests that a behaviour can be started as externally motivated and if external motivators support the three basic psychological needs which are relatedness, competitiveness, and autonomy then a behaviour that was once externally motivated can be internalized and users will start doing it because it is a good thing to do.
 
@@ -59,32 +60,32 @@ I also conducted short unstructured interviews at midline and endline. I selecte
 \section{Findings}
 There were four primary outcomes in analysing the findings and these are: (1)usage trend of the app; (2) user experience/intrinsic motivation  of both intermediaries and intermediaries in using the app; (3) intrinsic motivation of beneficiaries in self-monitoring of diet/nutrition; and (4) intrinsic motivation of beneficiaries in self-monitoring of physical activity.
 \subsection{Analysis of Usage Trend}
-The average number of days on which pairs used both versions of the application was 10.5 (SD=7.39) days. The most active usage was from a pair that utilized the app for a total of 26 days. The less active usage was from a pair that had used the app for only two days out of 41 days.\newline
-I contrasted usage in each day between the ``Logbook App'' and ``Gamified App'' by computing the daily total number of sessions from all users in each of the two experimental conditions. The beginning of a new session is defined as the a continuous period of time where the end user interacts with the app without interruption. This period is whereby there is user's activities detected on the app while there was no user activities for the past one hour. If delay between activities is less than one hour it is then assumed that the last session is still active. If a user comes back after one hour has elapsed since the last detected user's activity then it is assumed they went away from the app and now they are coming back for a new session. There were 41 days of app usage in total. Therefore, each experimental condition had a total number of sessions for each day as shown on Figure \ref{figure:usagedailysessions}. After the fourth week there was a decline in the daily total number of sessions in each of the two experimental conditions as the result of the learning effect. The decline was more apparent to users who where switched from gamification to logbook since the switching happened at the end of the fourth week of usage.\newline
+The average number of days on which pairs used both versions of the application was 10.5 (SD=7.39) days. The most active usage was from a pair that utilized the app for a total of 26 days. The less active usage was from a pair that had used the app for only two days out of 41 days.
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.6\textwidth]{Figures/scatter_daily_sessions.png}
+    \includegraphics[width=0.5\textwidth]{Figures/scatter_daily_sessions.png}
     \rule{35em}{0.5pt}
-  \caption{Total daily number of sessions from the two experimental conditions.}
+  \caption{Average utilization of the app by the two experimental conditions.}
   \label{figure:usagedailysessions}
 \end{figure}\newline
-I expanded the comparison of Figure \ref {figure:usagedailysessions} by carrying out an inferential statistical test in order to determine if the daily total of number of sessions differs in between logbook and gamification conditions. Before deciding on which test to use, I applied``\emph{Shapiro-Wilk Normality Test}''\footnote{http://sdittami.altervista.org/shapirotest/ShapiroTest.html} to test for normal distribution in both daily logbook and gamification sessions. The distributions of the two independent samples were both not normal. An attempt to transform the data using transformation algorithms didn't yield to normal distributions. Therefore, I made a decision to use a non-parametric test called Mann-Whitney U Test. The  daily number of sessions in gamification condition were significantly higher than in logbook condition as shown on Table \ref{table:usagedays}.\newline
+There were two usage comparisons. In the first comparison, I contrasted usage in each day between the Logbook App and Gamified App by computing the daily total number of sessions from all users in a particular experimental condition. There were 41 days in total. Therefore, each day had the total number of sessions in each experimental condition as shown on Figure \ref{figure:usagedailysessions}. After the fourth week there was a decline in usage as the result of the learning effect. The decline was more apparent to users who where switched from gamification to logbook. I used ``\emph{Shapiro-Wilk Normality Test}''\footnote{http://sdittami.altervista.org/shapirotest/ShapiroTest.html} to test for normal distribution between logbook sessions and gamification sessions. The distribution of each of the two independent samples were not normal. An attempt to transform the data using transformation algorithms didn't yield to normal distributions. Therefore, I made a decision to use a non-parametric test called Mann-Whitney U Test. The number of sessions in Gamification condition were significantly higher than in Logbook condition as shown on Table \ref{table:usagedays}.
 \begin{table}[h!]
   \begin{center}
     \caption{Daily usage comparison between Logbook and Gamified systems for 41 days}
     \label{table:usagedays}
-	\begin{tabular}{|L{3cm}|c|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		Groups&N&Rank Average&Sum Ranks&U&Z&P\\
 		\hline
-   		Daily logbook sessions&41&33.72&1701.5&\multirow{2}{*}{1159.5}&\multirow{2}{*}{-2.9538}& \multirow{2}{*}{0.00318}\\\cline{1-4} 
-   		 		    Daily gamification sessions&41&49.28& 1701.5&&&\\
+   		Logbook sessions&41&33.72&1701.5&\multirow{2}{*}{1159.5}&\multirow{2}{*}{-2.9538}& \multirow{2}{*}{0.00318}\\\cline{1-4} 
+   		 		    Gamification sessions&41&49.28& 1701.5&&&\\
 \hline
 	\end{tabular}
   \end{center}
 \end{table}
 \newline 
-I conducted another usage comparison which  entailed contrasting `Logbook'' usage versus ``Gamification'' usage for each pair as the aforementioned analyses were general not specifically examining on the performance of individual pairs and its results are shown on Table \ref{table:usagewellness1}\newline 
+The second comparison entailed contrasting `Logbook'' usage versus ``Gamification'' usage for each pair. I compared usage by counting both the number of days and total number sessions from each pair of users. Since the number of days and total sessions were relative to how many days users were exposed to a particular experimental condition, I divided the number of sessions with total days on which users were exposed to a particular experimental condition to get the ratio of days with respect to the total number of days and number of sessions per day. Therefore, comparison was based on a relative number and not an absolute. For instance, lets say pair one is from a LG group which they had access to a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in Logbook is 50 and the number of sessions in Gamified system is 30 then the relative number of sessions per day spent on logbook is 50 divide by 27 days and the relative number of session spent on  a gamified system is 30 divide by 27. Before comparing the two versions of the system on usage, I had to test if the differences of both the ratio of days and number of sessions per day between the two systems followed a normal distribution in order to identify a proper statistical test to use. The difference between logbook and gamification had a normal distribution in both the ratio of days and number of sessions per day, therefore I conducted a paired t-test. On comparison of usage between a gamified system and logbook system, the former had a higher mean log of ratio of days  and mean log of number of sessions per day compared to the latter without statistical significance.
+The results are shown on Table \ref{table:usagewellness1}
 \newline 
 \begin{table}[h!]
 
@@ -107,8 +108,8 @@ I conducted another usage comparison which  entailed contrasting `Logbook'' usag
 	\end{tabular}
   \end{center}
 \end{table}
-\newline 
-This is a step by step of how I arrived to results on Table \ref{table:usagewellness1}. The first step was to count the followings for each pair of users in each experimental condition: (1) the total number of days; and  (2) total number of sessions. Since the total number of days and sessions were relative to how many days users had a system with particular experimental condition available to them, I divided the number of sessions with total days on which users had a particular experimental condition available to them. The outcome is both the ratio of days with respect to the total number of days and number of sessions per day. Therefore, the comparison was based on a relative number and not an absolute number. For instance, lets say pair one is from a LG group which they were allowed to use a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in logbook was 50 and the number of sessions in Gamified system was 30 then the relative number of sessions per day spent on logbook is going to be ``\textbf{50} divide by \textbf{27} days'' and the relative number of sessions spent on  a gamified system is going to be ``\textbf{30} divide by \textbf{27}. Before comparing the two versions of the system on usage, I had to test if the differences of both the ratio of days and number of sessions per day between the two systems followed a normal distribution in order to identify a proper statistical test to use. The difference between logbook and gamification had a normal distribution in both the ratio of days and number of sessions per day, therefore I conducted a paired t-test, and its results are what I presented on the aforementioned Table \ref{table:usagewellness1} . On comparison of usage between a gamified system and logbook system, the former had a higher mean  of ratio of days  and mean of number of sessions per day compared to the latter without statistical significance.\newline 
+\newline  
+ 
 There were four pairs who faced hurdles on utilizing the app and this affected both their motivation and ability to participate or access the system. These pairs are listed on Table \ref{table:usageproblems}.\newline
 \begin{table}[h!]
   \begin{center}
@@ -168,52 +169,25 @@ y=log (x+1)
   \end{center}
 \end{table}\newline
 Analysis from Table \ref{table:usagewellness2s} suggests that there was an indication of an increase in frequency of daily usage when pairs where in gamification condition.\newline
-I further examined the utilization of different self-monitoring functionality as shown on Figure \ref{figure:self_monitoring_usage}. One interesting trend is that during gamification condition, usage of the main self-monitoring features for steps and diet decreases compared to when users where in Logbook condition. This happens as users started to spend time on virtual rewards of where they were getting indirect feedbacks of steps and diet through badges, gardens etc. However, the trend in recording of diet/meals continued to remain the same between the two experimental conditions as the process of recording meals played an important role in earning some of the virtual rewards, therefore, intermediary users had to continue using that feature while in gamification condition. Figure \ref{figure:clicks_distr} shows the distribution of clicks among feedback features of the "Gamified Wellness App" and "The Logbook App".\newline 
+In addition to the aforementioned analysis, I also examined utilization of different functionality as shown on Figure \ref{figure:self_monitoring_usage}.\newline
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.6\textwidth]{Figures/self_monitoring_usage.png}
+    \includegraphics[width=0.8\textwidth]{Figures/self_monitoring_usage.png}
     \rule{35em}{0.5pt}
-  \caption{Total clicks on feedback features for self-monitoring of wellness: ``Logbook App'' versus ``Gamified App''.}
+  \caption{Total Clicks on Feedback Features for Direct Self-monitoring: Logbook App versus Gamified App, .}
   \label{figure:self_monitoring_usage}
 \end{figure}\newline
+One interesting trend on Figure \ref{figure:self_monitoring_usage} is that during gamification condition, usage of the main self-monitoring features for steps and diet decreases as users started to spend time on virtual rewards of where they were getting indirect feedbacks of steps and diet through badges, gardens etc. However, recording of diet continued to remain the same between the two experimental conditions as the process of recording played an important role in earning some virtual rewards therefore intermediary users had to continue using it. Figure \ref{figure:clicks_distr} shows the distribution of clicks among feedback features of the "Gamified Wellness App" and "The Logbook App".\newline 
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.45\textwidth]{Figures/clicks_distr.png}
+    \includegraphics[width=0.5\textwidth]{Figures/clicks_distr.png}
     \rule{35em}{0.5pt}
-  \caption{Total clicks on feedback features in the two experimental conditions : self-monitoring features versus rewards features.}
+  \caption{Total Clicks on Feedback Features for Direct Self-monitoring: Logbook App versus Gamified App, .}
   \label{figure:clicks_distr}
 \end{figure}\newline
-From Figure \ref{figure:clicks_distr}, we can see that gamification condition's clicks on feedback features are distributed between the main self-monitoring and virtual rewards features. The number of clicks on the main self-monitoring feedback features had decreased as users became interested to feedbacks provided by virtual rewards features more than the main self-monitoring features. This explanation also supplements the reason why usage on Figure \ref{figure:usagedailysessions} above shows the drop on Logbook condition as users who had been exposed gamification condition before logbook condition became less interested with the "Logbook App" after being switched to it. I expanded on this usage phenomenon by examining through baseline data. However, the baseline data such as demographic information were not statistically sufficient to explain the above usage but we can use that information to explain the aforementioned usage trend. The drop in the total number of logbook sessions appears to be more apparent in younger intermediary users as shown on Figure \ref{figure:logbookbyage}.  But contrary to this is that younger intermediaries had higher average on total number of sessions compared to the older ones while in gamification condition  as shown on Figure \ref{figure:gambyage}. The term old and young are defined by the age \textgreater= and \textless median age (15.5 years old) respectively.  Although the total number of sessions is relative to the number of days in which a pair of users had a particular experimental condition available to them, but young and old intermediaries were evenly distributed to both experimental sequences (LG and GL groups). This means young and old intermediaries were both present in almost the same number in both experimental sequences hence their differences in number sessions which  is influenced by the number of days are expected to cancel each other. The distribution by age group is presented on Table \ref{table:agregroupsall}.\newline 
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=0.5\textwidth]{Figures/logbookbyage.png}
-    \rule{35em}{0.5pt}
-  \caption{Average number of logbook sessions on  14 intermediaries: Age \textgreater= median age(=15.5) versus Age \textless median age.}
-  \label{figure:logbookbyage}
-\end{figure}\newline
-\begin{figure}[htbp]
-  \centering
-    \includegraphics[width=0.5\textwidth]{Figures/gambyage.png}
-    \rule{35em}{0.5pt}
-  \caption{Average number of gamification sessions on  14 intermediaries: Age \textgreater= median age(=15.5) versus Age \textless median age.}
-  \label{figure:gambyage}
-\end{figure}
-\begin{table}[h!]
-  \begin{center}
-    \caption{Age groups of intermediary participants}
-    \label{table:agregroupsall}
-	\begin{tabular}{|c|L{3.2cm}|L{1cm}|L{2cm}|L{2cm}|L{1.6cm}|L{1.3cm}|}
-    		\hline
-         &\textbf{Age Groups}&\textbf{Total users}&\textbf{No. of GL sequence}&\textbf{No. of LG sequence}&\textbf{No. of Females}&\textbf{No. of Males}\\
-         \hline
-         1&Age \textgreater=15.5 years&7&3&4&4&3\\  
-\hline
-         2&Age \textless15.5 years&7&4&3&3&4\\  
-\hline
-	\end{tabular}
-  \end{center}
-\end{table}\newline
-In old intermediaries most sessions came from logbook condition while for younger intermediaries most sessions came from gamification condition. Older intermediaries appeared to have a tendency of valuing the main self-monitoring tasks compared to young intermediaries.   \newline\newline
+From Figure \ref{figure:clicks_distr}, we can see that gamification condition's clicks on feedback features are distributed between the main self-monitoring and virtual rewards features. The number of clicks on the main feedback features had decreased as users became interested to feedback provided by virtual rewards features more than the main self-monitoring features. This explanation also supplements the reason why usage on Figure \ref{figure:usagedailysessions} above shows the drop on Logbook condition as users who had been exposed gamification condition before logbook condition became less interested with the "Logbook App" after being switched to it. I expanded this usage phenomenon by examining through baseline data.\newline
+% Previous studies have also found out that in order for gamification not to harm intrinsic motivation a task itself has to meaningful. 
+Baseline data such as demographic information were not statistically sufficient to explain the above usage. However, there was an indication that male intermediaries had higher average number of sessions compared to female intermediaries as shown on Figure \ref{figure:usagegender}.  Also younger intermediaries had higher average number of sessions compared to the old ones as shown on Figure \ref{figure:usageage}. In old intermediaries most sessions came from logbook condition while for younger intermediaries most sessions came from gamification condition. Older intermediaries appeared to have a tendency of valuing the main self-monitoring tasks compared to young intermediaries.   \newline\newline
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{Figures/session_gender.png}
@@ -228,9 +202,7 @@ In old intermediaries most sessions came from logbook condition while for younge
   \caption{Average number of sessions of 12 intermediaries between age\textgreater=Median(15.5) and age\textless Median(15.5) years.}
   \label{figure:usageage}
 \end{figure}
-The aforementioned figures were for intermediaries from twelve pairs including Pair C and Pair D on Table \ref{table:usageproblems}. Pair A and Pair B were not considered as they terminated their usage on the first week of experiments pair. Pair B and C were considered as they reported usage up to the fifth week of experiments despite their technical difficulties (4 weeks in logbook and first week of gamification).\newline
-
-On the next sub sections, user experiences of both intermediaries and beneficiaries are reported.
+The aforementioned figures were for intermediaries from twelve pairs including Pair C and Pair D on Table \ref{table:usageproblems}. Pair A and Pair B were not considered as they terminated their usage on the first week of experiments pair. Pair B and C were considered as they reported usage up to the fifth week of experiments despite their technical difficulties (4 weeks in logbook and first week of gamification). On the next sub sections, user experiences of both intermediaries and beneficiaries are reported.
 \subsection{User Experience of Intermediaries}
 User experience was analysed through IMI(Intrinsic Motivation Inventory) questionnaires and interviews. The first step was to examine how baseline intrinsic motivation and  demographic information such as age and gender influence user experience. From Figure \ref{figure:usageage} above, we saw that young intermediaries (age\textless median=15.5 years) appeared to have more number of sessions per day on average, but contrary to this trend is that, at baseline the average perceived enjoyment on helping with cellphone related tasks was higher in intermediaries with age\textgreater=median compared to intermediaries with age\textless median for the 12 intermediary users as shown on Figure \ref{figure:PE_HELP_Age}. 
 \begin{figure}[htbp]
