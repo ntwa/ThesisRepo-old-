@@ -183,7 +183,7 @@ I further examined the utilization of different self-monitoring functionality as
   \caption{Total clicks on feedback features in the two experimental conditions : self-monitoring features versus rewards features.}
   \label{figure:clicks_distr}
 \end{figure}\newline
-From Figure \ref{figure:clicks_distr}, we can see that gamification condition's clicks on feedback features are distributed between the main self-monitoring and virtual rewards features. The number of clicks on the main self-monitoring feedback features had decreased as users became interested to feedbacks provided by virtual rewards features more than the main self-monitoring features. This explanation also supplements the reason why usage on Figure \ref{figure:usagedailysessions} above shows the drop on Logbook condition as users who had been exposed gamification condition before logbook condition became less interested with the "Logbook App" after being switched to it. I expanded on this usage phenomenon by examining through baseline data. However, the baseline data such as demographic information were not statistically sufficient to explain the above usage but we can use that information to explain the aforementioned usage trend. The drop in the total number of logbook sessions appears to be more apparent in younger intermediary users as shown on Figure \ref{figure:logbookbyage}.  But contrary to this is that younger intermediaries had higher average on total number of sessions compared to the older ones while in gamification condition  as shown on Figure \ref{figure:gambyage}. The term old and young are defined by the age \textgreater= and \textless median age (15.5 years old) respectively.  Although the total number of sessions is relative to the number of days in which a pair of users had a particular experimental condition available to them, but young and old intermediaries were evenly distributed to both experimental sequences (LG and GL groups). This means young and old intermediaries were both present in almost the same number in both experimental sequences hence their differences in number sessions which  is influenced by the number of days are expected to cancel each other. The distribution by age group is presented on Table \ref{table:agregroupsall}.\newline 
+From Figure \ref{figure:clicks_distr}, we can see that gamification condition's clicks on feedback features are distributed between the main self-monitoring and virtual rewards features. The number of clicks on the main self-monitoring feedback features had decreased as users became interested to feedbacks provided by virtual rewards features more than the main self-monitoring features. This explanation also supplements the reason why usage on Figure \ref{figure:usagedailysessions} above shows the drop on Logbook condition as users who had been exposed gamification condition before logbook condition became less interested with the "Logbook App" after being switched to it. I expanded on this usage phenomenon by examining through baseline data. However, the baseline data such as demographic information were not statistically sufficient to explain the above usage but we can use that information to explain the aforementioned usage trend. The drop in the total number of logbook sessions appears slightly the same in both younger and older intermediaries as shown on Figure \ref{figure:logbookbyage}.  But contrary to this is that younger intermediaries had slightly higher average on total number of sessions compared to the older ones while in gamification condition  as shown on Figure \ref{figure:gambyage}. Also on the average of total number sessions in both experimental conditions, the trend on average shows that younger intermediaries to have more sessions in overall as shown on Figure as more sessions were from gamification condition.  The term old and young are defined by the age \textgreater= and \textless median age (15.5 years old) respectively.  Although the total number of sessions is relative to the number of days in which a pair of users had a particular experimental condition available to them, but young and old intermediaries were evenly distributed to both experimental sequences (LG and GL groups). This means young and old intermediaries were both present in almost the same number in both experimental sequences hence their differences in number sessions which  is influenced by the number of days are expected to cancel each other. The distribution by age group is presented on Table \ref{table:agregroupsall}.\newline 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{Figures/logbookbyage.png}
@@ -197,6 +197,13 @@ From Figure \ref{figure:clicks_distr}, we can see that gamification condition's 
     \rule{35em}{0.5pt}
   \caption{Average number of gamification sessions on  14 intermediaries: Age \textgreater= median age(=15.5) versus Age \textless median age.}
   \label{figure:gambyage}
+\end{figure}\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Figures/bothexpebyage.png}
+    \rule{35em}{0.5pt}
+  \caption{Average of total number of sessions of  14 intermediaries on both experimental conditions: Age \textgreater= median age(=15.5) versus Age \textless median.}
+  \label{figure:bothexpebyage}
 \end{figure}
 \begin{table}[h!]
   \begin{center}
@@ -213,26 +220,25 @@ From Figure \ref{figure:clicks_distr}, we can see that gamification condition's 
 	\end{tabular}
   \end{center}
 \end{table}\newline
-In old intermediaries most sessions came from logbook condition while for younger intermediaries most sessions came from gamification condition. Older intermediaries appeared to have a tendency of valuing the main self-monitoring tasks compared to young intermediaries.   \newline\newline
+If we recall about users who had usage problems on Table \ref{table:usageproblems},three out of four intermediary users were above the median age and one below age, therefore one would argue that the trend would change. So lets try to remove some pairs of users from the trends on averages from the aforementioned  Figures \ref{figure:logbookbyage} and \ref{figure:gambyage}. As we have seen on pairs A and B, their usage stopped early during the beginning of the experiments. As for Pair C and D, their motivation to use the app was only hindered during the  gamification condition but they had used the app throughout logbook condition in which Pair C's pedometer was not working but since one of them had their pedometer working and the two intermediaries from the these pairs were close, usage problems didn't affect their utilization of the app while they were in logbook condition. Therefore, in the logbook condition, Lets remove pairs A and B only and the new trend on average number of sessions is shown on Figure \ref{figure:logbookbyage_mod}. For the gamification condition, we remove Pairs A,B,C, and D and the new trend on average session is shown Figure \ref{figure:gambyage_mod}. The same trends continue to hold as younger intermediaries appear to have higher average number sessions in gamification condition and lower average number of sessions in logbook condition. We cannot confidently conclude any thing based on these trends but they can recommended to be considered in future work in the conclusion chapter. \cite{koivisto2014demographic} found that the usage of  a gamified system is highly affected by the novelty effect which is inversely proportional to the age of participants, meaning that highly usage due to the novelty effect may be reported in much younger participants.   
+\newline
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.5\textwidth]{Figures/session_gender.png}
+    \includegraphics[width=0.5\textwidth]{Figures/logbookbyage_mod.png}
     \rule{35em}{0.5pt}
-  \caption{Average number of sessions between 6 male and 6 female intermediaries.}
-  \label{figure:usagegender}
-\end{figure}
+  \caption{Average number of logbook sessions on  12 intermediaries: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:logbookbyage_mod}
+\end{figure}\newline
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.5\textwidth]{Figures/session_age.png}
+    \includegraphics[width=0.5\textwidth]{Figures/gambyage_mod.png}
     \rule{35em}{0.5pt}
-  \caption{Average number of sessions of 12 intermediaries between age\textgreater=Median(15.5) and age\textless Median(15.5) years.}
-  \label{figure:usageage}
-\end{figure}
-The aforementioned figures were for intermediaries from twelve pairs including Pair C and Pair D on Table \ref{table:usageproblems}. Pair A and Pair B were not considered as they terminated their usage on the first week of experiments pair. Pair B and C were considered as they reported usage up to the fifth week of experiments despite their technical difficulties (4 weeks in logbook and first week of gamification).\newline
-
-On the next sub sections, user experiences of both intermediaries and beneficiaries are reported.
+  \caption{Average number of gamification sessions on  10 intermediaries: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:gambyage_mod}
+\end{figure}\newline
+On the next sub sections, user experiences of both intermediaries and beneficiaries are reported .
 \subsection{User Experience of Intermediaries}
-User experience was analysed through IMI(Intrinsic Motivation Inventory) questionnaires and interviews. The first step was to examine how baseline intrinsic motivation and  demographic information such as age and gender influence user experience. From Figure \ref{figure:usageage} above, we saw that young intermediaries (age\textless median=15.5 years) appeared to have more number of sessions per day on average, but contrary to this trend is that, at baseline the average perceived enjoyment on helping with cellphone related tasks was higher in intermediaries with age\textgreater=median compared to intermediaries with age\textless median for the 12 intermediary users as shown on Figure \ref{figure:PE_HELP_Age}. 
+User experience was analysed through IMI(Intrinsic Motivation Inventory) questionnaires and interviews. The first step was to examine how baseline intrinsic motivation and  demographic information such as age and gender influence user experience. From Figure \ref{figure:bothexpebyage} above, we saw that young intermediaries (age\textless median=15.5 years) appeared to have more number of sessions per day on average, but contrary to this trend is that, at baseline the average perceived enjoyment on helping with cellphone related tasks was higher in intermediaries with age\textgreater=median compared to intermediaries with age\textless median for the 12 intermediary users as shown on Figure \ref{figure:PE_HELP_Age}. 
 \begin{figure}[htbp]
   \centering
     \includegraphics[width=0.5\textwidth]{Figures/PE_HELP_Age.png}
@@ -240,11 +246,11 @@ User experience was analysed through IMI(Intrinsic Motivation Inventory) questio
   \caption{Intermediaries' average perceived enjoyment to help others with cellphone tasks versus age group.}
   \label{figure:PE_HELP_Age}
 \end{figure}\newline
-I started by comparing the perceived enjoyment to use the family wellness app by age at midline and endline for the 12 intermediary users (excluding users from Pair A and B since they terminated their usage too soon). The purpose of this comparison was to understand why young intermediaries who appeared to be less enjoying on helping with cellphone related tasks, emerged as having more usage sessions than older intermediaries. In this comparison, six intermediary users were below the median age of 15.5 while the remaining six intermediary users were above the median age. More information on these two age groups is provided on Table \ref{table:agregroups}. We can see that both age groups had representatives from both experimental sequences (GL, and LG)  and genders. Figure \ref{figure:PE_Interm_App} shows the averages of perceived enjoyment to use the family wellness app at midline and endline. The averages are higher on the intermediaries with age \textless median for both midline and endline points. \newline
+I started by comparing the perceived enjoyment to use the family wellness app by age at midline and endline for the 12 intermediary users (excluding users from Pair A and B since they terminated their usage too soon). The purpose of this comparison was to understand why young intermediaries who appeared to be less enjoying on helping with cellphone related tasks, emerged as having more usage sessions than older intermediaries. In this comparison, six intermediary users were below the median age of 15.5 while the remaining six intermediary users were above the median age. More information on these two age groups is provided on Table \ref{table:agegroups}. We can see that both age groups had representatives from both experimental sequences (GL, and LG)  and genders. Figure \ref{figure:PE_Interm_App} shows the averages of perceived enjoyment to use the family wellness app at midline and endline. The averages are higher on the intermediaries with age \textless median for both midline and endline points. \newline
 \begin{table}[h!]
   \begin{center}
     \caption{Age groups of intermediary participants}
-    \label{table:agregroups}
+    \label{table:agegroups}
 	\begin{tabular}{|c|L{3.2cm}|L{1cm}|L{2cm}|L{2cm}|L{1.6cm}|L{1.3cm}|}
     		\hline
          &\textbf{Age Groups}&\textbf{Total users}&\textbf{No. of GL sequence}&\textbf{No. of LG sequence}&\textbf{No. of Females}&\textbf{No. of Males}\\
