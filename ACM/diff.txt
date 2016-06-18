@@ -1,0 +1,1210 @@
+% This is "sig-alternate.tex" V2.0 May 2012								% This is "sig-alternate.tex" V2.0 May 2012								
+% This file should be compiled with V2.5 of "sig-alternate.cl								% This file should be compiled with V2.5 of "sig-alternate.cl								
+%								%								
+% This example file demonstrates the use of the 'sig-alternat								% This example file demonstrates the use of the 'sig-alternat								
+% V2.5 LaTeX2e document class file. It is for those submittin								% V2.5 LaTeX2e document class file. It is for those submittin								
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO								% articles to ACM Conference Proceedings WHO DO NOT WISH TO								
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.								% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.								
+% The 'sig-alternate.cls' file will produce a similar-looking								% The 'sig-alternate.cls' file will produce a similar-looking								
+% albeit, 'tighter' paper resulting in, invariably, fewer pag								% albeit, 'tighter' paper resulting in, invariably, fewer pag								
+%								%								
+% -----------------------------------------------------------								% -----------------------------------------------------------								
+% This .tex file (and associated .cls V2.5) produces:								% This .tex file (and associated .cls V2.5) produces:								
+%       1) The Permission Statement								%       1) The Permission Statement								
+%       2) The Conference (location) Info information								%       2) The Conference (location) Info information								
+%       3) The Copyright Line with ACM data								%       3) The Copyright Line with ACM data								
+%       4) NO page numbers								%       4) NO page numbers								
+%								%								
+% as against the acm_proc_article-sp.cls file which								% as against the acm_proc_article-sp.cls file which								
+% DOES NOT produce 1) thru' 3) above.								% DOES NOT produce 1) thru' 3) above.								
+%								%								
+% Using 'sig-alternate.cls' you have control, however, from w								% Using 'sig-alternate.cls' you have control, however, from w								
+% the source .tex file, over both the CopyrightYear								% the source .tex file, over both the CopyrightYear								
+% (defaulted to 200X) and the ACM Copyright Data								% (defaulted to 200X) and the ACM Copyright Data								
+% (defaulted to X-XXXXX-XX-X/XX/XX).								% (defaulted to X-XXXXX-XX-X/XX/XX).								
+% e.g.								% e.g.								
+% \CopyrightYear{2007} will cause 2007 to appear in the copyr								% \CopyrightYear{2007} will cause 2007 to appear in the copyr								
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 t								% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 t								
+%								%								
+% -----------------------------------------------------------								% -----------------------------------------------------------								
+% This .tex source is an example which *does* use								% This .tex source is an example which *does* use								
+% the .bib file (from which the .bbl file % is produced).								% the .bib file (from which the .bbl file % is produced).								
+% REMEMBER HOWEVER: After having produced the .bbl file,								% REMEMBER HOWEVER: After having produced the .bbl file,								
+% and prior to final submission, you *NEED* to 'insert'								% and prior to final submission, you *NEED* to 'insert'								
+% your .bbl file into your source .tex file so as to provide								% your .bbl file into your source .tex file so as to provide								
+% ONE 'self-contained' source file.								% ONE 'self-contained' source file.								
+%								%								
+% ================= IF YOU HAVE QUESTIONS ===================								% ================= IF YOU HAVE QUESTIONS ===================								
+% Questions regarding the SIGS styles, SIGS policies and								% Questions regarding the SIGS styles, SIGS policies and								
+% procedures, Conferences etc. should be sent to								% procedures, Conferences etc. should be sent to								
+% Adrienne Griscti (griscti@acm.org)								% Adrienne Griscti (griscti@acm.org)								
+%								%								
+% Technical questions _only_ to								% Technical questions _only_ to								
+% Gerald Murray (murray@hq.acm.org)								% Gerald Murray (murray@hq.acm.org)								
+% ===========================================================								% ===========================================================								
+%								%								
+% For tracking purposes - this is V2.0 - May 2012								% For tracking purposes - this is V2.0 - May 2012								
+																
+\documentclass{sig-alternate}								\documentclass{sig-alternate}								
+\usepackage{multirow}								\usepackage{multirow}								
+\usepackage{fixltx2e}								\usepackage{fixltx2e}								
+\usepackage{xcolor}								\usepackage{xcolor}								
+\def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB								\def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB								
+\def\SP#1{\textsuperscript{\textcolor{black}{#1}}}								\def\SP#1{\textsuperscript{\textcolor{black}{#1}}}								
+\def\SB#1{\textsubscript{\textcolor{black}{#1}}}								\def\SB#1{\textsubscript{\textcolor{black}{#1}}}								
+\newcommand{\userquote}[2]{\begin{quote}							      |	\newenvironment{myquote}								
+     \em{\small{#2 \begin{flushright}---#1\end{flushright}}}							      |	               {\list{}{\rightmargin   \leftmargin								
+   \end{quote}}							      |	                        \parsep        0in }%								
+							      >	                \item\relax}								
+							      >	               {\endlist}								
+							      >	\newcommand{\userquote}[2]{\begin{samepage}\begin{myquote} 								
+							      >	     \em{\small{#2\begin{flushright}---#1\end{flushright}}}								
+							      >	   \end{myquote}\end{samepage}}								
+%Quote code								%Quote code								
+%\newif\ifquoteopen								%\newif\ifquoteopen								
+%\catcode`\"=\active % lets you define `"` as a macro								%\catcode`\"=\active % lets you define `"` as a macro								
+%\DeclareRobustCommand*{"}{%								%\DeclareRobustCommand*{"}{%								
+%   \ifquoteopen								%   \ifquoteopen								
+%     \quoteopenfalse ''%								%     \quoteopenfalse ''%								
+%   \else								%   \else								
+%     \quoteopentrue ``%								%     \quoteopentrue ``%								
+%   \fi								%   \fi								
+%}								%}								
+																
+%End of quote code								%End of quote code								
+																
+\begin{document}								\begin{document}								
+%								%								
+% --- Author Metadata here ---								% --- Author Metadata here ---								
+\conferenceinfo{ICTD 2016,}{June 03-06 2016, Michigan, USA}								\conferenceinfo{ICTD 2016,}{June 03-06 2016, Michigan, USA}								
+%\CopyrightYear{2007} % Allows default copyright year (20XX) 								%\CopyrightYear{2007} % Allows default copyright year (20XX) 								
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data								%\crdata{0-12345-67-8/90/01}  % Allows default copyright data								
+% --- End of Author Metadata ---								% --- End of Author Metadata ---								
+																
+%\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX								%\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX								
+%\title{Leveraging on Families' Social Interactions on Utiliz								%\title{Leveraging on Families' Social Interactions on Utiliz								
+\title{Leveraging Intermediated Interactions to Support Utili								\title{Leveraging Intermediated Interactions to Support Utili								
+%								%								
+% You need the command \numberofauthors to handle the 'placem								% You need the command \numberofauthors to handle the 'placem								
+% and alignment' of the authors beneath the title.								% and alignment' of the authors beneath the title.								
+%								%								
+% For aesthetic reasons, we recommend 'three authors at a tim								% For aesthetic reasons, we recommend 'three authors at a tim								
+% i.e. three 'name/affiliation blocks' be placed beneath the 								% i.e. three 'name/affiliation blocks' be placed beneath the 								
+%								%								
+% NOTE: You are NOT restricted in how many 'rows' of								% NOTE: You are NOT restricted in how many 'rows' of								
+% "name/affiliations" may appear. We just ask that you restri								% "name/affiliations" may appear. We just ask that you restri								
+% the number of 'columns' to three.								% the number of 'columns' to three.								
+%								%								
+% Because of the available 'opening page real-estate'								% Because of the available 'opening page real-estate'								
+% we ask you to refrain from putting more than six authors								% we ask you to refrain from putting more than six authors								
+% (two rows with three columns) beneath the article title.								% (two rows with three columns) beneath the article title.								
+% More than six makes the first-page appear very cluttered in								% More than six makes the first-page appear very cluttered in								
+%								%								
+% Use the \alignauthor commands to handle the names								% Use the \alignauthor commands to handle the names								
+% and affiliations for an 'aesthetic maximum' of six authors.								% and affiliations for an 'aesthetic maximum' of six authors.								
+% Add names, affiliations, addresses for								% Add names, affiliations, addresses for								
+% the seventh etc. author(s) as the argument for the								% the seventh etc. author(s) as the argument for the								
+% \additionalauthors command.								% \additionalauthors command.								
+% These 'additional authors' will be output/set for you								% These 'additional authors' will be output/set for you								
+% without further effort on your part as the last section in								% without further effort on your part as the last section in								
+% the body of your article BEFORE References or any Appendice								% the body of your article BEFORE References or any Appendice								
+																
+\numberofauthors{3} %  in this sample file, there are a *tota								\numberofauthors{3} %  in this sample file, there are a *tota								
+% of EIGHT authors. SIX appear on the 'first-page' (for forma								% of EIGHT authors. SIX appear on the 'first-page' (for forma								
+% reasons) and the remaining two appear in the \additionalaut								% reasons) and the remaining two appear in the \additionalaut								
+%								%								
+\author{								\author{								
+% You can go ahead and credit any number of authors here,								% You can go ahead and credit any number of authors here,								
+% e.g. one 'row of three' or two rows (consisting of one row 								% e.g. one 'row of three' or two rows (consisting of one row 								
+% and a second row of one, two or three).								% and a second row of one, two or three).								
+%								%								
+% The command \alignauthor (no curly braces needed) should								% The command \alignauthor (no curly braces needed) should								
+% precede each author name, affiliation/snail-mail address an								% precede each author name, affiliation/snail-mail address an								
+% e-mail address. Additionally, tag each line of								% e-mail address. Additionally, tag each line of								
+% affiliation/address with \affaddr, and tag the								% affiliation/address with \affaddr, and tag the								
+% e-mail address with \email.								% e-mail address with \email.								
+%								%								
+% 1st. author								% 1st. author								
+\alignauthor								\alignauthor								
+        Ntwa Katule \\								        Ntwa Katule \\								
+        %\affaddr{Institute for Clarity in Documentation}\\								        %\affaddr{Institute for Clarity in Documentation}\\								
+        %\affaddr{1932 Wallamaloo Lane}\\								        %\affaddr{1932 Wallamaloo Lane}\\								
+       % \affaddr{Wallamaloo, New Zealand}\\								       % \affaddr{Wallamaloo, New Zealand}\\								
+        %\email{trovato@corporation.com}								        %\email{trovato@corporation.com}								
+% 2nd. author								% 2nd. author								
+\alignauthor								\alignauthor								
+Melissa Densmore\\								Melissa Densmore\\								
+        %\affaddr{Institute for Clarity in Documentation}\\								        %\affaddr{Institute for Clarity in Documentation}\\								
+        %\affaddr{P.O. Box 1212}\\								        %\affaddr{P.O. Box 1212}\\								
+        %\affaddr{Dublin, Ohio 43017-6221}\\								        %\affaddr{Dublin, Ohio 43017-6221}\\								
+       % \email{webmaster@marysville-ohio.com}								       % \email{webmaster@marysville-ohio.com}								
+% 3rd. author								% 3rd. author								
+\alignauthor Ulrike Rivett\\								\alignauthor Ulrike Rivett\\								
+       %\affaddr{The Th{\o}rv{\"a}ld Group}\\								       %\affaddr{The Th{\o}rv{\"a}ld Group}\\								
+        %\affaddr{1 Th{\o}rv{\"a}ld Circle}\\								        %\affaddr{1 Th{\o}rv{\"a}ld Circle}\\								
+        %\affaddr{Hekla, Iceland}\\								        %\affaddr{Hekla, Iceland}\\								
+        %\email{larst@affiliation.org}								        %\email{larst@affiliation.org}								
+%\and  % use '\and' if you need 'another row' of author names								%\and  % use '\and' if you need 'another row' of author names								
+% 4th. author								% 4th. author								
+%\alignauthor Lawrence P. Leipuner\\								%\alignauthor Lawrence P. Leipuner\\								
+%       \affaddr{Brookhaven Laboratories}\\								%       \affaddr{Brookhaven Laboratories}\\								
+%       \affaddr{Brookhaven National Lab}\\								%       \affaddr{Brookhaven National Lab}\\								
+%       \affaddr{P.O. Box 5000}\\								%       \affaddr{P.O. Box 5000}\\								
+%       \email{lleipuner@researchlabs.org}								%       \email{lleipuner@researchlabs.org}								
+% 5th. author								% 5th. author								
+%\alignauthor Sean Fogarty\\								%\alignauthor Sean Fogarty\\								
+%       \affaddr{NASA Ames Research Center}\\								%       \affaddr{NASA Ames Research Center}\\								
+%       \affaddr{Moffett Field}\\								%       \affaddr{Moffett Field}\\								
+%       \affaddr{California 94035}\\								%       \affaddr{California 94035}\\								
+%       \email{fogartys@amesres.org}								%       \email{fogartys@amesres.org}								
+% 6th. author								% 6th. author								
+%\alignauthor Charles Palmer\\								%\alignauthor Charles Palmer\\								
+%       \affaddr{Palmer Research Laboratories}\\								%       \affaddr{Palmer Research Laboratories}\\								
+%       \affaddr{8600 Datapoint Drive}\\								%       \affaddr{8600 Datapoint Drive}\\								
+%       \affaddr{San Antonio, Texas 78229}\\								%       \affaddr{San Antonio, Texas 78229}\\								
+%       \email{cpalmer@prl.com}								%       \email{cpalmer@prl.com}								
+}								}								
+% There's nothing stopping you putting the seventh, eighth, e								% There's nothing stopping you putting the seventh, eighth, e								
+% author on the opening page (as the 'third row') but we ask,								% author on the opening page (as the 'third row') but we ask,								
+% for aesthetic reasons that you place these 'additional auth								% for aesthetic reasons that you place these 'additional auth								
+% in the \additional authors block, viz.								% in the \additional authors block, viz.								
+%\additionalauthors{Additional authors: John Smith (The Th{\o								%\additionalauthors{Additional authors: John Smith (The Th{\o								
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumq								%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumq								
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortiu								%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortiu								
+\date{30 July 1999}								\date{30 July 1999}								
+% Just remember to make sure that the TOTAL number of authors								% Just remember to make sure that the TOTAL number of authors								
+% is the number that will appear on the first page PLUS the								% is the number that will appear on the first page PLUS the								
+% number that will appear in the \additionalauthors section.								% number that will appear in the \additionalauthors section.								
+																
+\maketitle \begin{abstract} Behavior change support systems (							      |	\maketitle 								
+							      >									
+							      >	\begin{abstract} 								
+							      >	Behavior change support systems (BCSS) and								
+persuasive technologies for healthcare often entail users int								persuasive technologies for healthcare often entail users int								
+mobile devices. However, especially in developing countries, 								mobile devices. However, especially in developing countries, 								
+community is unfamiliar with and often intimidated by new tec								community is unfamiliar with and often intimidated by new tec								
+this paper we propose the use of  {\em{intermediaries}} to fa								this paper we propose the use of  {\em{intermediaries}} to fa								
+interaction with a mobile phone-based application and to moti								interaction with a mobile phone-based application and to moti								
+by the target beneficiaries. The application incentivizes uti								by the target beneficiaries. The application incentivizes uti								
+gamification techniques, using badges, scoreboards, and other								gamification techniques, using badges, scoreboards, and other								
+example, a young girl might help her father keep track of his								example, a young girl might help her father keep track of his								
+diet, maintaining participation as much for her father's heal								diet, maintaining participation as much for her father's heal								
+social awards given by the app.  We explain how intermediarie								social awards given by the app.  We explain how intermediarie								
+leveraged to improve utilization and engagement of the benefi								leveraged to improve utilization and engagement of the benefi								
+describe factors affecting interaction between the participat								describe factors affecting interaction between the participat								
+interaction with the application. This study highlights the i								interaction with the application. This study highlights the i								
+social rapport - typically through a familial relationship - 								social rapport - typically through a familial relationship - 								
+component of the intervention. Finally, we discuss the implic								component of the intervention. Finally, we discuss the implic								
+designing for the motivation of two different users: gamifica								designing for the motivation of two different users: gamifica								
+personalization and utility play different roles for the inte								personalization and utility play different roles for the inte								
+beneficiary but ultimately combine to make a more effective a								beneficiary but ultimately combine to make a more effective a								
+the beneficiary than one targeting the beneficiary alone. \en							      |	the beneficiary than one targeting the beneficiary alone. 								
+							      >	\end{abstract}								
+																
+% A category with the (minimum) three required fields								% A category with the (minimum) three required fields								
+\category{H.5m.}{Information interfaces and presentation}{Mis								\category{H.5m.}{Information interfaces and presentation}{Mis								
+\category{H.1.2.}{User/Machine Systems}{Human Factors}								\category{H.1.2.}{User/Machine Systems}{Human Factors}								
+%A category including the fourth, optional field follows...								%A category including the fourth, optional field follows...								
+\keywords{HCI4D, intermediated interactions, persuasive techn								\keywords{HCI4D, intermediated interactions, persuasive techn								
+																
+\section{Introduction} Approximately 1.3 billion people are c								\section{Introduction} Approximately 1.3 billion people are c								
+either overweight or obese worldwide, of which two-thirds are								either overweight or obese worldwide, of which two-thirds are								
+income or developing countries \cite{Steyn2006}. While this p							      |	income or developing countries ~\cite{Steyn2006}. While this 								
+be considered a ``first world problem'', urbanization and cha								be considered a ``first world problem'', urbanization and cha								
+have led to increasing problems for the low-income communitie								have led to increasing problems for the low-income communitie								
+developing world. For example, 60\% of South Africans are ove								developing world. For example, 60\% of South Africans are ove								
+four in 10 women that are either overweight or clinically								four in 10 women that are either overweight or clinically								
+obese\cite{ng:global}.							      |	obese~\cite{ng:global}.								
+																
+A typical intervention from the West might entail development								A typical intervention from the West might entail development								
+application to encourage healthy eating and exercise behavior								application to encourage healthy eating and exercise behavior								
+\cite{arsand:mobile,hamari2014persuasive}.  Persuasive applic							      |	~\cite{arsand:mobile,hamari2014persuasive}.  Persuasive appli								
+phones are particularly well-positioned for interventions tha								phones are particularly well-positioned for interventions tha								
+psychological processes, because they are pervasively present								psychological processes, because they are pervasively present								
+\cite{hsu2014persuasive}. Gamification, enabling self-reflect							      |	~\cite{hsu2014persuasive}. Gamification, enabling self-reflec								
+simple strategies such as SMS-based reminders all motivate po								simple strategies such as SMS-based reminders all motivate po								
+experiences and more frequent engagement								experiences and more frequent engagement								
+\cite{hamari2014persuasive,cole2010text} The subset of these 							      |	~\cite{hamari2014persuasive,cole2010text} The subset of these								
+that target collection of personal history entry, review and 								that target collection of personal history entry, review and 								
+broadly called personal informatics, or personal health infor								broadly called personal informatics, or personal health infor								
+health interventions.								health interventions.								
+																
+However these applications fail to replicate well to typical 								However these applications fail to replicate well to typical 								
+targeted by information and communications technology for dev								targeted by information and communications technology for dev								
+interventions \cite{kaplan2006can}. In part this is due to pr							      |	interventions ~\cite{kaplan2006can}. In part this is due to p								
+technology access: people do not own phones, share phones, or								technology access: people do not own phones, share phones, or								
+to use them.  In the context of obesity, many potential targe								to use them.  In the context of obesity, many potential targe								
+older, further exacerbating the problem. As a result, more ty								older, further exacerbating the problem. As a result, more ty								
+interventions target community health workers (CHWs) or other								interventions target community health workers (CHWs) or other								
+as facilitators of access to mobile content								as facilitators of access to mobile content								
+\cite{ramachandran2010mobile,ramachandran2010research,molapo2							      |	~\cite{ramachandran2010mobile,ramachandran2010research,molapo								
+However, Sambasivan et al suggest another resource - young gi								However, Sambasivan et al suggest another resource - young gi								
+the community can be leveraged as intermediaries for older ad								the community can be leveraged as intermediaries for older ad								
+interact with new technologies \cite{sambasivan2010}. Thus, w							      |	interact with new technologies ~\cite{sambasivan2010}. Thus, 								
+persuasive PHI might be more effective if it incorporates int								persuasive PHI might be more effective if it incorporates int								
+motivate participation.								motivate participation.								
+																
+In this paper, we present the results of a series of studies 								In this paper, we present the results of a series of studies 								
+townships in Cape Town, South Africa. In these studies, we ha								townships in Cape Town, South Africa. In these studies, we ha								
+mobile application to support PHI for overweight or pre-diabe								mobile application to support PHI for overweight or pre-diabe								
+application primarily incorporates gamification strategies su								application primarily incorporates gamification strategies su								
+badges, and leaderboards for motivating ongoing use. Each adu								badges, and leaderboards for motivating ongoing use. Each adu								
+intermediary to assist with use of the application, and is gi								intermediary to assist with use of the application, and is gi								
+use the application for two to six weeks. We identify charact								use the application for two to six weeks. We identify charact								
+effective intermediaries, highlighting social rapport as a ke								effective intermediaries, highlighting social rapport as a ke								
+towards effectiveness of the application. Using qualitative f								towards effectiveness of the application. Using qualitative f								
+participants, we also discuss important aspects of intermedia								participants, we also discuss important aspects of intermedia								
+and implications of intermediation on design of persuasive te								and implications of intermediation on design of persuasive te								
+Ultimately we find that intermediated persuasive technologies								Ultimately we find that intermediated persuasive technologies								
+way to improve engagement of adults with PHI.								way to improve engagement of adults with PHI.								
+																
+\section{Related Work} 								\section{Related Work} 								
+																
+Persuasive technologies have evolved from; prescriptive							      |	Persuasive technologies have evolved from prescriptive								
+nature of information flow in between health care providers a								nature of information flow in between health care providers a								
+recipients\cite{chatterjee2009healthy}; to behaviour change s							      |	recipients ~\cite{chatterjee2009healthy} to behaviour change 								
+(BCSS) \cite{langrial2012digital}. Oinas-kukkonen 							      |	(BCSS) ~\cite{langrial2012digital}. Oinas-kukkonen 								
+\cite{Oinas-Kukkonen:foundation} defined BCSS as `` a socio-t							      |	~\cite{Oinas-Kukkonen:foundation} defined BCSS as ``a socio-t								
+with psychological and behavioural outcomes designed to form,								with psychological and behavioural outcomes designed to form,								
+reinforce attitudes, behaviours or an act of complying withou								reinforce attitudes, behaviours or an act of complying withou								
+or deception''.								or deception''.								
+																
+In order for a system to be persuasive, the persuasion goal i								In order for a system to be persuasive, the persuasion goal i								
+intentional\cite{hamari2014persuasive}. Persuasive system des							      |	intentional ~\cite{hamari2014persuasive}. The persuasive syst								
+proposes a set of functionality required for a system to be c							      |	proposes a set of functionalities required for a system to be								
+persuasive technology \cite{Oinas-kukkonen:psd}. The first se							      |	persuasive technology ~\cite{Oinas-kukkonen:psd}. The first s								
+functionality are under primary task support which includes b							      |	functionalities fall under primary task support, which includ								
+to; reduction of complex behaviours into simple tasks; guidin							      |	to: reduction of complex behaviours into simple tasks; guidin								
+through experiences while persuade along the way; tailoring o								through experiences while persuade along the way; tailoring o								
+information to factors relevant to a user group; personalizat								information to factors relevant to a user group; personalizat								
+self-monitoring for users to keep track of their performance 							      |	and self-monitoring for users to keep track of their performa								
+goals etc. The second set of functionality is dialogue suppor							      |	goals. The second set of functionalities fall under dialogue 								
+praises, rewards, reminders, similarity, liking, and social r							      |	praises, rewards, reminders, similarity, liking, and social r								
+set functionality is system credibility support which include							      |	set functionalities fall under system credibility support, wh								
+trustworthiness, expertise, surface credibility etc. The last								trustworthiness, expertise, surface credibility etc. The last								
+functionality emphasizes on the role of social support which 							      |	functionalities emphasize the role of social support, which i								
+learning, social comparison, competition etc.							      |	learning, social comparison, and competition.								
+																
+Of recent gamification is also garnering popularity as one of							      |	Gamification is also garnering popularity as a means to								
+persuade people because of its ability to invoke users' intri								persuade people because of its ability to invoke users' intri								
+through gameful experiences \cite{hamari2014persuasive}. Gami							      |	through gameful experiences ~\cite{hamari2014persuasive}. Gam								
+use of game design elements in non-game contexts \cite{deterd							      |	use of game design elements in non-game contexts ~\cite{deter								
+an objective of increasing engagement in a particular activit								an objective of increasing engagement in a particular activit								
+review on peer reviewed studies found that gamification provi								review on peer reviewed studies found that gamification provi								
+effects and these effects are highly dependent on both the co								effects and these effects are highly dependent on both the co								
+gamification is implemented and the users using it \cite{hama							      |	gamification is implemented and the users using it ~\cite{ham								
+Hamari and Koivisto \cite{hamari2013social} found out that so							      |	Hamari and Koivisto ~\cite{hamari2013social} found out that s								
+for use of a gamified service/system are attributed to social								for use of a gamified service/system are attributed to social								
+recognition, reciprocal benefit, and network exposure. Some o								recognition, reciprocal benefit, and network exposure. Some o								
+attributes resonates to the functionality proposed on the afo							      |	attributes resonate with the functionality proposed on the af								
+model for BCSS.								model for BCSS.								
+																
+Typically a BCSS aims at sustaining engagement over a long pe							      |	Typically a BCSS will aim at sustaining engagement over a lon								
+\cite{Oinas-Kukkonen:foundation}. Existing literature suggest							      |	~\cite{Oinas-Kukkonen:foundation}, but only considers single 								
+system to engage a targeted user alone, hence intermediaries 							      |	Existing literature does not consider how to design systems t								
+considered as part of the engagement. In this work, we seek t							      |	intermediaries								
+							      >	as part of the engagement. In this work, we seek to understan								
+can one sustain engagement in the context of intermediated in								can one sustain engagement in the context of intermediated in								
+explore important human factors on intermediated interactions							      |	explore important human factors in intermediated interactions								
+utilization of persuasive personal health informatics (PHI) t								utilization of persuasive personal health informatics (PHI) t								
+behavior change. In the next sub-sections, we discuss literat								behavior change. In the next sub-sections, we discuss literat								
+relationships in the context of intermediated technology use,								relationships in the context of intermediated technology use,								
+of human intermediaries in health behavior change through ICT								of human intermediaries in health behavior change through ICT								
+																
+							      >	\subsection{Intermediaries in ICTs for Healthy Behavior Chang								
+							      >									
+							      >	In the context of ICTD, human intermediaries have been previo								
+							      >	behavior change interventions. One study								
+							      >	~\cite{ramachandran2010mobile,ramachandran2010research} in In								
+							      >	health workers (CHWs) with help of mobile messages to persuad								
+							      >	women together with their relatives on maternal health issues								
+							      >	health workers interacted with mobile phones to access persua								
+							      >	share with their clients. Another study by Molapo and Marsden								
+							      >	~\cite{molapo2013software}  empowered rural health trainers w								
+							      >	application that allows them to create digital  training  con								
+							      >	low-literate 								
+							      >	CHWs in Lesotho, using images, voice-over, and  video clips.								
+							      >	While intended only for training, CHWs also chose to save tho								
+							      >	clients, having the unintentional								
+							      >	effect of persuading people to get tested for diseases such a								
+							      >	tuberculosis. In this context CHWs were acting as intermediar								
+							      >	provided access to information that had persuasive effects. 								
+							      >	CHWs are an oft-used intermediary for communities in which di								
+							      >	health resources is difficult, and are an effective bridge be								
+							      >	and government-based resources.  However, they are ultimately								
+							      >	typically interacting with potential beneficiaries only once 								
+							      >	Furthermore, in this case, while CHWs are intermediaries with								
+							      >	information, facilitating beneficiary access to mobile media.								
+							      >	case of personal health informatics, we expect that the benef								
+							      >	be the primary users of the mobile device, and choose to expl								
+							      >	access might be facilitated by intermediaries.  As such, CHW 								
+							      >	ultimately too limited for our typically-older and less techn								
+							      >	target beneficiaries, and we build upon Sambisavan's example 								
+							      >	\em{proximate translation}~\cite{sambasivan2010} by leveragin								
+							      >	of the same household to								
+							      >	sustain an ongoing use of a BCSS even when CHWs are not avail								
+							      >									
+							      >									
+\subsection{Social Relationships in Intermediated Interaction								\subsection{Social Relationships in Intermediated Interaction								
+																
+Poole et al.\cite{poole:chh}, explored extensively the dynami							      |	Poole et al.~\cite{poole:chh}, explored extensively the dynam								
+help-seeking and giving behaviors in the context of family an								help-seeking and giving behaviors in the context of family an								
+settings, and highlighted that one of the factors that contri							      |	settings. One of the factors that contributes to help-								
+seeking behaviors is availability of unlimited help provided 								seeking behaviors is availability of unlimited help provided 								
+longer-term relationship, while for help-givers what motivate							      |	longer-term relationship, while  help-givers are motivated by								
+of being accountable to their family and friends.								of being accountable to their family and friends.								
+																
+Parikh and Ghosh \cite{parikh2006} were one of the early pion							      |	Parikh and Ghosh ~\cite{parikh2006} were early pioneers in br								
+(human-computer interaction) perspective in trying to underst							      |	(human-computer interaction) perspective towards understandin								
+intermediation in the context of developing world. Their work							      |	intermediation in the context of developing world. Their work								
+understanding of a taxonomy of intermediated information task								understanding of a taxonomy of intermediated information task								
+different modes of access have their own design requirements 								different modes of access have their own design requirements 								
+cooperative versus dominated interactions or intermediated ve								cooperative versus dominated interactions or intermediated ve								
+interactions. Sambasivan et al.\cite{sambasivan2010} further 							      |	interactions. Sambasivan et al.~\cite{sambasivan2010} further								
+ethnographic study in Urban slums of Bangalore in India and p							      |	ethnographic study in urban slums of Bangalore in India and p								
+following design implications ; positioning and reorientation							      |	following design implications: that technology should be reor								
+allow sharing and supporting secondary users (beneficiary use							      |	allow sharing and supporting secondary users (beneficiary use								
+persistent storage of information for retrieval at later stag							      |	persistent storage of information for retrieval at later stag								
+metrics of use should go beyond ownership to measuring the ab								metrics of use should go beyond ownership to measuring the ab								
+from use; and design for asymmetric engagement. Their work fu							      |	from use; and that designs should consider and enable asymmet								
+the critical role of human relations such as interpersonal tr							      |	Their work further emphasizes								
+							      >	the critical role of human relations, such as interpersonal t								
+of intermediated interactions. The concept of social relation								of intermediated interactions. The concept of social relation								
+implicitly discussed by Sukumaran et al. \cite{sukumaran2009i							      |	implicitly discussed by Sukumaran et al. ~\cite{sukumaran2009								
+reported about an experiment carried out to investigate if so							      |	report on an experiment carried out to investigate if social 								
+of an intermediary versus technology affects perceived inform								of an intermediary versus technology affects perceived inform								
+characteristics and attitudes towards an interaction by a ben								characteristics and attitudes towards an interaction by a ben								
+Their preliminary findings suggest that when the technology w								Their preliminary findings suggest that when the technology w								
+and an intermediary did not monopolize access (situation of s								and an intermediary did not monopolize access (situation of s								
+participants tended to feel more engaged and positive. Ramire								participants tended to feel more engaged and positive. Ramire								
+\cite{ramirez2013infomediaries} studied of how human factors 							      |	~\cite{ramirez2013infomediaries} studied of how human factors								
+and technical skills of infomediaries influence the outcomes 								and technical skills of infomediaries influence the outcomes 								
+infomediation to users at public access venues.								infomediation to users at public access venues.								
+																
+In order to sustain frequency of interaction with a particula								In order to sustain frequency of interaction with a particula								
+aforementioned initiatives rely on innate intrinsic motivatio								aforementioned initiatives rely on innate intrinsic motivatio								
+and beneficiary users. As discussed in \cite{sambasivan2010},							      |	and beneficiary users. As discussed by Sambasivan et al. ~\ci								
+for interaction is initiated by beneficiaries, and intermedia								for interaction is initiated by beneficiaries, and intermedia								
+based to existing reciprocal benefits or prior social relatio							      |	based on existing reciprocal benefits or prior social relatio								
+Therefore, instigation to engage with a system is mediated by								Therefore, instigation to engage with a system is mediated by								
+behaviors of beneficiary users. Intermediaries' decision to h							      |	behaviors of beneficiary users. An intermediary's decision to								
+by prior social relationships.								by prior social relationships.								
+																
+In our approach we continue to emphasize strengthening of exi								In our approach we continue to emphasize strengthening of exi								
+relationships through motivational strategies that aim to inc								relationships through motivational strategies that aim to inc								
+experience of both intermediary and beneficiary users. We rep							      |	experience of both intermediary and beneficiary users. We rep								
+motivational factors that increase the frequency of help-seek								motivational factors that increase the frequency of help-seek								
+beneficiary users;and (2) factors to motivate intermediaries 							      |	beneficiary users and (2) factors that motivate intermediarie								
+help-giving in interacting with a BCSS instead of relying on 								help-giving in interacting with a BCSS instead of relying on 								
+relationships or beneficiaries' help-seeking behaviors alone.							      |	relationships or beneficiaries' help-seeking behaviors alone.								
+BCSS is to sustain engagement, existing literature doesn't su							      |	We suggest that designing BCSS to enable intermediary engagem								
+motivate the two users to engage with a behavior change suppo							      |	increase sustained engagement on the part of the beneficiary.								
+regularly.							      <
+							      <
+\subsection{Intermediaries in ICTs for Healthy Behavior Chang							      <
+																
+In the context of ICTD, human intermediaries have been previo							      <
+behavior change interventions. One study							      <
+\cite{ramachandran2010mobile,ramachandran2010research} in Ind							      <
+health workers with help of mobile messages to persuade pregn							      <
+women together with their relatives on maternal health issues							      <
+health workers interacted with mobile phones to access persua							      <
+share with their clients. Another study by Molapo and Marsden							      <
+\cite{molapo2013software},  empowered rural health trainers w							      <
+application that allows them to create digital  training  con							      <
+literate community health workers (CHWs) in Lesotho. The digi							      <
+mobile videos created from  combining  images, voice-over and							      <
+When CHW shared these videos with their clients some of them 							      <
+persuasive effect that persuaded people to get tested for dis							      <
+tuberculosis (TB). In this context CHWs were acting as interm							      <
+provided access to information that had persuasive effects. H							      <
+context is different as we are using intermediaries within fa							      <
+sustain an ongoing use of a BCSS even when CHWs are not avail							      <
+																
+\section{Context}								\section{Context}								
+																
+Both overweight and obesity are associated with increased inc								Both overweight and obesity are associated with increased inc								
+multiple co-morbidities including type 2 diabetes, cancer and								multiple co-morbidities including type 2 diabetes, cancer and								
+diseases (CVD)\cite{guh2009incidence}. Obesity is a developme							      |	diseases (CVD)~\cite{guh2009incidence}. Obesity is a developm								
+since it has both an indirect implication on health care syst								since it has both an indirect implication on health care syst								
+domestic product (GDP). Abegunde et al.\cite{abegunde:theburd							      |	domestic product (GDP). Abegunde et al.~\cite{abegunde:thebur								
+total of 23 low-income and middle-income countries found out 								total of 23 low-income and middle-income countries found out 								
+US\$84 billion of economic production was going to be lost in								US\$84 billion of economic production was going to be lost in								
+2015 from heart disease, stroke, and diabetes alone if there 								2015 from heart disease, stroke, and diabetes alone if there 								
+measures in place.								measures in place.								
+																
+We carried out this work in South Africa. South Africa is one							      |	We carried out this work in Cape Town, South Africa. South Af								
+developing countries having been most affected by the current								developing countries having been most affected by the current								
+\cite{ali2009factors}. According to data on human development							      |	~\cite{ali2009factors}. According to data on human developmen								
+country, South Africa is among countries grouped in medium HD								country, South Africa is among countries grouped in medium HD								
+systematic review by Dinsa et al \cite{dinsa2012obesity} reve							      |	systematic review by Dinsa et al ~\cite{dinsa2012obesity} rev								
+countries in the group of medium HDI, the relationship betwee								countries in the group of medium HDI, the relationship betwee								
+status (SES) and obesity is; largely mixed for men meaning th							      |	status (SES) and obesity is largely mixed for men meaning tha								
+high SES and low SES are affected;  and mainly negative for w							      |	high SES and low SES are affected,  and mainly negative for w								
+women with low SES are more at risky compared to their counte							      |	women with low SES are more at risk compared to their counter								
+SES.  This suggests obesity is also affecting the poor in cou								SES.  This suggests obesity is also affecting the poor in cou								
+Africa. Within South African context obesity is affecting dif							      |	Africa. Within South African context obesity affects differen								
+including old adults \cite{ali2009factors}. The focus of our 							      |	including old adults ~\cite{ali2009factors}. Thus, the focus 								
+primarily on adults from low income suburbs who are not very 								primarily on adults from low income suburbs who are not very 								
+technology. We targeted this group since most persuasive PHI 							      |	technology. We targeted this group since most persuasive PHI 								
+group which is also affected by obesity.							      |	target them, despite the prevelance of obesity in the populat								
+																
+In initial testing and evaluation of the software prototype w								In initial testing and evaluation of the software prototype w								
+worked with participants from Philippi and Langa in Cape Town								worked with participants from Philippi and Langa in Cape Town								
+The two suburbs were previously designated for people who wer								The two suburbs were previously designated for people who wer								
+during apartheid era. In 2011 the population of Langa was 524							      |	during apartheid era. In 2011 the population of Langa was 52,								
+households of which 72\% of households  had a monthly income 							      |	households of which 72\% of households  had a monthly income 								
+(~US\$300) or less. Also the same year the population in Phil							      |	(\~US\$210) or less. In the same year the population in Phili								
+with 61797 households of which the monthly income of 78\% of 							      |	with 61,797 households of which the monthly income of 78\% of								
+was also R 3200 or less. These data are available at the webs							      |	was also ZAR3200 or less. These data are available at the web								
+municipality\footnote{https://www.capetown.gov.za/}.    The c								municipality\footnote{https://www.capetown.gov.za/}.    The c								
+income earners in South Africa is R 54,344 per annum(~US\$ 50							      |	income earners in South Africa is ZAR54,344 per annum (\~US\$								
+annum)\footnote{This data was retrieved on 18 \SP{th} of Nove							      |	annum)\footnote{This data was retrieved on 18\SP{th} of Novem								
+this website http://www.unisa.ac.za/news/wp-content/uploads/2							      |	http://www.unisa.ac.za/news/wp-content/uploads/2013/01/Househ								
+income-and-expenditure-patterns-Press-Release-3Jan2012.pdf}.								income-and-expenditure-patterns-Press-Release-3Jan2012.pdf}.								
+																
+\section{System Description}								\section{System Description}								
+																
+The system comprised of two parts as shown in Figure \ref{fig							      |	The system is composed of two parts as shown in Figure~\ref{f								
+first part was a  native pedometer application developed usin							      |	first part is a  native pedometer application developed using								
+code. The second part consisted of a web application hosted o							      |	code. The second part consists of a web application hosted on								
+University of Cape Town. The pedometer was sending all steps 							      |	University of Cape Town. The pedometer sends a count of all s								
+application. The web application allowed users to view steps'							      |	the holder of the mobile phone to the web								
+to record meals eaten by beneficiaries. Additional features i							      |	application. The web application allows users to view step gr								
+sub-system of where we implemented gamification motivators su							      |	to record meals eaten by beneficiaries. Additional features i								
+leader board, botanical garden and fish tank. Rewards were ea							      |	sub-system in which we implemented gamification motivators su								
+							      >	leaderboard, a botanical garden, and fish tank. Rewards were 								
+uses the application for both viewing of steps and  recording								uses the application for both viewing of steps and  recording								
+beneficiary user walks a number of steps that exceed a certai								beneficiary user walks a number of steps that exceed a certai								
+has been set for a particular level of gamification. As a ben								has been set for a particular level of gamification. As a ben								
+walks more steps and an application is used more regularly, a							      |	walks more steps and the application is used more regularly, 								
+that forms a team (a beneficiary and an intermediary)  stands							      |	that forms a team (a beneficiary and an intermediary) will ga								
+more advanced badges. An advanced badge gives more resources 								more advanced badges. An advanced badge gives more resources 								
+garden or fish tank. Also more fruits and vegetables recorded							      |	garden or fish tank. Also, users can improve upon the quality								
+the quality of the garden or fish tank. Users could receive t							      |	and fish tanks by adopting healthier eating habits and record								
+							      >	consumption of								
+							      >	 more fruits and vegetables recorded.								
+							      >	Users receive text messages that								
+update them on their status and tips on how to improve on bad								update them on their status and tips on how to improve on bad								
+fish tanks. Text messages are personalized and they are addre								fish tanks. Text messages are personalized and they are addre								
+intermediaries. Each message starts with with an informal gre								intermediaries. Each message starts with with an informal gre								
+name of the person and finishes with either a reminder, a tip								name of the person and finishes with either a reminder, a tip								
+rewards, or a feedback on status about rewards. Figure \ref{f							      |	rewards, or a feedback on status about rewards. Figure~\ref{f								
+shows some of the user interfaces.							      |	shows screenshots of the web interface.								
+																
+ \begin{figure*}								 \begin{figure*}								
+\centering								\centering								
+\epsfig{file=screen.png, height=1.8in, width=6in}							      |	\epsfig{file=screen.png, height=1.8in, width=3.3in}								
+\caption{Information flow inside the system}								\caption{Information flow inside the system}								
+\label{figure:infflow}								\label{figure:infflow}								
+\end{figure*}								\end{figure*}								
+\begin{figure}								\begin{figure}								
+\centering								\centering								
+\epsfig{file=screens.png, height=3in, width=3in}							      |	\epsfig{file=screens.png, height=3in, width=2.4in}								
+\caption{Sample screen-shots from the system}							      |	\caption{Sample screenshots from the system}								
+\label{figure:screens}								\label{figure:screens}								
+\end{figure}								\end{figure}								
+																
+\section{Methods}								\section{Methods}								
+\subsection{Contextual Inquiry}								\subsection{Contextual Inquiry}								
+																
+We conducted a contextual inquiry using a series of semi-stru								We conducted a contextual inquiry using a series of semi-stru								
+with diabetic patients at a diabetes and endocrinology clinic							      |	with 								
+hospital in Cape Town. This was conducted in between March an							      |	a convenience sample of								
+							      >	diabetic patients at a diabetes and endocrinology clinic of G								
+							      >	Hospital in Cape Town. This was conducted in between March an								
+2013. The objective was to understand patterns in utilization								2013. The objective was to understand patterns in utilization								
+technology among adults obese patients. This study was approv								technology among adults obese patients. This study was approv								
+respective institution's ethical review body.								respective institution's ethical review body.								
+																
+We interviewed a total of thirty participants of which 67\% (								We interviewed a total of thirty participants of which 67\% (								
+females.  The average age of these participants was 53.13 yea							      |	females.  The average age of these participants was 53 years 								
+standard deviation of 11.77 years old.  Almost 86\% (26) of p							      |	standard deviation of 11.8 years.  Almost 86\% (26) of partic								
+above 40 years of age. Majority of the participants were eith							      |	above 40 years of age. A majority of the participants were ei								
+obese from low income suburbs of Cape Town. Nineteen particip							      |	obese and from low income suburbs of Cape Town. Nineteen part								
+unemployed or on a disability grant. Participants were approa							      |	unemployed or on a disability grant. Participants were approa								
+							      >	opportunistically as								
+they waited to see their physicians. To ensure confidentialit								they waited to see their physicians. To ensure confidentialit								
+were conducted in one of the vacant consultation rooms. One r								were conducted in one of the vacant consultation rooms. One r								
+research assistant carried out the interviews. The main topic								research assistant carried out the interviews. The main topic								
+structured interviews were centred around participants' gener								structured interviews were centred around participants' gener								
+cellphones, and whether they seek help from their intermediar							      |	mobile phones, whether they seek help from intermediaries, an								
+they prefer to act as their intermediaries.							      |	preferred intermediaries are.								
+																
+Although eighteen participants had access to smart-phones, ut							      |	Although eighteen participants had access to smartphones, uti								
+features was not beyond SMS and voice in majority of the part								features was not beyond SMS and voice in majority of the part								
+26 people whom were forty years of age and above, not more th								26 people whom were forty years of age and above, not more th								
+already used internet based services (i.e Email, Whatsapp, ge							      |	already used Internet-based services (e.g. e-mail, WhatsApp, 								
+browsing, Facebook, etc.) before. This suggests that majority							      |	browsing, Facebook). This suggests that majority of the aged								
+participants were likely to be less conversant with cellphone								participants were likely to be less conversant with cellphone								
+three participants had used their cellphones in management of							      |	three participants had used their cellphones in management of								
+i.e. to look for information on the Internet or to participat							      |	to look for information on the Internet and to participate in								
+support groups on Facebook. Only one participant had used a p								support groups on Facebook. Only one participant had used a p								
+																
+On responses to whether participants seek assistance from int							      |	We also								
+found that, twenty participants had asked for informal help f							      |	found that twenty participants had asked for informal help fr								
+intermediaries before, in tasks such as; (1) to setup or conf							      |	intermediaries before, in tasks such as: (1) to setup or conf								
+and apps on their phones (i.e. Whatsapp,Facebook); (2) to be 							      |	and apps on their phones (e.g. Whatsapp, Facebook); (2) to be								
+operate or navigate through certain features (i.e. a phone bo							      |	operate or navigate through certain features (e.g. a phone bo								
+unfamiliar cellphone,Whatsapp, etc); and (3) to be helped in 							      |	unfamiliar cellphone, Whatsapp); and (3) to be helped in inte								
+certain features such as SMS, Internet browsing etc. The leve								certain features such as SMS, Internet browsing etc. The leve								
+on intermediaries varied depending on frequency of tasks at h								on intermediaries varied depending on frequency of tasks at h								
+as configuration of services and apps or teaching of individu								as configuration of services and apps or teaching of individu								
+the beginning when there is a new application or device. When								the beginning when there is a new application or device. When								
+were not capable of interacting with applications that they u							      |	are not capable of interacting with applications that they us								
+they will seek for help more often. For either of these tasks							      |	they seek help more frequently. For either of these tasks, pa								
+chose trusted individuals to act as their intermediaries whom							      |	chose trusted individuals to act as their intermediaries, typ								
+their children and grandchildren in most cases or children of							      |	their children and grandchildren or, less frequently, childre								
+friends, or someone at a cellphone shop in fewer cases. On th							      |	friends, or someone at a cellphone shop. 23 out 30 participan								
+choice of intermediaries, 23 out 30 participants preferred to							      |	members act as their intermediaries.								
+members to act as their intermediaries.							      <
+																
+Apart from utilization of help from intermediaries, we also o								Apart from utilization of help from intermediaries, we also o								
+of the participants share their phones with their intermediar								of the participants share their phones with their intermediar								
+borrow  their parents' phones to search for school materials 								borrow  their parents' phones to search for school materials 								
+or to use social network services such as Facebook,Mxit etc. 							      |	or to use social network services such as Facebook or Mxit. F								
+participant who had a blackberry smart phone reported that sh							      |	participant who had a Blackberry smartphone reported that she								
+Internet on her phone but her kids use it to do their assignm							      |	Internet on her phone but her kids use it to do their assignm								
+							      >	example of shared device use.								
+																
+Our preliminary findings of this contextual enquiry indicated							      |	Our findings from this contextual enquiry indicate that  a ma								
+the aged participants relied on expertise of their younger fa								the aged participants relied on expertise of their younger fa								
+solving problems on both setting up of cellphones and interac								solving problems on both setting up of cellphones and interac								
+specific user interfaces.  The majority of responses show tha							      |	specific applications.  The majority of responses show that t								
+participants were assisted by their sons, daughters, and gran							      |	participants were assisted by their sons, daughters, and gran								
+showed that it will be interesting to implement a technology 							      |	Based on this observation, we decided to implement a technolo								
+utilized through young intermediaries in a family. This findi							      |	utilized through young intermediaries in a family. This findi								
+to inform the design of gamification and the choice of interm							      |	motivated the use of gamification and the choice of intermedi								
+group in phases of evaluation that are explained in the next 								group in phases of evaluation that are explained in the next 								
+																
+\subsection{Iterative Design and Evaluation I}								\subsection{Iterative Design and Evaluation I}								
+																
+We conducted two iterations of design. The first iteration st								We conducted two iterations of design. The first iteration st								
+2013. We developed the first prototype of a web application. 								2013. We developed the first prototype of a web application. 								
+could allow users to self-monitor their diet and walking patt								could allow users to self-monitor their diet and walking patt								
+addition, we implemented a reward system that paired a benefi								addition, we implemented a reward system that paired a benefi								
+an intermediary user in a team that could compete with other 								an intermediary user in a team that could compete with other 								
+each team were presented on points, badges, and based on appe							      |	each team are presented as points, badges, and the appearance								
+							      >	in the 								
+tanks and botanical gardens. Within each botanical garden and								tanks and botanical gardens. Within each botanical garden and								
+was a Facebook social plug-in that could allow users from dif							      |	was a Facebook social plug-in that allowed users from differe								
+comment or like on each other. We also utilized Facebook grou							      |	comment on or like each other. We also utilized Facebook grou								
+users to engage with the application.								users to engage with the application.								
+																
+In order to test our application, we recruited participants t								In order to test our application, we recruited participants t								
+based in Cape Town called ``\textbf{\textit{Mamelani Projects								based in Cape Town called ``\textbf{\textit{Mamelani Projects								
+carries out outreach programs on health education in less pri								carries out outreach programs on health education in less pri								
+communities. The NGO agreed that they would help us to recrui							      |	communities. Mamelani trains women them on								
+							      >	issues of HIV/AIDS, nutrition, and gender equality. 								
+							      >	The NGO agreed to help us to recruit participants								
+among people they were training. We gave them the following r								among people they were training. We gave them the following r								
+criteria; (1) we want participants who were above mid-aged; a							      |	criteria: (1) we want participants who were aged 35 or above 								
+participants must have an intermediary to help them. The NGO 								participants must have an intermediary to help them. The NGO 								
+identifying the targeted participants in Philippi township, t							      |	identifying the targeted participants in Philippi township, w								
+NGO was conducting its trainings at that moment. This particu							      |	NGO was conducting its own activities. T We recruited a total								
+program of the NGO was only working with women. They were tra							      <
+issues of HIV/AIDS, nutrition, and gender equality. We recrui							      <
+six participants whom were women above middle age (>=35 years								six participants whom were women above middle age (>=35 years								
+																
+After recruitment of the six adults, each one of them brought								After recruitment of the six adults, each one of them brought								
+to work together with them in a pair. Three intermediaries we								to work together with them in a pair. Three intermediaries we								
+between 19-23 years of age. The remaining three intermediarie								between 19-23 years of age. The remaining three intermediarie								
+between 14 and 19 years of age. All Participants (intermediar							      |	between 14 and 19 years of age. 								
+							      >	We informed participants about the objectives of the study,								
+							      >	that logs on their usage of the phones would be collected, an								
+							      >	their rights as research participants.								
+							      >	All participants (intermediaries and								
+beneficiaries) signed consent forms except for intermediaries								beneficiaries) signed consent forms except for intermediaries								
+These minors  signed assent forms that were approved by their							      |	These minors signed assent forms that were approved by their 								
+parents/guardians. We gave enough information about what the 							      |	parents/guardians. 								
+about and what information we will be collecting through logs							      |	After signing of consent and								
+were made aware that their information will be collected by t							      <
+phones, before agreeing to be part of the study. After signin							      <
+assent forms, intermediaries were trained on how to use the a								assent forms, intermediaries were trained on how to use the a								
+the application to the field from the end of October 2014 to 								the application to the field from the end of October 2014 to 								
+December 2014. Each pair of participants was given one Androi							      |	December 2014. In order to control the application environmen								
+GT-S5300) running a pedometer app. Participants were required							      |	potential complications from deploying the intervention on mu								
+							      >	each pair of participants was given one Android phone (Samsun								
+							      >	GT-S5300) running the pedometer app. Participants were requir								
+web application hosted in our institution's server. We gave o								web application hosted in our institution's server. We gave o								
+incentive to each participant including intermediaries. Every								incentive to each participant including intermediaries. Every								
+participant would get R 30 (USD 3) worth of airtime.							      |	participant got ZAR30 (\~US\$3) worth of airtime.								
+																
+In that period of deployment, only two pairs of users engaged								In that period of deployment, only two pairs of users engaged								
+for a few days. For of these two pairs, a beneficiary and an 							      |	for more than a few days. Both of these two pairs consisted o								
+lived in the same house and the pairs consisted of mothers wo							      |	and an  intermediary								
+							      >	living in the same house--- the pairs consisted of mothers wo								
+sons. One of these two pairs was very motivated and enthusias								sons. One of these two pairs was very motivated and enthusias								
+system. But after sometime they also got bored because they w							      |	system. But after some time they also got bored because they 								
+any competition from other teams and they had attained all th								any competition from other teams and they had attained all th								
+within a short period of time. In a third pair, a girl was wo								within a short period of time. In a third pair, a girl was wo								
+mother but they were not living together so it was difficult 								mother but they were not living together so it was difficult 								
+to the application. Intermediaries from the remaining two pai							      |	to the application. Intermediaries from the remaining two pai								
+little enthusiasm in the all project. We hypothesized this to							      |	little enthusiasm in the project. We hypothesized this to be 								
+motivation to engage with gamification and a prior social rel							      |	motivation to engage with gamification and a lack of a prior 								
+two users within a pair. Findings from this informative evalu							      |	between								
+							      >	the two users within each pair. Findings from this informativ								
+another iteration in the design. It also informed the manner 								another iteration in the design. It also informed the manner 								
+going to conduct future evaluations.								going to conduct future evaluations.								
+																
+We started another iteration of design in January 2015 to add								We started another iteration of design in January 2015 to add								
+drawbacks encountered during testing of the first prototype. 								drawbacks encountered during testing of the first prototype. 								
+version we improved the gamification part to make it more cha								version we improved the gamification part to make it more cha								
+also integrated SMS reminders. In the next sub section we dis								also integrated SMS reminders. In the next sub section we dis								
+evaluation of the improved system.								evaluation of the improved system.								
+ 								 								
+\subsection{Evaluation II}								\subsection{Evaluation II}								
+																
+After fixing the bugs, we conducted another round of evaluati								After fixing the bugs, we conducted another round of evaluati								
+another group of participants who resided in another side of 								another group of participants who resided in another side of 								
+recruitment was facilitated by the same NGO in evaluation I. 							      |	recruitment was facilitated by the same NGO in Evaluation I. 								
+commencement of the study, the NGO advised that we withdraw f								commencement of the study, the NGO advised that we withdraw f								
+participants addressed some concerns regarding safety issues.								participants addressed some concerns regarding safety issues.								
+safe, hence experimental phones would pose risks to both part								safe, hence experimental phones would pose risks to both part								
+researcher. Therefore we made a decision to look for another 							      |	researcher. In response, we terminated this study and sought 								
+and Langa township was much better in terms of security.							      |	Langa, which as a smaller and more central township is safer 								
+							      >									
+							      >	As an aside, this incident highlights some of the limits and 								
+							      >	smartphone-based interventions in low-income areas~\cite{Mola								
+							      >	However, we still believe								
+							      >	that this study has relevance, even for residents of Philippi								
+							      >	usage is not limited to smartphone applications. For example,								
+							      >	campaigns are not specifically designed for intermediated int								
+							      >	not inconceivable that a family member would assist a target 								
+							      >	in an informal proximate interaction~\cite{Sambasivan2010}.								
+																
+This time we successfully deployed the app in Langa township.							      |	In Langa, we worked with a								
+research assistant who is a resident of Langa. The research a							      |	research facilitator who is a resident of Langa. The research								
+with the recruitment process. This time we adjusted criteria 								with the recruitment process. This time we adjusted criteria 								
+based on lessons learned during the first deployment in Phili								based on lessons learned during the first deployment in Phili								
+for recruitment were (1) adults from mid-aged and above and;(							      |	for recruitment were (1)~adults aged 35 and above with (2)~sc								
+school going children living with them or living nearby.							      |	children living with them or living nearby.								
+																
+Prior to deployment we provided participants with information								Prior to deployment we provided participants with information								
+Participants were made aware that the study's cellphone will 								Participants were made aware that the study's cellphone will 								
+their information related to steps and diet and transfer it t								their information related to steps and diet and transfer it t								
+researcher's computer at University of Cape Town. Participant								researcher's computer at University of Cape Town. Participant								
+signed assent forms approved by their guardians/parents who w								signed assent forms approved by their guardians/parents who w								
+the study. All other participants signed consent forms.   We 								the study. All other participants signed consent forms.   We 								
+of nine adults (3 men and 6 women). Each adult brought one ki								of nine adults (3 men and 6 women). Each adult brought one ki								
+intermediary hence they formed a pair. There were 3 boys and 								intermediary hence they formed a pair. There were 3 boys and 								
+adults were relatives of the kids except for one adult who wa								adults were relatives of the kids except for one adult who wa								
+the grandmother of her intermediary. All intermediaries were 							      |	the grandmother of her intermediary. All intermediaries were 								
+children but one.  We administered a questionnaire at baselin								children but one.  We administered a questionnaire at baselin								
+demographics information such as age, familiarity with cellph							      |	demographic information such as age, familiarity with cellpho								
+determination to use cellphone which assesses the intrinsic m								determination to use cellphone which assesses the intrinsic m								
+engage with cellphones. Questionnaires were translated and ma								engage with cellphones. Questionnaires were translated and ma								
+both English and Isixhosa. Only seven beneficiary participant							      |	both English and IsiXhosa. Only seven beneficiary participant								
+baseline survey. All the nine kids completed the baseline sur							      |	baseline survey. All nine of the kids completed the baseline 								
+for adults was 49.29 years old (SD=7.910 years) while the mea							      |	for adults was 49.3 years old (SD=7.9 years) while the mean a								
+was 14 years old (SD=4.272).							      |	was 14 years old (SD=4.3).								
+																
+We compared the average number of applications on a cellphone								We compared the average number of applications on a cellphone								
+set of users by using student t test. Intermediary participan							      |	set of users by using the student's t-test. Intermediary part								
+significantly interacted with more applications (M=5.44; SD=1							      |	significantly interacted with more applications (M=5.4; SD=1.								
+compared to beneficiary participants with (M=3.43; SD=1.51) a							      |	compared to beneficiary participants with (M=3.4; SD=1.5) app								
+(t(14)=2.430; p=0.029; 95\% CI=3.765 to 3.795 applications). 								(t(14)=2.430; p=0.029; 95\% CI=3.765 to 3.795 applications). 								
+findings on average number of applications used by each group							      |	findings on the average number of applications used by each g								
+suggest that our intermediary particithe impact of obesity on							      |	suggest that our intermediary participants 								
+costspants were more likely to interact with more services or							      |	were more likely to interact with services or applications								
+compared to our beneficiary participants. This resonates with							      |	than our beneficiary participants. This resonates with the ob								
+difference on overall intrinsic motivation to use cellphone b								difference on overall intrinsic motivation to use cellphone b								
+groups. There were significant differences on the following s								groups. There were significant differences on the following s								
+intrinsic motivation; perceived competence (PC); perceived au								intrinsic motivation; perceived competence (PC); perceived au								
+perceived effort/important (PE) . Intermediaries scored signi							      |	perceived effort/important (PE). Intermediaries scored signif								
+on the aforementioned scales as presented on Table \ref{table								on the aforementioned scales as presented on Table \ref{table								
+didn't observe any difference on perceived relatedness, perce								didn't observe any difference on perceived relatedness, perce								
+and perceived benefits on using the cellphone.								and perceived benefits on using the cellphone.								
+																
+\begin{table}[h!]								\begin{table}[h!]								
+  \begin{center}								  \begin{center}								
+    \caption{Intrinsic motivation scores to use cellphone}								    \caption{Intrinsic motivation scores to use cellphone}								
+    \label{table:intrcell}								    \label{table:intrcell}								
+	\begin{tabular}{|c|c|c|}									\begin{tabular}{|c|c|c|}								
+		\hline										\hline								
+		&Intermediary mean&Beneficiary mean\\										&Intermediary mean&Beneficiary mean\\								
+		\hline										\hline								
+		 \multirow{2}{*}{PC}&M=5.56;SD=1.20&M=3.75 ;S										 \multirow{2}{*}{PC}&M=5.56;SD=1.20&M=3.75 ;S								
+																
+		 &\multicolumn{2}{|l|}{t(14)=2.82 ; p=0.014 ;										 &\multicolumn{2}{|l|}{t(14)=2.82 ; p=0.014 ;								
+\hline								\hline								
+   		 \multirow{2}{*}{PA}&M=5.53 ;SD=0.58&M=3.88;S								   		 \multirow{2}{*}{PA}&M=5.53 ;SD=0.58&M=3.88;S								
+																				
+		 &\multicolumn{2}{|l|}{t(14)=2.822 ; p=0.014 										 &\multicolumn{2}{|l|}{t(14)=2.822 ; p=0.014 								
+\hline								\hline								
+																
+   		 \multirow{2}{*}{PE}&M=5.66; SD=0.79&M=4.64 ;								   		 \multirow{2}{*}{PE}&M=5.66; SD=0.79&M=4.64 ;								
+																				
+		 &\multicolumn{2}{|l|}{t(14)=2.16; p=0.049; 9										 &\multicolumn{2}{|l|}{t(14)=2.16; p=0.049; 9								
+\hline								\hline								
+																				
+	\end{tabular}									\end{tabular}								
+  \end{center}								  \end{center}								
+\end{table}								\end{table}								
+																
+We trained each kid on how to use the prototype. Each pair of								We trained each kid on how to use the prototype. Each pair of								
+given one android phone installed with a pedometer and a link								given one android phone installed with a pedometer and a link								
+web application. We left the application in the field for thr								web application. We left the application in the field for thr								
+provided airtime as incentives to participants of where each 							      |	provided airtime as incentives to participants. Each adult re								
+rands worth of airtime four times in a period of three weeks.							      |	worth of airtime four times in a period of three weeks. In ad								
+each pair was given 300 MB of data to use on the Android phon							      |	each pair was given 300MB of data to use on the Android phone								
+weeks we conducted interviews with three intermediary partici							      |	weeks we conducted interviews with three intermediary partici								
+beneficiary participants who engaged with the application for								beneficiary participants who engaged with the application for								
+Interviews were conducted in English since all the respondent								Interviews were conducted in English since all the respondent								
+comfortable with English.								comfortable with English.								
+																
+Out of nine pairs of users, eight attempted to engage with th								Out of nine pairs of users, eight attempted to engage with th								
+at least one day in a period of three weeks. The average numb								at least one day in a period of three weeks. The average numb								
+for these eight participants was 4.88 days with a standard de								for these eight participants was 4.88 days with a standard de								
+days. Two pairs used the application for only one day. The mo								days. Two pairs used the application for only one day. The mo								
+used it for 11 days in total. There were lot of problems that							      |	used it for 11 days in total. 								
+and one of them was running out of data bundles. We provided 							      |	While there were many problems that contributed to non-use, t								
+data bundles equivalent to 300 MB but it was not sufficient a							      |	was that the data bundles allocated for the study (300MB per 								
+data bundle for other apps such as Whatsapp and downloading o							      |	expended earlier than expected.								
+Ferreira\cite{ferrplay2015} emphasized that non-prescribed us							      |	In addition to the prescribed study use, they also used the								
+							      >	data bundle for other apps such as Whatsapp and downloading o								
+							      >	elected not to prohibit this since it has been shown that all								
+							      >	use can motivate ongoing prescribed usage~\cite{Schwartz2013}								
+							      >	Ferreira~\cite{ferrplay2015} also emphasizes that non-prescri								
+discouraged within the context of ICTD as they can be viewed 								discouraged within the context of ICTD as they can be viewed 								
+that foster participation and engagement in ICTD projects.								that foster participation and engagement in ICTD projects.								
+																
+Our synthesis on data collected through interviews uncovered 								Our synthesis on data collected through interviews uncovered 								
+related to social dynamics on usage of a persuasive personal 								related to social dynamics on usage of a persuasive personal 								
+informatics through intermediaries. We discuss these findings								informatics through intermediaries. We discuss these findings								
+section.								section.								
+																
+\section{Findings}								\section{Findings}								
+																
+On reflection of findings from both evaluation I and II,  we 								On reflection of findings from both evaluation I and II,  we 								
+useful insights on social dynamics that had an influence on u								useful insights on social dynamics that had an influence on u								
+BCCS in our context. Usage of the app occurred when intermedi								BCCS in our context. Usage of the app occurred when intermedi								
+to an experimental phone. Most beneficiaries went to work dur								to an experimental phone. Most beneficiaries went to work dur								
+hence they carried the phone with them, and  also intermediar								hence they carried the phone with them, and  also intermediar								
+school during the day. Figure \ref{figure:hourpattern} below 								school during the day. Figure \ref{figure:hourpattern} below 								
+of the time of which there were users' activities on the app 								of the time of which there were users' activities on the app 								
+From the graph, the peaks are shown at 5AM, 5-6PM, and 8PM. T								From the graph, the peaks are shown at 5AM, 5-6PM, and 8PM. T								
+when intermediaries and beneficiaries were together.								when intermediaries and beneficiaries were together.								
+																
+When a pair meets, one of them would instigate the request to								When a pair meets, one of them would instigate the request to								
+information on the app. Initiation of the request to engage a								information on the app. Initiation of the request to engage a								
+failure in fulfilment of a request were determined by social 								failure in fulfilment of a request were determined by social 								
+pair, motivational triggers as the result of the app's featur								pair, motivational triggers as the result of the app's featur								
+interactions among beneficiary participants. The mentioned fa								interactions among beneficiary participants. The mentioned fa								
+part in influencing help-seeking by beneficiaries and help-gi								part in influencing help-seeking by beneficiaries and help-gi								
+intermediaries. We present in detail about these factors on t								intermediaries. We present in detail about these factors on t								
+sections. In addition, we also present perceived health benef								sections. In addition, we also present perceived health benef								
+utilization of the application. All the names used in present								utilization of the application. All the names used in present								
+are pseudonyms in order to ensure confidentiality of particip								are pseudonyms in order to ensure confidentiality of particip								
+																
+ \begin{figure}								 \begin{figure}								
+\centering								\centering								
+\epsfig{file=clicks_pattern_pilot2, height=2.5in, width=3.5in								\epsfig{file=clicks_pattern_pilot2, height=2.5in, width=3.5in								
+\caption{Total clicks on each hour of the day}								\caption{Total clicks on each hour of the day}								
+\label{figure:hourpattern}								\label{figure:hourpattern}								
+\end{figure}								\end{figure}								
+																
+\subsection{Social Rapport}								\subsection{Social Rapport}								
+																
+We clustered each pair in evaluation II on its respective rel								We clustered each pair in evaluation II on its respective rel								
+shown in Figure \ref{figure:relation}. In the parent-intermed								shown in Figure \ref{figure:relation}. In the parent-intermed								
+were four pairs. In the relative-intermediary group, there we								were four pairs. In the relative-intermediary group, there we								
+and there was only one pair of where members didn't have a fa								and there was only one pair of where members didn't have a fa								
+relationship. We measured usage on each relationship type thr								relationship. We measured usage on each relationship type thr								
+dimensions and these are;the average number of days per parti								dimensions and these are;the average number of days per parti								
+average number of sessions per participant; and the average n								average number of sessions per participant; and the average n								
+per participant. We defined the beginning of a new session as								per participant. We defined the beginning of a new session as								
+activity is detected while there was no user activity for the								activity is detected while there was no user activity for the								
+If delay between activities is less than one hour it is then 								If delay between activities is less than one hour it is then 								
+last session is still active. If a user comes back after one 								last session is still active. If a user comes back after one 								
+since the last detected user's activity then it is assumed th								since the last detected user's activity then it is assumed th								
+the app and now they are coming back for a new session.								the app and now they are coming back for a new session.								
+																
+Once members of a pair are together, interaction between them								Once members of a pair are together, interaction between them								
+The success of this initiation depends on the nature of their								The success of this initiation depends on the nature of their								
+within a pair. In existing work on intermediaries within the 								within a pair. In existing work on intermediaries within the 								
+human relationships play a pivotal role in encouraging or dis								human relationships play a pivotal role in encouraging or dis								
+engagement. In our context, we uncovered scenarios of how the								engagement. In our context, we uncovered scenarios of how the								
+users within a pair played a significant role in facilitating								users within a pair played a significant role in facilitating								
+requests for engagement. For members of a pair with a prior s								requests for engagement. For members of a pair with a prior s								
+relationship, there was an indication of motivation for the t								relationship, there was an indication of motivation for the t								
+together. Within these pairs, intermediaries showed empathy a								together. Within these pairs, intermediaries showed empathy a								
+ownership on interaction processes, and believed that the act								ownership on interaction processes, and believed that the act								
+for a good cause as it had an instrumental value to the peopl								for a good cause as it had an instrumental value to the peopl								
+about. For instance \textbf{Lulama} (an intermediary from Lan								about. For instance \textbf{Lulama} (an intermediary from Lan								
+old girl, mentioned that the app was meaningful to her becaus								old girl, mentioned that the app was meaningful to her becaus								
+the person she cares about, and that was her mother. \textbf{								the person she cares about, and that was her mother. \textbf{								
+years old intermediary who was part of the study in Philippi,								years old intermediary who was part of the study in Philippi,								
+his duty to support his mother as she took care of him since 								his duty to support his mother as she took care of him since 								
+born. These are examples of how intermediaries were reciproca								born. These are examples of how intermediaries were reciproca								
+of a prior social relationship.								of a prior social relationship.								
+																
+In a pair with no prior social relationship, negotiation for 								In a pair with no prior social relationship, negotiation for 								
+not be successful even if one user within a pair is motivated								not be successful even if one user within a pair is motivated								
+the system. For instance trust and social rapport hindered \t								the system. For instance trust and social rapport hindered \t								
+beneficiary user from Langa)(a 47 years old woman) from acces								beneficiary user from Langa)(a 47 years old woman) from acces								
+She was working together with an intermediary that was not re								She was working together with an intermediary that was not re								
+we learned  during the interviews. The intermediary was the g								we learned  during the interviews. The intermediary was the g								
+her Landlord.								her Landlord.								
+																
+ \begin{figure}								 \begin{figure}								
+\centering								\centering								
+\epsfig{file=relationships, height=2.0in, width=3in}								\epsfig{file=relationships, height=2.0in, width=3in}								
+\caption{Usage in three groups of relationships}								\caption{Usage in three groups of relationships}								
+\label{figure:relation}								\label{figure:relation}								
+\end{figure}								\end{figure}								
+																
+When there was a prior social relationship (i.e. familial rel								When there was a prior social relationship (i.e. familial rel								
+played part in mediating the success for negotiation of inter								played part in mediating the success for negotiation of inter								
+intermediary or beneficiary user would instigate a conversati								intermediary or beneficiary user would instigate a conversati								
+interaction with the wellness app and exchange of information								interaction with the wellness app and exchange of information								
+intermediary user and a beneficiary user. The phone was posse								intermediary user and a beneficiary user. The phone was posse								
+beneficiary user and if negotiation for interaction is succes								beneficiary user and if negotiation for interaction is succes								
+is passed from a beneficiary to an intermediary. If interacti								is passed from a beneficiary to an intermediary. If interacti								
+by an intermediary, an intermediary would request a beneficia								by an intermediary, an intermediary would request a beneficia								
+some information such as what food has been eaten by a benefi								some information such as what food has been eaten by a benefi								
+intermediary might either view information inside the app for								intermediary might either view information inside the app for								
+consumption or share that information with a beneficiary user								consumption or share that information with a beneficiary user								
+is instigated by a beneficiary user, most of the time they re								is instigated by a beneficiary user, most of the time they re								
+intermediaries to help them view certain information. In this								intermediaries to help them view certain information. In this								
+were cases where intermediaries' autonomy was violated as ben								were cases where intermediaries' autonomy was violated as ben								
+requested assistance at the time where intermediaries were ei								requested assistance at the time where intermediaries were ei								
+occupied by other activities. In these cases, a social relati								occupied by other activities. In these cases, a social relati								
+to play a role in convincing intermediaries to fulfil request								to play a role in convincing intermediaries to fulfil request								
+beneficiaries.								beneficiaries.								
+																
+Members of a pair with a prior social relationship demonstrat								Members of a pair with a prior social relationship demonstrat								
+relatedness within a pair compared to before. They mentioned 								relatedness within a pair compared to before. They mentioned 								
+conversing more often to talk about what is going on inside t								conversing more often to talk about what is going on inside t								
+conversation was fun in some of the participants when they ma								conversation was fun in some of the participants when they ma								
+what was happening inside the app.								what was happening inside the app.								
+																
+\subsection{Motivation in Utilization of the app}								\subsection{Motivation in Utilization of the app}								
+																
+Motivational strategies that were implemented in the app and 								Motivational strategies that were implemented in the app and 								
+socially constructed as the result of engaging with informati								socially constructed as the result of engaging with informati								
+played a vital role in persuading both beneficiary and interm								played a vital role in persuading both beneficiary and interm								
+engaged with the application. These motivational strategies l								engaged with the application. These motivational strategies l								
+of interaction. We discuss in detail these forms of motivatio								of interaction. We discuss in detail these forms of motivatio								
+below.								below.								
+																
+\subsubsection*{\textbf{Sources of Motivation in Beneficiarie								\subsubsection*{\textbf{Sources of Motivation in Beneficiarie								
+																
+The most prominent motivational factor that drove beneficiari								The most prominent motivational factor that drove beneficiari								
+information derived from the app was steps comparison. Steps 								information derived from the app was steps comparison. Steps 								
+socially constructed as majority of the beneficiaries lived n								socially constructed as majority of the beneficiaries lived n								
+other.In cases where beneficiaries initiated the negotiation 								other.In cases where beneficiaries initiated the negotiation 								
+it was for the purpose of their health and secondly it was fo								it was for the purpose of their health and secondly it was fo								
+with other beneficiaries. This kind of comparison is referred								with other beneficiaries. This kind of comparison is referred								
+social comparison in the context of behavior change support 								social comparison in the context of behavior change support 								
+system~\cite{Oinas-kukkonen:psd}. This kind of comparison 							      |	system~~\cite{Oinas-kukkonen:psd}. This kind of comparison 								
+was not implemented in the app but it								was not implemented in the app but it								
+was instigated by the the existing social network. Some benef								was instigated by the the existing social network. Some benef								
+compared each other and this led to both social support, rela								compared each other and this led to both social support, rela								
+competition among beneficiary users. Beneficiary users who kn								competition among beneficiary users. Beneficiary users who kn								
+before organized themselves in informal support groups. Whene								before organized themselves in informal support groups. Whene								
+users met in these informal support groups, they talked about								users met in these informal support groups, they talked about								
+or food they have been eating.								or food they have been eating.								
+%\newline\newline								%\newline\newline								
+																
+\userquote{\textbf{Nokhanyo}(beneficiary user), a 57 years of							      |	\userquote{\textbf{Nokhanyo} (beneficiary user), 57yrs, woman								
+{I used to boss to others in the group like hahaha [She would								{I used to boss to others in the group like hahaha [She would								
+ to the people she is interacting with] how many steps did yo								 to the people she is interacting with] how many steps did yo								
+ hahaha. I am getting there. I tell them I got some encouragi								 hahaha. I am getting there. I tell them I got some encouragi								
+ They would also say 'I got some too'. I tell them that I wal								 They would also say 'I got some too'. I tell them that I wal								
+ kilometres today.''}							      |	 kilometres today.}								
+							      <
+																
+\textbf{Nokhanyo}(beneficiary user), a 57 years of age woman 							      <
+\textit{``I used to boss to others in the group like hahaha [							      <
+ to the people she is interacting with] how many steps did yo							      <
+ hahaha. I am getting there. I tell them I got some encouragi							      <
+ They would also say 'I got some too'. I tell them that I wal							      <
+ kilometres today.''}\newline\newline							      <
+																
+Through these informal discussions, beneficiary participants 								Through these informal discussions, beneficiary participants 								
+each other. There was also an indication of improved relatedn								each other. There was also an indication of improved relatedn								
+participants. People who were part of those informal support 								participants. People who were part of those informal support 								
+they were more related to each other compared to before using							      |	they were more related to each other compared to before using								
+																
+\textbf{Nobantu} (beneficiry user), a 50 years of age woman f							      |	\userquote{\textbf{Nobantu} (beneficiary user), 50yrs, woman,								
+\textit{``We [With other participants] didn't communicate so 							      |	{We [with other participants] didn't communicate so much befo								
+now we communicate. Most of the time, we chat about this and 							      |	now we communicate. Most of the time, we chat about this and 								
+																
+\textbf{Ndileka}(beneficiary user),  a 35 years of age woman 							      |	\userquote{\textbf{Ndileka} (beneficiary user),  35yrs, woman								
+\textit{``I am close to other people because of the steps. Th							      |	{I am close to other people because of the steps. They would 								
+you messages to ask `how many steps did you take?'. These are								you messages to ask `how many steps did you take?'. These are								
+didn't speak to here. Not to speak to, I mean others that I d								didn't speak to here. Not to speak to, I mean others that I d								
+really relationship with. I know them from here. It is just a								really relationship with. I know them from here. It is just a								
+that's it. They send me messages `how many steps did you take								that's it. They send me messages `how many steps did you take								
+app working for you?'. There is this lady next door. She woul								app working for you?'. There is this lady next door. She woul								
+like ooh `how did that thing work for you and blah blah'. We 								like ooh `how did that thing work for you and blah blah'. We 								
+communicating more than before.''}\newline\newline							      |	communicating more than before.}								
+																
+Competition with others was also partially linked to competit								Competition with others was also partially linked to competit								
+where beneficiaries challenged themselves by setting goals im								where beneficiaries challenged themselves by setting goals im								
+writing them down). Goal setting pushed beneficiaries to do m								writing them down). Goal setting pushed beneficiaries to do m								
+that they can beat others. For instance a person would ask he								that they can beat others. For instance a person would ask he								
+about the number of steps they have walked in a particular da								about the number of steps they have walked in a particular da								
+response from their intermediaries they would say that ``tomo								response from their intermediaries they would say that ``tomo								
+to walk this number of steps''. But the main objective of set								to walk this number of steps''. But the main objective of set								
+is to have more steps than others. Goal setting is an importa								is to have more steps than others. Goal setting is an importa								
+health behavior change \cite{strecher1995goal}.							      |	health behavior change ~\cite{strecher1995goal}.								
+																
+%\newline								%\newline								
+%\newline								%\newline								
+																
+These findings suggest the role that activity and diet based 								These findings suggest the role that activity and diet based 								
+can play even in resource constrained environments. With typi								can play even in resource constrained environments. With typi								
+change support systems from the west, this kind of comparison								change support systems from the west, this kind of comparison								
+provided through software functionality. In our system we imp								provided through software functionality. In our system we imp								
+and diet comparison through gamification design patterns such								and diet comparison through gamification design patterns such								
+leader board, badges, botanical gardens, and fish tanks. Thro								leader board, badges, botanical gardens, and fish tanks. Thro								
+features, each pair of users (a beneficiary and an intermedia								features, each pair of users (a beneficiary and an intermedia								
+to make comparison with other teams. But our existing gamific								to make comparison with other teams. But our existing gamific								
+appeared to be of less value to beneficiary users as they did								appeared to be of less value to beneficiary users as they did								
+understand the meaning of motivation strategies provided by g								understand the meaning of motivation strategies provided by g								
+although they interacted with those features through intermed								although they interacted with those features through intermed								
+valued most was their relationship with each other(beneficiar								valued most was their relationship with each other(beneficiar								
+context of the community they lived in.								context of the community they lived in.								
+																
+\subsubsection*{\textbf{Motivational Sources in Intermediarie								\subsubsection*{\textbf{Motivational Sources in Intermediarie								
+																
+Each pair of users (an intermediary user and a beneficiary us								Each pair of users (an intermediary user and a beneficiary us								
+that competed with other teams.  Some intermediaries pushed t								that competed with other teams.  Some intermediaries pushed t								
+users to walk more steps or to eat healthy due to two reasons								users to walk more steps or to eat healthy due to two reasons								
+because they cared for the people they were helping. Secondly								because they cared for the people they were helping. Secondly								
+them more points to win the game against other teams.In cases								them more points to win the game against other teams.In cases								
+intermediaries initiated the interaction, they did so to enco								intermediaries initiated the interaction, they did so to enco								
+beneficiaries to do more so that their pair can win in gamifi								beneficiaries to do more so that their pair can win in gamifi								
+Gamification features in combination of a prior social rappor								Gamification features in combination of a prior social rappor								
+intermediary users to perceive themselves as partial owners o								intermediary users to perceive themselves as partial owners o								
+and value derived from the system. For instance one participa								and value derived from the system. For instance one participa								
+actions that were carried out by the beneficiary she was help								actions that were carried out by the beneficiary she was help								
+																
+%\newline\newline								%\newline\newline								
+\textbf{Lulama}: \textit{``When I saw the garden I was like y								\textbf{Lulama}: \textit{``When I saw the garden I was like y								
+is looking beautiful. Lets do more. Lets take more steps. Let								is looking beautiful. Lets do more. Lets take more steps. Let								
+veges, because it is the veges and fruits that are important.								veges, because it is the veges and fruits that are important.								
+went to the clinic in town and she always walks to the clinic								went to the clinic in town and she always walks to the clinic								
+town. That day I was motivated. She took more than four thous								town. That day I was motivated. She took more than four thous								
+mostly the garden . I like the garden. When I see the garden 								mostly the garden . I like the garden. When I see the garden 								
+more steps. Lets eat more veges.''}								more steps. Lets eat more veges.''}								
+																
+%\newline\newline								%\newline\newline								
+																
+Gamification features also led to competition among intermedi								Gamification features also led to competition among intermedi								
+intermediary user explained how the badges played a role in c								intermediary user explained how the badges played a role in c								
+making him to compete with others. Badges were obtained in an								making him to compete with others. Badges were obtained in an								
+process. Each badge had requirements that were specified by t								process. Each badge had requirements that were specified by t								
+number of steps that needed to be walked by a beneficiary use								number of steps that needed to be walked by a beneficiary use								
+number of								number of								
+days a pair had used the system. Two intermediary participant								days a pair had used the system. Two intermediary participant								
+the badges and competition motivated them to do more with the								the badges and competition motivated them to do more with the								
+																
+The living metaphors such as botanical gardens and fish tanks								The living metaphors such as botanical gardens and fish tanks								
+social responses from some intermediary users. This phenomeno								social responses from some intermediary users. This phenomeno								
+systems ability to present social cues to environment that tr								systems ability to present social cues to environment that tr								
+responses is discussed by Fogg \cite{foggpersuasivebook}. For							      |	responses is discussed by Fogg ~\cite{foggpersuasivebook}. Fo								
+asked one participant what was the size of fish in his tank a								asked one participant what was the size of fish in his tank a								
+was as follows, \textit{``They were medium sized because I wa								was as follows, \textit{``They were medium sized because I wa								
+feeding them.''} By feeding he meant recording of meals eaten								feeding them.''} By feeding he meant recording of meals eaten								
+beneficiary user.								beneficiary user.								
+																
+%\newline								%\newline								
+The above findings suggest that gamification resulted into a 								The above findings suggest that gamification resulted into a 								
+experience on intermediaries and it had more value and meanin								experience on intermediaries and it had more value and meanin								
+compared to beneficiary users.								compared to beneficiary users.								
+																
+\subsection{Perceived Benefits from our BCSS}								\subsection{Perceived Benefits from our BCSS}								
+																
+There were reported perceived benefits by participants. For i								There were reported perceived benefits by participants. For i								
+process of recording meals led to cognitive dissonance in one								process of recording meals led to cognitive dissonance in one								
+Cognitive dissonance is where by an individual discovers that								Cognitive dissonance is where by an individual discovers that								
+are not consistent to their actions. Oinas-Kukkonen et 								are not consistent to their actions. Oinas-Kukkonen et 								
+al~\cite{Oinas-kukkonen:psd} discussed cognitive consistency 							      |	al~~\cite{Oinas-kukkonen:psd} discussed cognitive consistency								
+one of the key issues behind								one of the key issues behind								
+persuasive systems. People want their beliefs and actions to 								persuasive systems. People want their beliefs and actions to 								
+there is an inconsistency, then it is likely  for them to bec								there is an inconsistency, then it is likely  for them to bec								
+change their attitude or behavior in order to restore that co								change their attitude or behavior in order to restore that co								
+																
+%\newline								%\newline								
+\textbf{Ndileka}: \textit{``I think I like a bit everything a								\textbf{Ndileka}: \textit{``I think I like a bit everything a								
+especially with food because I used to eat McDonalds. So I ha								especially with food because I used to eat McDonalds. So I ha								
+what I am going to eat first. I will think that I am eating b								what I am going to eat first. I will think that I am eating b								
+carbohydrates and small portions of fruits. So now I have to 								carbohydrates and small portions of fruits. So now I have to 								
+have to eat fruits more than carbohydrates. With me it helps 								have to eat fruits more than carbohydrates. With me it helps 								
+can drink more water. I can eat more fruits than I used to.''								can drink more water. I can eat more fruits than I used to.''								
+%\newline\newline								%\newline\newline								
+																
+In other cases intermediary users explained how their benefic								In other cases intermediary users explained how their benefic								
+controlling their eating habits as the result of interacting 								controlling their eating habits as the result of interacting 								
+derived from the app. For instance the meal chart from the ap								derived from the app. For instance the meal chart from the ap								
+\textbf{Nokhanyo} to reflect whether she was consuming meals 								\textbf{Nokhanyo} to reflect whether she was consuming meals 								
+trigger the spike of her blood sugar level i.e carbohydrates.								trigger the spike of her blood sugar level i.e carbohydrates.								
+																
+%\newline\newline								%\newline\newline								
+\textbf{Lulama}: \textit{``She [Nokhanyo] knows that `I am ea								\textbf{Lulama}: \textit{``She [Nokhanyo] knows that `I am ea								
+much sugar. Let me lower my sugar by 500 calories in a week.'								much sugar. Let me lower my sugar by 500 calories in a week.'								
+helps her that way. And she is diabetic. So when she tests he								helps her that way. And she is diabetic. So when she tests he								
+sees that she ate too much of something so she knows that she								sees that she ate too much of something so she knows that she								
+lower it. There is a chart. There is a plate. She looks at th								lower it. There is a chart. There is a plate. She looks at th								
+says that `I have eaten enough veggies but I need to eat more								says that `I have eaten enough veggies but I need to eat more								
+She doesn't eat meat that much.''}								She doesn't eat meat that much.''}								
+																
+%\newline\newline								%\newline\newline								
+\textbf{Lwazi}: \textit{``It [The app] was really good becaus								\textbf{Lwazi}: \textit{``It [The app] was really good becaus								
+mother was limiting herself on stuff like pies and fat food. 								mother was limiting herself on stuff like pies and fat food. 								
+her don't eat this don't eat that. She wasn't eating much veg								her don't eat this don't eat that. She wasn't eating much veg								
+was encouraging her to eat vegetables''}								was encouraging her to eat vegetables''}								
+																
+%\newline\newline								%\newline\newline								
+																
+The application had a persuasive effect on beneficiary partic								The application had a persuasive effect on beneficiary partic								
+engaged with it, hence there is a feasibility for beneficiary								engaged with it, hence there is a feasibility for beneficiary								
+value from the information presented by a BCSS in our context								value from the information presented by a BCSS in our context								
+																
+\section{Discussion}								\section{Discussion}								
+																
+This work was developed based on existing literature of PHI a								This work was developed based on existing literature of PHI a								
+dominated by research from the West. Our idea was to test if 								dominated by research from the West. Our idea was to test if 								
+laveraging existing intermediated technology use. As we found								laveraging existing intermediated technology use. As we found								
+contextual enquiry, intermediated technology use was common a								contextual enquiry, intermediated technology use was common a								
+participants. So the approach attempted to utilize what alrea								participants. So the approach attempted to utilize what alrea								
+this time in the context of PHI.								this time in the context of PHI.								
+																
+Our findings uncover social dynamics that are important in un								Our findings uncover social dynamics that are important in un								
+intermediated interactions can be leveraged to foster utiliza								intermediated interactions can be leveraged to foster utiliza								
+change support systems within family settings. The two import								change support systems within family settings. The two import								
+consider are (1) social rapport between an intermediary and a								consider are (1) social rapport between an intermediary and a								
+requirement for persuasion; and (2) differences in motivation								requirement for persuasion; and (2) differences in motivation								
+between intermediaries and beneficiaries, we refer to this as								between intermediaries and beneficiaries, we refer to this as								
+persuasion.  We discuss these two factors in details below.								persuasion.  We discuss these two factors in details below.								
+																
+\subsubsection*{\textbf{Social Relationship on Engagement wit								\subsubsection*{\textbf{Social Relationship on Engagement wit								
+																
+The motivation strategies may work provided that an intermedi								The motivation strategies may work provided that an intermedi								
+beneficiary user have a prior social relationship. A prior so								beneficiary user have a prior social relationship. A prior so								
+makes intermediaries to value the interaction as more meaning								makes intermediaries to value the interaction as more meaning								
+benefits of intermediaries valuing the interaction process as								benefits of intermediaries valuing the interaction process as								
+that; we can capitalize on intermediaries to play a role of p								that; we can capitalize on intermediaries to play a role of p								
+health behavior change. We observed this phenomenon in pairs 								health behavior change. We observed this phenomenon in pairs 								
+intermediary and a beneficiary had a prior social relationshi								intermediary and a beneficiary had a prior social relationshi								
+																
+%\newline								%\newline								
+%\newline								%\newline								
+\textbf{Nokhanyo}(a beneficiary user): \textit{``Sometimes sh								\textbf{Nokhanyo}(a beneficiary user): \textit{``Sometimes sh								
+used to shout at me. `No no you didn't eat that thing. Tell m								used to shout at me. `No no you didn't eat that thing. Tell m								
+ate in the morning. I saw you eating this. It seems there is 								ate in the morning. I saw you eating this. It seems there is 								
+fruits, peanuts. You must remind me to check you!'''}								fruits, peanuts. You must remind me to check you!'''}								
+%\newline								%\newline								
+%\newline								%\newline								
+\textbf{Lwazi}(an intermediary user), a 14 years old male fro								\textbf{Lwazi}(an intermediary user), a 14 years old male fro								
+Langa:\textit{``I would tell her don't eat this don't eat tha								Langa:\textit{``I would tell her don't eat this don't eat tha								
+eating much vegetables but I was encouraging her to eat veget								eating much vegetables but I was encouraging her to eat veget								
+%\newline								%\newline								
+%\newline								%\newline								
+																
+This is an example of how intermediaries with a prior social 								This is an example of how intermediaries with a prior social 								
+their beneficiaries to walk more steps or eat healthy. Interm								their beneficiaries to walk more steps or eat healthy. Interm								
+become a source of intent to persuade. In the work by Fogg								become a source of intent to persuade. In the work by Fogg								
+\cite{fogg1998persuasive} mentioned in \cite{Oinas-kukkonen:p							      |	~\cite{fogg1998persuasive} mentioned in ~\cite{Oinas-kukkonen								
+to persuade can come from three sources and these are; from t								to persuade can come from three sources and these are; from t								
+create or produce interactive technology; from people who giv								create or produce interactive technology; from people who giv								
+distribute the interactive technology to others for which in 								distribute the interactive technology to others for which in 								
+intermediary users; and the people themselves who use or adop								intermediary users; and the people themselves who use or adop								
+technology. The approach of using people supported by technol								technology. The approach of using people supported by technol								
+other people is not new in the context of ICTD work. As we ha								other people is not new in the context of ICTD work. As we ha								
+study in India that equipped health care workers with mobile 								study in India that equipped health care workers with mobile 								
+they could access persuasive messages and use them to persuad								they could access persuasive messages and use them to persuad								
+maternal health issues\cite{ramachandran2010mobile,ramachandr							      |	maternal health issues~\cite{ramachandran2010mobile,ramachand								
+Our approach is more innate as intermediaries and beneficiari								Our approach is more innate as intermediaries and beneficiari								
+natural settings and it can be more feasible of where persuas								natural settings and it can be more feasible of where persuas								
+process. Therefore, prior social rapport is one the prerequis								process. Therefore, prior social rapport is one the prerequis								
+approach to work.								approach to work.								
+																
+																
+\subsubsection*{\textbf{Parallel Persuasion}} 								\subsubsection*{\textbf{Parallel Persuasion}} 								
+																
+Unlike existing persuasion problems of where we design for on								Unlike existing persuasion problems of where we design for on								
+persuasion in our context is more complex as it involves an i								persuasion in our context is more complex as it involves an i								
+beneficiary user. Despite of existing relationships between i								beneficiary user. Despite of existing relationships between i								
+beneficiary users, intermediaries, may not always be willing 								beneficiary users, intermediaries, may not always be willing 								
+and this might discourage beneficiaries and hence discontinue								and this might discourage beneficiaries and hence discontinue								
+Kiesler et al.\cite{kiesler:twi} found out that some parents 							      |	Kiesler et al.~\cite{kiesler:twi} found out that some parents								
+to seek informal help from their children after they had enco								to seek informal help from their children after they had enco								
+experiences. We encountered this phenomenon during both conte								experiences. We encountered this phenomenon during both conte								
+and preliminary interviews before evaluation II. Some of our 								and preliminary interviews before evaluation II. Some of our 								
+shared these negative experiences. For instance one participa								shared these negative experiences. For instance one participa								
+sometimes it is difficult to seek help on using cellphone bec								sometimes it is difficult to seek help on using cellphone bec								
+are sometimes annoyed when they are constantly asked to help 								are sometimes annoyed when they are constantly asked to help 								
+the same task from last time. Therefore, it is important to m								the same task from last time. Therefore, it is important to m								
+experiences of beneficiaries by increasing engagement of inte								experiences of beneficiaries by increasing engagement of inte								
+																
+We have the task of persuading intermediaries to share inform								We have the task of persuading intermediaries to share inform								
+beneficiaries, and we also have the task of persuading benefi								beneficiaries, and we also have the task of persuading benefi								
+their health behaviors. From our findings, we see how persuas								their health behaviors. From our findings, we see how persuas								
+between intermediaries and beneficiaries differ. Intermediari								between intermediaries and beneficiaries differ. Intermediari								
+game design elements and social comparison is within the cont								game design elements and social comparison is within the cont								
+gamification. For a beneficiary, the weight is more on percei								gamification. For a beneficiary, the weight is more on percei								
+information on health benefits and informal social comparison								information on health benefits and informal social comparison								
+beneficiaries from the same community. This suggests that per								beneficiaries from the same community. This suggests that per								
+strategies between intermediaries and beneficiaries differ. I								strategies between intermediaries and beneficiaries differ. I								
+have seen from above that intermediaries can introduce an int								have seen from above that intermediaries can introduce an int								
+apart from these informal social comparisons. Therefore, it i								apart from these informal social comparisons. Therefore, it i								
+take into account of all social dynamics when designing for p								take into account of all social dynamics when designing for p								
+context.								context.								
+																
+\section{Conclusions}								\section{Conclusions}								
+																
+We have explored the extent to which we can leverage on inter								We have explored the extent to which we can leverage on inter								
+family settings to support utilization of behavior change sup								family settings to support utilization of behavior change sup								
+systems(BCSSs) for health. We presented the social dynamics t								systems(BCSSs) for health. We presented the social dynamics t								
+consider when designing a BCSS for health in the context of i								consider when designing a BCSS for health in the context of i								
+interactions. We also discussed how persuasive functionality 								interactions. We also discussed how persuasive functionality 								
+considering the fact that we have two layers of persuasion. O								considering the fact that we have two layers of persuasion. O								
+suggest that it is feasible to take advantage of intermediate								suggest that it is feasible to take advantage of intermediate								
+support utilization of ICTs in health behavior change interve								support utilization of ICTs in health behavior change interve								
+   								   								
+This study has limitations in generalizations as we generated								This study has limitations in generalizations as we generated								
+based on fewer iterations of evaluations. A larger ethnograph								based on fewer iterations of evaluations. A larger ethnograph								
+in understanding the contextual dynamics of an intermediated 								in understanding the contextual dynamics of an intermediated 								
+Secondly, it is not known to what extent gamification mediate								Secondly, it is not known to what extent gamification mediate								
+motivation of both intermediaries and beneficiaries. In our c								motivation of both intermediaries and beneficiaries. In our c								
+are carrying out a control study to evaluate the extent to wh								are carrying out a control study to evaluate the extent to wh								
+has an impact on intrinsic motivation of both intermediaries 								has an impact on intrinsic motivation of both intermediaries 								
+beneficiaries. We seek to understand if intermediaries' intri								beneficiaries. We seek to understand if intermediaries' intri								
+to assist in self-monitoring can be enhanced by gamification 								to assist in self-monitoring can be enhanced by gamification 								
+intrinsic motivation of beneficiaries in engaging in self-mon								intrinsic motivation of beneficiaries in engaging in self-mon								
+health. We are comparing two systems; one with gamification; 								health. We are comparing two systems; one with gamification; 								
+without gamification.								without gamification.								
+																
+%\end{document}  % This is where a 'short' article might term								%\end{document}  % This is where a 'short' article might term								
+																
+%ACKNOWLEDGMENTS are optional 								%ACKNOWLEDGMENTS are optional 								
+																
+\section{Acknowledgments} 								\section{Acknowledgments} 								
+																
+This work would have								This work would have								
+not been possible without the generous funding of Centre of E								not been possible without the generous funding of Centre of E								
+and HPI Research School at University of Cape Town.								and HPI Research School at University of Cape Town.								
+																
+%								%								
+% The following two commands are all you need in the								% The following two commands are all you need in the								
+% initial runs of your .tex file to								% initial runs of your .tex file to								
+% produce the bibliography for the citations in your paper.								% produce the bibliography for the citations in your paper.								
+%small{								%small{								
+\bibliographystyle{abbrv}								\bibliographystyle{abbrv}								
+\bibliography{sigproc} %} % sigproc.bib is the name of the Bi								\bibliography{sigproc} %} % sigproc.bib is the name of the Bi								
+% You must have a proper ".bib" file								% You must have a proper ".bib" file								
+%  and remember to run:								%  and remember to run:								
+% latex bibtex latex latex								% latex bibtex latex latex								
+% to resolve all references								% to resolve all references								
+%								%								
+% ACM needs 'a single self-contained file'!								% ACM needs 'a single self-contained file'!								
+%								%								
+%APPENDICES are optional								%APPENDICES are optional								
+%\balancecolumns								%\balancecolumns								
+																
+																
+\end{document}								\end{document}								

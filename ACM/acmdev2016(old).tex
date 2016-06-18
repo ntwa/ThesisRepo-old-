@@ -1,0 +1,282 @@
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+\usepackage{fixltx2e}
+\usepackage{xcolor}
+\def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB{#2}}
+\def\SP#1{\textsuperscript{\textcolor{black}{#1}}}
+\def\SB#1{\textsubscript{\textcolor{black}{#1}}}
+\newenvironment{myquote}
+               {\list{}{\rightmargin   \leftmargin
+                        \parsep        0in }%
+                \item\relax}
+               {\endlist}
+\newcommand{\userquote}[2]{\begin{samepage}\begin{myquote} 
+     \em{\small{#2\begin{flushright}---#1\end{flushright}}}
+   \end{myquote}\end{samepage}}
+%Quote code
+%\newif\ifquoteopen
+%\catcode`\"=\active % lets you define `"` as a macro
+%\DeclareRobustCommand*{"}{%
+%   \ifquoteopen
+%     \quoteopenfalse ''%
+%   \else
+%     \quoteopentrue ``%
+%   \fi
+%}
+
+%End of quote code
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\CopyrightYear{2016}
+\setcopyright{acmcopyright}
+\conferenceinfo{ICTD '16,}{June 03-06, 2016, Ann Arbor, Michigan, USA}
+\isbn{978-1-4503-4306-0/16/06}\acmPrice{\$15.00}
+\doi{http://dx.doi.org/10.1145/2909609.2909664}
+%
+% --- Author Metadata here ---
+%\conferenceinfo{ICTD'16}{June 3-6 2016, Ann Arbor, Michigan, USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+%\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX
+%\title{Leveraging on Families' Social Interactions on Utilization of Personal Health Informatics through Intermediaries}
+\title{A Family Wellness App: Motivating Children to Manage Wellness of Adults}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{3} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+        Ntwa Katule \\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Computer Science}\\
+        \affaddr{Cape Town, South Africa}\\
+        \email{katulentwa@gmail.com}
+% 2nd. author
+\alignauthor
+Melissa Densmore\\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Computer Science}\\
+        \affaddr{Cape Town, South Africa}\\
+        %\affaddr{Institute for Clarity in Documentation}\\
+        %\affaddr{P.O. Box 1212}\\
+        %\affaddr{Dublin, Ohio 43017-6221}\\
+        \email{mdensmore@cs.uct.ac.za}
+% 3rd. author
+\alignauthor Ulrike Rivett\\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Information Systems}\\
+        \affaddr{Cape Town, South Africa}\\
+        \email{ulrike.rivett@uct.ac.za}
+       %\affaddr{The Th{\o}rv{\"a}ld Group}\\
+        %\affaddr{1 Th{\o}rv{\"a}ld Circle}\\
+        %\affaddr{Hekla, Iceland}\\
+        %\email{larst@affiliation.org}
+%\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+%\alignauthor Lawrence P. Leipuner\\
+%       \affaddr{Brookhaven Laboratories}\\
+%       \affaddr{Brookhaven National Lab}\\
+%       \affaddr{P.O. Box 5000}\\
+%       \email{lleipuner@researchlabs.org}
+% 5th. author
+%\alignauthor Sean Fogarty\\
+%       \affaddr{NASA Ames Research Center}\\
+%       \affaddr{Moffett Field}\\
+%       \affaddr{California 94035}\\
+%       \email{fogartys@amesres.org}
+% 6th. author
+%\alignauthor Charles Palmer\\
+%       \affaddr{Palmer Research Laboratories}\\
+%       \affaddr{8600 Datapoint Drive}\\
+%       \affaddr{San Antonio, Texas 78229}\\
+%       \email{cpalmer@prl.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle 
+
+\begin{abstract} 
+The pandemic of lifestyle-related chronic diseases has led to an advent of personal health informatics, with the goal of persuading individuals to adopt healthful lifestyles. Such systems implement various motivational affordances to promote ongoing use. Design of such systems focuses in engaging only the beneficiary of information derived from those systems. In this study we explored how one can use gamification to motivate ongoing usage of such systems in the context of intermediated technology use. We studied the effect of gamification in motivating young family members in assisting adults who might be less conversant or intimidated with such a technology. We compared two designs of a mobile wellness application of which one prototype was gamified and the other one was not gamified. Our findings suggest that virtual rewards can enhance usage of such systems through intermediary users. We highlight some of the design implications in order to foster perceived enjoyment in using such a system.    
+\end{abstract}
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below. 
+%
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002944.10011122.10002947</concept_id>
+<concept_desc>General and reference~General conference proceedings</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120.10003121.10011748</concept_id>
+<concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10003456.10010927</concept_id>
+<concept_desc>Social and professional topics~User characteristics</concept_desc>
+<concept_significance>100</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{General and reference~General conference proceedings}
+\ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
+\ccsdesc[100]{Social and professional topics~User characteristics}
+
+%
+% End generated code
+%
+
+%
+%  Use this command to print the description
+%
+\printccsdesc
+
+
+%A category including the fourth, optional field follows...
+\keywords{HCI4D, intermediated interactions, persuasive technologies, gamification, personal informatics, motivational affordances, health}
+
+\section{Introduction} 
+Lifestyle-related diseases are now attracting many players seeking to design low cost and tailored information and communications technology (ICT)- based systems for supporting lifestyle change and disease management\cite{arsand:mobile} with most recent development focusing in persuasive technlogies. A systematic review of 95 studies on persuasive technologies found out that persuasive systems have the capability to persuade because their design include implementation of persuasion stimuli \cite{hamari2014persuasive}.\newline
+Persuasive systems include personal informatics which can be used for persuasion of health behaviours. Personal informatics systems are interactive applications that support users to become self-aware of patterns in the behaviours, by providing means to collect personal history, as well as tools for its review or analysis \cite{li2011:personal,li2012:personal}. Persuasion stimuli in a personal informatics rely on their ability to support reflective learning/self-reflection \cite{li2011:understanding}. Reflective learning entails reviewing of collected personal data to learn about oneself and the user always alternates between two phases known as discovery of a behaviour pattern and maintenance of a better behaviour\cite{li2011:understanding}. These phases are usually supported through feedback mechanisms such as bar charts or other affective mechanisms such as gardens that represent steps walked (i.e Ubifit\cite{klasnja2009:using}) or Fish growing or shrinking depending to an increase or decrease in the number of steps walked (i.e Fish'nSteps \cite{lin2006:fish}). The aforementioned techniques can further be supplemented with social comparison\cite{Oinas-kukkonen:psd} or competitions with others \cite{comber2013:designing} in some systems. Feature that support competitions have become popular in personal health informatics~\cite{hamari2014persuasive} and this is encouraged by borrowing of game design elements into non-game contexts, referred to as ``\emph{Gamification}'' ~\cite{deterding2011game}. \newline
+Despite the popularity of gamification its capability to invoke intrinsic experiences may be constrained to specific demographics. For instance, one study found out that perceived interest decreases with age and this implies that such a gamified system might be more effective with younger populations\cite{v2014motivational}. In order to leverage the power of gamification with older alduts, we propose replication of one of the prevalent mode of access to technology referred to as intermediated technology use\cite{sambasivan2010}. Instead of just involving an adult beneficiary user in interacting with a personal informatics for health, we bring young family members to become part of the interaction and apply gamification to foster ongoing use since gamification works well with young people.\newline
+In this study we report on the outcome of using gamification and how different it is in comparison to involving intermediaries without gamification. We also propose approaches that can enhance the impact of gamification in the context of personal health informatics used through intermediary users.
+\section{Related Work} 
+Zhang et al.\cite{zhang2008:motivational} suggested a list of motivational affordances that could be implemented in a system in order to foster its usage such as: (1) the system should afford self-identity and autonomy;(2) the system should support provision of challenges/competitions; (3)the system should allow users to relate to each other; etc. The aforementioned motivational affordances must be fulfilled in order to support the three basic psychological needs that are suggested by self-determination theory (SDT) and these are: (1) the need for autonomy; (2)the need for challenges/competitions that are developmentally appropriate;  (3) the need to belong to a group \cite{deci1985:intrinsic}. Individuals engage in activities to satisfy the aforementioned psychological needs \cite{deterding2011:situated}. The support for the three needs is important for a person to feel intrinsically motivated to perform a certain task.\newline     
+Personal health informatics have been designed with specific motivational affordances to facilitate the ability of user to understand themselves through their collected personal data and continue to be motivated to engage with their collected personal data with the goal of changing their lifestyles or behaviours. For instance a personal informatics with just a self-monitoring feature can satisfy the need for challenges as users set goal and challenge themselves to attain that goal. Literature in public health also recognizes goal setting as an important part towards change in health behaviours~\cite{strecher1995goal}. Other motivation affordances that support competitions and relatedness with others can be implemented to support the process of self-monitoring. \newline
+The motivation pull behind video games is explained by the self-determination theory \cite{ryan2006:motivationalpull}. Gamification is an idyllic avenue for engaging users with personal informatics or persuasive technology targeting health behaviour change because of its ability to trigger intrinsic experiences. Gamification usually borrows game design mechanics such as points, leader-boards, badges, etc hence it can support the three aforementioned psychological needs. However, perceived interest/enjoyment in gamification diminishes with age \cite{v2014motivational}. But the phenomenon of young people providing support to adults on technological related problems is quite prevalent in both HCI and ICTD literature. Studies have explored factors influencing help-seeking and giving behaviours and have pointed out factors such group orientations towards tasks unfamiliarity with technology, social rapport,reciprocal benefits, the sense of being accountable and many others to play a significant role in mediating help-seeking and help giving behaviors in various contexts.\cite{sambasivan2010,poole:chh,kiesler:twi,parikh2006}.However the aforementioned literature in intermediated technology use is limited to general use technology and it has not focus on specialized technology such as personal health informatics which has received a lot of attention within HCI community. Therefore it is unknown of how one could utilize motivational affordances to support ongoing use a personal health informatics through intermediary users.\newline
+We can extend intermediated technology use and couple it with gamification in utilization of personal health informatics since we already know that gamification is promising in young populations. The use of gamification has been limited to tasks such as learning/teaching, image annotation tasks etc. and not to intermediated information tasks. The intermediated information task is different from other tasks as there may be two users collaborating to engage with a user interface with the goal of one user assisting another user with his/her information needs. For the case of personal informatics, motivational affordances need to motivate the two users to work together in engaging with the system.\newline  
+Therefore our main research question attempts to understand the effectiveness of gamification in facilitating usage through intermediary users.
+\section{Methods}
+\section{Findings}
+\section{Discussion}
+\section{Conclusions}
+
+
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional 
+
+\section{Acknowledgments} 
+
+.
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+%small{
+\bibliographystyle{abbrv}
+\bibliography{sigproc} %} % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+
+\end{document}
