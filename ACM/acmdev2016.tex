@@ -48,6 +48,9 @@
 \documentclass{sig-alternate}
 \usepackage{fixltx2e}
 \usepackage{xcolor}
+\usepackage{amsmath,array}
+\usepackage{multirow}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
 \def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB{#2}}
 \def\SP#1{\textsuperscript{\textcolor{black}{#1}}}
 \def\SB#1{\textsubscript{\textcolor{black}{#1}}}
@@ -268,9 +271,9 @@ A total of fourteen adult participants were recruited with mean age of 44.21 yea
 \end{figure}
 We were comparing two versions of the "Family Wellness App". The first version of the application was simply a logbook or journal (Figure \ref{figure:logbookapp}) that allows each pair of participants to view steps graphs and recording and viewing summaries of nutrition components of food consumed by a beneficiary within a pair. The second version also contained all the aforementioned features of logbook with an added gamification component (Figure \ref{figure:gameapp}). A gamification component consisted of a leader board (points' score board), badges,avatars, message board, botanical gardens, and fish tanks (aquarium). The rules for rewards were were as follows:
 \begin{itemize}
-\item{\textbf{Points}}:Points are earned by an average number of steps/per day walked by a beneficiary participant are added to usage points. Each day of app usage is equivalent to 1000 usage points.
+\item{\textbf{Points}}:Points are earned by an average number of steps/per day walked by a beneficiary participant which are added to usage points. Each day of app usage is equivalent to 1000 usage points.
 \item{\textbf{Badge}}: There were a total of 10 ranked badges. The highest badge was ranked number 1 while the lowest was ranked number 10. To attain a badge that is one step higher than the current badge, there were certain fixed requirements and these are; a pair has to use the app for a minimum number of days required for attaining that badge, and a beneficiary member of a pair needs to have walked a minimum average of number of steps specified for that particular badge. 
-\item{\textbf{Botanical garden}}: A botanical garden had trees on one side and flowers on the other side. Number of trees is determined by the corresponding rank of badge while the size is determined by the number of meals recorded by a pair divided the number of meals of a pair with the highest number. Suppose a pair ``P'' has a badge that is ranked number \emph{`n'}.  The number of trees in a garden for a pair P will be as shown on Equation \ref{equation:numtrees}. Suppose the tree is ``z'' when it is big enough, then then the size of each tree for a pair P is determined by Equation \ref{equation:sizetrees} of where \emph{`a'} is the total number of meals recorded by pair P ,\emph{`b'} is the highest number of meals recorded by a particular pair lets ''Q'',\emph{`c'} is the ratio of fruits and vegetables in all meals that have been recorded by pair P before, and z is either height or width of a tree when it has grown up to the maximum size( width=50 pixels; height=50 pixels).   For instance pair has a badge that is ranked number 7 will have (10-7) multiply by 10= 30 trees. Lets assume this pair recorded a total of a=7 meals or which its overall nutritions components constitutes of c=0.3 from fruits and vegetables. Also lets assume that a pair that had recorded the highest number of meals had a total of b=12 meals. Then the size of each tree will be; height=((7/12)*height of a tree when it is big enough)+0.3;width=((7/12)*width of a tree when it is big enough)+0.3.  Flowers are determined by the overall usage of the system in number of days. In each day of app usage, a pair receives 10 flowers. The size of each flower is also determined by the Equation \ref{equation:sizetrees}
+\item{\textbf{Botanical garden}}: A botanical garden had trees on one side and flowers on the other side. Number of trees is determined by the corresponding rank of badge while the size is determined by the number of meals recorded by a pair divided the number of meals of a pair with the highest number. Suppose a pair ``P'' has a badge that is ranked number \emph{`n'}.  The number of trees in a garden for a pair P will be as shown on Equation \ref{equation:numtrees}. Suppose the size of tree is ``z x z in width x height'' when it is big enough, then then the width or height of each tree for a pair P is determined by Equation \ref{equation:sizetrees} of where \emph{`a'} is the total number of meals recorded by pair P ,\emph{`b'} is the highest number of meals recorded by a particular pair lets ''Q'',\emph{`c'} is the ratio of fruits and vegetables in all meals that have been recorded by pair P before, and z is either height or width of a tree when it has grown up to the maximum size( width=50 pixels; height=50 pixels).   For instance pair has a badge that is ranked number 7 will have (10-7) multiply by 10= 30 trees. Lets assume this pair recorded a total of a=7 meals or which its overall nutritions components constitutes of c=0.3 from fruits and vegetables. Also lets assume that a pair that had recorded the highest number of meals had a total of b=12 meals. Then the size of each tree will be; height=((7/12)*height of a tree when it is big enough)+0.3;width=((7/12)*width of a tree when it is big enough)+0.3.  Flowers are determined by the overall usage of the system in number of days. In each day of app usage, a pair receives 10 flowers. The size of each flower is also determined by the Equation \ref{equation:sizetrees}
 \begin{equation}
 \label{equation:numtrees}
 y=((10-n)*10) 
@@ -290,22 +293,128 @@ We carried out this evaluation for a period of six weeks starting from Mid Octob
 We collected data through triangulation of usage logs for the two versions of the prototype,intrinsic motivation inventory(IMI) questionnaires, and interviews. We developed the IMI questionnaires with guidance of materials found on a ``Self-Determination Theory''\footnote{http://www.selfdeterminationtheory.org/intrinsic-motivation-inventory/} website which is maintained by researchers working on the theory including Richard Ryan and Edward Deci\cite{deci1985intrinsic} whom were early pioneers in developing the theory. These questionnaires were pretested in one of our early pilot studies.\newline
 There were two sets of questionnaires, one for adult (beneficiaries) participants , and another one for children (intermediaries)  participants. Both questionnaires were administered at three points: (1) baseline (before experiments); (2) midline (the fourth week, before switching of experimental conditions; (3) endline (after concluding usage experiment at the end of the sixth week).\newline
 The baseline questionnaire for the intermediary participants assesses the perceived enjoyment of intermediaries in helping other people with cellphone related tasks. The midline questionnaire for the intermediary participants assesses the ability of the two prototype to support the three basic psychological needs postulated by the self-determination theory: (1) autonomy, (2) competence, and (3) relatedness. Therefore we selected three sub-scales from the IMI questionnaire and these were (1)perceived autonomy, (2) perceived competence, and (3) perceived relatedness. The endline questionnaire for intermediaries was the same as the midline one.\newline
-The baseline questionnaur
+The baseline questionnaire for beneficiary assesses the the overall average IMI scores for: (1)self-monitoring of diet; (2)self-monitoring of activity. The IMI questionnaire included the following sub-scales;perceived competence, perceived autonomy, perceived relatedness, perceived enjoyment, perceived important, and perceived usefulness. The midline and endline questionnaire include the same baseline questionnaire. In addition, we assesses beneficiaries' perceived usefulness in using the family wellness app at midline and endline.
+\section{Findings}
+On this findings section we report first report on the general use of the app, secondly we report on the impact of the two versions of the app in satisfying intermediaries intrinsic motivation needs through fulfilment of the three basic psychological needs. The third outcome we explore if beneficiaries find the app to be useful for their health. And the fourth and the last outcome is the impact of the versions of the app in self-monitoring of diet and activity.\newline
+
+\subsection{Usage Trend} 
+The experimental duration was 27 days in the first experimental condition from a particular sequence, 14 days in the second experimental condition for a sequence as there were two sequences namely ``LG' and ``GL'' groups. Therefore, the sum is 41 days (6 weeks).\newline 
+In this period of six weeks, the average utilization of the app regardless of experimental conditions was 10.5 (SD=7.39) days. The most active usage was from a pair that utilized the app for a total of 26 days while the less active usage was from a pair that had used the app for only two days out of 41 days.\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.3\textwidth]{scatter_daily_sessions.png}
+    \rule{26em}{0.5pt}
+  \caption{Total daily number of sessions from the two experimental conditions.}
+  \label{figure:usagedailysessions}
+\end{figure}\newline
+\begin{table*}[h!]
+  \begin{center}
+    \caption{Daily usage comparison between Logbook and Gamified systems for 41 days}
+    \label{table:usagedays}
+	\begin{tabular}{|L{3cm}|c|c|c|c|c|c|}
+		\hline
+		Groups&N&Rank Average&Sum Ranks&U&Z&P\\
+		\hline
+   		Daily logbook sessions&41&33.72&1701.5&\multirow{2}{*}{1159.5}&\multirow{2}{*}{-2.9538}& \multirow{2}{*}{0.00318}\\\cline{1-4} 
+   		 		    Daily gamification sessions&41&49.28& 1701.5&&&\\
+\hline
+	\end{tabular}
+  \end{center}
+\end{table*}
+\newline 
+\begin{table*}[h!]
+  \begin{center}
+    \caption{Sessions comparison between logbook and gamification for 10 pairs of users}
+    \label{table:usagewellness2s}
+	\begin{tabular}{|L{4cm}|L{4cm}|L{4cm}|}
+		\hline
+		Log mean &Logbook App&Gamified App\\
+		\hline
+		 \multirow{2}{*}{ Number of sessions/day}&M=0.201 ;SD=0.196&M=0.459;SD=0.336\\\cline{2-3} 
+		
+		 &\multicolumn{2}{|l|}{t(9)= 2.6593 ; p= 0.0261 ; 95\% CI=  -0.477 to -0.039 } \\
+\hline
+	\end{tabular}
+  \end{center}
+\end{table*}\newline
+I contrasted usage in each day between the ``Logbook App'' and ``Gamified App'' by computing the daily total number of sessions from all users in each of the two experimental conditions. The beginning of a new session is defined as the a continuous period of time where the end user interacts with the app without interruption. This period is whereby there is user's activities detected on the app while there was no user activities for the past one hour. If delay between activities is less than one hour it is then assumed that the last session is still active. If a user comes back after one hour has elapsed since the last detected user's activity then it is assumed they went away from the app and now they are coming back for a new session. There were 41 days of app usage in total. Therefore, each experimental condition had a total number of sessions for each day as shown on Figure \ref{figure:usagedailysessions}. After the fourth week there was a decline in the daily total number of sessions in each of the two experimental conditions as the result of the learning effect. The decline was more apparent to users who where switched from gamification to logbook since the switching happened at the end of the fourth week of usage.\newline
+We expanded the comparison of Figure \ref {figure:usagedailysessions} by carrying out an inferential statistical test in order to determine if the daily total of number of sessions differs in between logbook and gamification conditions. Before deciding on which test to use, I applied``\emph{Shapiro-Wilk Normality Test}''\footnote{http://sdittami.altervista.org/shapirotest/ShapiroTest.html} to test for normal distribution in both daily logbook and gamification sessions. The distributions of the two independent samples were both not normal. An attempt to transform the data using transformation algorithms didn't yield to normal distributions. Therefore, we adopted a non-parametric test called Mann-Whitney U Test. The  daily number of sessions in gamification condition were significantly higher than in logbook condition as shown on Table \ref{table:usagedays} above.\newline
+Another usage comparison that was carried out contrasted between `Logbook'' usage and``Gamification'' usage in each pair of users as the analysis on Table \ref{table:usagedays} compared totals sessions from the two systems by treating days as individual subjects, hence, it  was not specifically examining on the performance of individual pairs. This analysis excluded four pairs of users because they various technical problems that hindered their full participation in both experimental conditions. The list of pairs that were excluded and reasons for their exclusion are summarised on Table \ref{table:usageproblems}. \newline
+We compared usage by counting the number of sessions from each experimental condition. We computed the relative number of sessions since the number of days on which pairs of users spent on a particular experimental condition differ between LG and GL group. For instance the LG group spent nearly four weeks in logbook and two weeks in gamification while the GL group spent four weeks in gamification and two weeks in logbook. Therefore, we use number of session per day which is obtained using Equation \ref{equation:sessions}.\newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Pairs with usability/technical problems that hinder their participation}
+    \label{table:usageproblems}
+	\begin{tabular}{|l|p{1cm}|p{2cm}|p{3.5cm}|}
+		\hline
+		&Pair&Sequence&Problem\\
+		\hline
+		1&Pair A&GL group &App not loading due to poor Internet signal\\
+		\hline
+		2&Pair B&GL group& Miss-allocation of data bundles  \\
+		\hline
+		3&Pair C & LG group.& Pedometer never transmitted data to the server.\\
+		\hline
+		4&Pair D & LG group.& Pedometer stopped transmitting data to the server during the fourth week.\\
+	\hline
+	\end{tabular}
+  \end{center}
+\end{table}
+\begin{equation}
+\label{equation:sessions}
+y=t\SB{i n}/d\SB{i n}
+\end{equation} \newline
+where:\newline
+\emph{y} is number of sessions per day\newline
+\emph{t\SB{n i}} is total number of sessions for pair ``n'' in experimental condition ``i''\newline
+\emph{d\SB{n i}} is total number of days on which experimental condition ``i'' was available for pair ``n''.\newline
+For instance, suppose pair one is from a LG group. This means they had  a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in logbook was 50 and the number of sessions in Gamified system was 30 then the relative number of sessions per day spent on logbook is going to be ``\textbf{50} divide by \textbf{27} days'' and the relative number of sessions spent on  a gamified system is going to be ``\textbf{30} divide by \textbf{27}.\newline
+The differences on number of sessions per day didn't have a normal distribution shape. In order to get a normal distirbution shape of the differences, data was transformed using the natural log equation \ref{equation:log}. The differences between transformed logbook and gamification data had normal distribution shape. We performed a paired t test on the transformed data and the results showed that the Log mean of number of sessions per day was significantly higher on gamification condition when compared to logbook condition as shown on Table \ref{table:usagewellness2s} above. What this finding suggests is that there was an indication of an increase in frequency of daily usage when pairs where in gamification condition.\newline
+\begin{equation}
+\label{equation:log}
+y=log (x+1)
+\end{equation}\newline
+\begin{figure*}[htbp]
+  \centering
+    \includegraphics[width=0.6\textwidth]{self_monitoring_usage.png}
+    \rule{35em}{0.5pt}
+  \caption{Total clicks on feedback features for self-monitoring of wellness: ``Logbook App'' versus ``Gamified App''.}
+  \label{figure:self_monitoring_usage}
+\end{figure*}\newline
+Another dimension of usage analysis was on utilization of different self-monitoring functionality. There was an interesting phenomenon on usage of feedback features. Figure \ref{figure:self_monitoring_usage} shows during gamification condition, usage of the main self-monitoring features for steps and diet decreased compared to when users where in logbook condition. This happens as users started to spend time on virtual rewards which provided indirect feedbacks on steps and diet through badges, gardens etc. However, the trend in recording of diet/meals continued to remain the same between the two experimental conditions as the process of recording meals played instrumental in earning some of the virtual rewards, therefore, intermediary users had to continue using that feature while in gamification condition. Figure \ref{figure:clicks_distr} shows the distribution of clicks among feedback features of the "Gamified Wellness App" and "The Logbook App".\newline 
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.45\textwidth]{clicks_distr.png}
+    \rule{26em}{0.5pt}
+  \caption{Total clicks on feedback features in the two experimental conditions : self-monitoring features versus rewards features.}
+  \label{figure:clicks_distr}
+\end{figure}\newline
+From Figure \ref{figure:clicks_distr}, one can see that the number of clicks on the main self-monitoring feedback features had decreased and this because intermediary users became interested to feedbacks provided by virtual rewards features more than the main self-monitoring features. This provides an explanation why usage on Figure \ref{figure:usagedailysessions} above showed the decline of logbook conditions  after users who had been using gamified version of the app before logbook version became less interested with the "Logbook App" after being switched to it. If we examine this decline in usage by age groups (age \textgreater=median(15.5 years and age \textless 15.5 year), the drop appears to be almost the same for both age group. Contrary to this finding is that the trend on average sessions between the two age groups indicates more sessions in pairs that consisted of younger intermediary participants as shown on Figure \ref{figure:gambyage}. Intermediaries from both age group were distributed almost evenly to the two experimental sequences, therefore, the relativity of number of sessions doesn't matter on this trend. If we look at a different trend (Figure \ref{figure:gambyage_mod}) that exclude the four pairs who had usage problems (Table \ref{table:usageproblems}), still there is an indication that young intermediaries are likely to have more sessions on average while in gamification condition. Koivisto and Hamari \cite{koivisto2014demographic} studied the use of gamification in marketing and found that younger participants appears to be more interested in gamification compared to their older counterparts. In addition, the use gamification was found to be highly affected by the novelty effect which was inversely proportional to participants' age.\newline\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.5\textwidth]{gambyage.png}
+    \rule{26em}{0.5pt}
+  \caption{Average number of gamification sessions on  14 pairs by intermediaries' age: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:gambyage}
+\end{figure}\newline
+\begin{figure}[htbp]      
+  \centering
+    \includegraphics[width=0.5\textwidth]{gambyage_mod.png}
+    \rule{26em}{0.5pt}
+  \caption{Average number of gamification sessions on  10 pairs by intermediaries' age: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:gambyage_mod}
+\end{figure}\newline
 \section{Discussion}
 \section{Conclusions}
-
-
 %\end{document}  % This is where a 'short' article might terminate
 
 %ACKNOWLEDGMENTS are optional 
 
 \section{Acknowledgments} 
 
-.
-
 %
 % The following two commands are all you need in the
-% initial runs of your .tex file to
+% initial runs of your .tex file to\ref{equation:sizetrees}
 % produce the bibliography for the citations in your paper.
 %small{
 \bibliographystyle{abbrv}
