@@ -1,0 +1,523 @@
+% This is "sig-alternate.tex" V2.0 May 2012
+% This file should be compiled with V2.5 of "sig-alternate.cls" May 2012
+%
+% This example file demonstrates the use of the 'sig-alternate.cls'
+% V2.5 LaTeX2e document class file. It is for those submitting
+% articles to ACM Conference Proceedings WHO DO NOT WISH TO
+% STRICTLY ADHERE TO THE SIGS (PUBS-BOARD-ENDORSED) STYLE.
+% The 'sig-alternate.cls' file will produce a similar-looking,
+% albeit, 'tighter' paper resulting in, invariably, fewer pages.
+%
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V2.5) produces:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) NO page numbers
+%
+% as against the acm_proc_article-sp.cls file which
+% DOES NOT produce 1) thru' 3) above.
+%
+% Using 'sig-alternate.cls' you have control, however, from within
+% the source .tex file, over both the CopyrightYear
+% (defaulted to 200X) and the ACM Copyright Data
+% (defaulted to X-XXXXX-XX-X/XX/XX).
+% e.g.
+% \CopyrightYear{2007} will cause 2007 to appear in the copyright line.
+% \crdata{0-12345-67-8/90/12} will cause 0-12345-67-8/90/12 to appear in the copyright line.
+%
+% ---------------------------------------------------------------------------------------------------------------
+% This .tex source is an example which *does* use
+% the .bib file (from which the .bbl file % is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission, you *NEED* to 'insert'
+% your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% ================= IF YOU HAVE QUESTIONS =======================
+% Questions regarding the SIGS styles, SIGS policies and
+% procedures, Conferences etc. should be sent to
+% Adrienne Griscti (griscti@acm.org)
+%
+% Technical questions _only_ to
+% Gerald Murray (murray@hq.acm.org)
+% ===============================================================
+%
+% For tracking purposes - this is V2.0 - May 2012
+
+\documentclass{sig-alternate}
+\usepackage{fixltx2e}
+\usepackage{xcolor}
+\usepackage{amsmath,array}
+\usepackage{multirow}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+\def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB{#2}}
+\def\SP#1{\textsuperscript{\textcolor{black}{#1}}}
+\def\SB#1{\textsubscript{\textcolor{black}{#1}}}
+\newenvironment{myquote}
+               {\list{}{\rightmargin   \leftmargin
+                        \parsep        0in }%
+                \item\relax}
+               {\endlist}
+\newcommand{\userquote}[2]{\begin{samepage}\begin{myquote} 
+     \em{\small{#2\begin{flushright}---#1\end{flushright}}}
+   \end{myquote}\end{samepage}}
+%Quote code
+%\newif\ifquoteopen
+%\catcode`\"=\active % lets you define `"` as a macro
+%\DeclareRobustCommand*{"}{%
+%   \ifquoteopen
+%     \quoteopenfalse ''%
+%   \else
+%     \quoteopentrue ``%
+%   \fi
+%}
+
+%End of quote code
+
+\begin{document}
+\setlength{\parindent}{0pt}
+\CopyrightYear{2016}
+\setcopyright{acmcopyright}
+\conferenceinfo{ACM DEV '16,}{Nov 18-21, 2016, Nairobi, Kenya}
+%\isbn{978-1-4503-4306-0/16/06}\acmPrice{\$15.00}
+%\doi{http://dx.doi.org/10.1145/2909609.2909664}
+%
+% --- Author Metadata here ---
+%\conferenceinfo{ICTD'16}{June 3-6 2016, Ann Arbor, Michigan, USA}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+%\title{Alternate {\ttlit ACM} SIG Proceedings Paper in LaTeX
+%\title{Leveraging on Families' Social Interactions on Utilization of Personal Health Informatics through Intermediaries}
+\title{A Family Wellness App: Engage Children to Manage Wellness of Adults}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{3} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+        Ntwa Katule \\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Computer Science}\\
+        \affaddr{Cape Town, South Africa}\\
+        \email{katulentwa@gmail.com}
+% 2nd. author
+\alignauthor
+Melissa Densmore\\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Computer Science}\\
+        \affaddr{Cape Town, South Africa}\\
+        %\affaddr{Institute for Clarity in Documentation}\\
+        %\affaddr{P.O. Box 1212}\\
+        %\affaddr{Dublin, Ohio 43017-6221}\\
+        \email{mdensmore@cs.uct.ac.za}
+% 3rd. author
+\alignauthor Ulrike Rivett\\
+        \affaddr{University of Cape Town}\\
+        \affaddr{Department of Information Systems}\\
+        \affaddr{Cape Town, South Africa}\\
+        \email{ulrike.rivett@uct.ac.za}
+       %\affaddr{The Th{\o}rv{\"a}ld Group}\\
+        %\affaddr{1 Th{\o}rv{\"a}ld Circle}\\
+        %\affaddr{Hekla, Iceland}\\
+        %\email{larst@affiliation.org}
+%\and  % use '\and' if you need 'another row' of author names
+% 4th. author
+%\alignauthor Lawrence P. Leipuner\\
+%       \affaddr{Brookhaven Laboratories}\\
+%       \affaddr{Brookhaven National Lab}\\
+%       \affaddr{P.O. Box 5000}\\
+%       \email{lleipuner@researchlabs.org}
+% 5th. author
+%\alignauthor Sean Fogarty\\
+%       \affaddr{NASA Ames Research Center}\\
+%       \affaddr{Moffett Field}\\
+%       \affaddr{California 94035}\\
+%       \email{fogartys@amesres.org}
+% 6th. author
+%\alignauthor Charles Palmer\\
+%       \affaddr{Palmer Research Laboratories}\\
+%       \affaddr{8600 Datapoint Drive}\\
+%       \affaddr{San Antonio, Texas 78229}\\
+%       \email{cpalmer@prl.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+\date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle 
+
+\begin{abstract} 
+The pandemic of lifestyle-related chronic diseases has led to an advent of personal health informatics, with the goal of persuading individuals to adopt healthful lifestyles. Such systems implement various motivational affordances to promote ongoing use. Design of such systems focuses in engaging only the beneficiary of information derived from those systems. In this study we explored how one can use gamification to motivate ongoing usage of such systems in the context of intermediated technology use. We studied the effect of gamification in motivating young family members in assisting adults who might be less conversant or intimidated with such a technology. We compared two designs of a mobile wellness application of which one prototype was gamified and the other one was not gamified. Our findings suggest that virtual rewards can enhance usage of such systems through intermediary users. We highlight some of the design implications in order to foster perceived enjoyment in using such a system.    
+\end{abstract}
+%
+% The code below should be generated by the tool at
+% http://dl.acm.org/ccs.cfm
+% Please copy and paste the code instead of the example below. 
+%
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002944.10011122.10002947</concept_id>
+<concept_desc>General and reference~General conference proceedings</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10003120.10003121.10011748</concept_id>
+<concept_desc>Human-centered computing~Empirical studies in HCI</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10003456.10010927</concept_id>
+<concept_desc>Social and professional topics~User characteristics</concept_desc>
+<concept_significance>100</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{General and reference~General conference proceedings}
+\ccsdesc[300]{Human-centered computing~Empirical studies in HCI}
+\ccsdesc[100]{Social and professional topics~User characteristics}
+
+%
+% End generated code
+%
+
+%
+%  Use this command to print the description
+%
+\printccsdesc
+
+
+%A category including the fourth, optional field follows...
+\keywords{HCI4D, intermediated interactions, persuasive technologies, gamification, personal informatics, motivational affordances, health}
+
+\section{Introduction} 
+Lifestyle-related diseases are now attracting many players seeking to design low cost and tailored information and communications technology (ICT)- based systems for supporting lifestyle change and disease management\cite{arsand:mobile} with most recent development focusing in persuasive technlogies. A systematic review of 95 studies on persuasive technologies found out that persuasive systems have the capability to persuade because their design include implementation of persuasion stimuli \cite{hamari2014persuasive}.\newline
+Persuasive systems include personal informatics which can be used for persuasion of health behaviours. Personal informatics systems are interactive applications that support users to become self-aware of patterns in the behaviours, by providing means to collect personal history, as well as tools for its review or analysis \cite{li2011:personal,li2012:personal}. Persuasion stimuli in a personal informatics rely on their ability to support reflective learning/self-reflection \cite{li2011:understanding}. Reflective learning entails reviewing of collected personal data to learn about oneself and the user always alternates between two phases known as discovery of a behaviour pattern and maintenance of a better behaviour\cite{li2011:understanding}. These phases are usually supported through feedback mechanisms such as bar charts or other affective mechanisms such as gardens that represent steps walked (i.e Ubifit\cite{klasnja2009:using}) or Fish growing or shrinking depending to an increase or decrease in the number of steps walked (i.e Fish'nSteps \cite{lin2006:fish}). The aforementioned techniques can further be supplemented with social comparison\cite{Oinas-kukkonen:psd} or competitions with others \cite{comber2013:designing} in some systems. General approaches on how to design such systems have been proposed with ideas coming from both HCI\cite{li2010:stage} and persuasive technologies fields \cite{fogg2009:behavior,Oinas-kukkonen:psd,Oinas-Kukkonen:foundation}.  \newline
+However utilization of such systems may be constrained to specific demographics such as young or experienced users of technology. For instance , one study evaluated two of the popular fitness apps, Nike+ and RunKeeper, and concluded that the two apps are not ready to accommodate older adults needs \cite{silva2014:smartphones}. In addition to that, in developing countries there are scenarios of intermediated technology use for users who are inexperience or intimidated by technology and many of the existing apps are designed to accommodate only direct users of technology \cite{sambasivan2010}. Therefore, in personal health informatics, features that foster ongoing use are targeted towards beneficiaries of the information processed by the app. But in the context of intermediated technology there is an intermediary user who is there to facilitate access of information to beneficiary users hence that facilitator needs to also be motivated to support ongoing use of a personal health informatics.\newline
+In our work, we replicate the idea of intermediated technology use into personal health informatics as we believe that it can support users who are less conversant in technology. Instead of just involving an adult beneficiary user in interacting with a personal health informatics, we bring young family members to become part of the interaction process and apply gamification to foster ongoing use. One study found out that perceived interest to use gamification decreases with age and this implies that such a gamified system might be more effective if utilized through younger populations\cite{v2014motivational}.\newline
+In this study we report on the outcome of using gamification and how different it is in comparison to involving intermediaries without gamification. We also propose approaches that can enhance the impact of gamification in the context of personal health informatics used through intermediary users.
+\section{Related Work} 
+Zhang et al.\cite{zhang2008:motivational} suggested a list of motivational affordances that could be implemented in a system in order to foster its usage such as: (1) the system should afford self-identity and autonomy;(2) the system should support provision of challenges/competitions; (3)the system should allow users to relate to each other; etc. The aforementioned motivational affordances must be fulfilled in order to support the three basic psychological needs that are suggested by a self-determination theory (SDT) and these are: (1) the need for autonomy; (2)the need for challenges/competitions that are developmentally appropriate;  (3) the need to belong to a group \cite{deci1985:intrinsic}. Individuals engage in activities to satisfy the aforementioned psychological needs \cite{deterding2011:situated}. The support for the three needs is important for a person to feel intrinsically motivated to perform a certain task.\newline     
+Personal health informatics have been designed with specific motivational affordances to engage users with their personal data. For instance a personal informatics with just a self-monitoring feature can provide afford the need for challenges as users set goals and challenge themselves to attain those goals. Literature in public health also recognizes goal setting as an important part towards health behaviour change~\cite{strecher1995goal}. Other motivation affordances that support competitions and relatedness with others can be implemented to support the process of self-monitoring. But these motivational affordances are usually implemented to motivate a beneficiary user alone hence it is challenging to motivate ongoing use in the context where a beneficiary user has to to rely on an intermediary user to interact with his/her personal data.
+The phenomenon of young people providing support to adults on technological related problems is quite prevalent in both HCI and ICTD literature. Studies have explored factors influencing help-seeking and giving behaviours and have pointed out factors such group orientations towards tasks unfamiliarity with technology, social rapport,reciprocal benefits, the sense of being accountable and many others to play a significant role in mediating help-seeking and help giving behaviors in various contexts.\cite{sambasivan2010,poole:chh,kiesler:twi,parikh2006}. However the aforementioned literature in intermediated technology use is limited to general use of technology and it has not focused on specialized technology such as a personal health informatics which has received a lot of attention within HCI community. In our work, we designed a system that allows an intermediary user and a beneficiary user to work together to sustain ongoing use of the system.\newline
+In order to engage the two sets of users with the system and foster its ongoing use, we implemented game design elements. The two users worked as a pair to form a team of where any virtual rewards are specifically awarded to a team and not an individual user. Gamification is an idyllic avenue that is used in engaging users with personal informatics or persuasive technology targeting health behaviour change because of its ability to trigger intrinsic experiences \cite{hamari2014persuasive}. Gamification borrows game design mechanics such as points, leader-boards, badges, etc in non-game contexts. It brings together the motivation pull from video games. The motivation pull behind video games is due to its support for the three construct of self-determination theory \cite{ryan2006:motivationalpull}. Gamification has been found to have a potential to address motivational mechanisms and thereby fosters motivation \cite{sailer2013:psychological}. The aforementioned psychological needs can be supported with game design elements.\newline
+The use of gamification has been studied in tasks such as image annotation\cite{mekler2013:points,mekler2013:disassembling},crowd reporting\cite{crowley2012:gamification}, data collection \cite{cechanowicz2013:effects} etc. and not in intermediated information tasks. The intermediated information task is different from the other tasks as there may be two users collaborating to engage with a user interface with the goal of one user assisting another user with his/her information needs. For the case of personal informatics, motivational affordances need to motivate the two users to work together in engaging with the system. Perceived interest/enjoyment in gamification tends to diminish with increasing in age \cite{v2014motivational} and this suggests that young people are the perfect choice for intermediaries. We limited selection of intermediary users to family members because in our previous study we observed that familial relationships were the key to the success of such an intervention.\newline 
+Our main research question attempts to understand the effectiveness of gamification in facilitating usage through intermediary users.
+\section{Methods}
+\subsection{Participants' Demography}
+Participants for this study were recruited from Langa and Athlone, two of the many townships in Cape Town, South Africa. Majority of the households in these two townships fall under the bracket of low income earners in South Africa. The recruitment was facilitated one research assistant and her field work who reside in Langa and Athlone respectively.\newline
+A total of fourteen adult participants were recruited with mean age of 44.21 years(S.D of 9.99 years). The youngest adult was 26 years of age while the oldest was 60 years of age. Thirteen of these adult participants were females. Each adult participant elected one of their children/grand children to work with. The two members of a pair were required to work together in using the ``Family Wellness App'' to self-monitor the wellness of an adult member of a pair (a beneficiary). The average age of children participants was 15.42 (S.D=2.06) years. The youngest intermediary participants was 12 years of age while the oldest was 20 years of age. The number of females and males intermediary participants were equal. Prior to be part of the study all adult participant signed consent forms and also all children participant sign an assent form which was also signed by their respective adult participants.\newline  
+\subsection{Experiment Design}
+\begin{figure}
+\centering
+\epsfig{file=logbookapp.png, height=1.5in, width=3in}
+\caption{Screen-shots showing logbook features: step bar chart and meal pie chart}
+\label{figure:logbookapp}
+\end{figure}
+\begin{figure}
+\centering
+\epsfig{file=gameapp.png, height=1.5in, width=3in}
+\caption{Screen-shots showing badges and a fitness garden}
+\label{figure:gameapp}
+\end{figure}
+We were comparing two versions of the "Family Wellness App". The first version of the application was simply a logbook or journal (Figure \ref{figure:logbookapp}) that allows each pair of participants to view steps graphs and recording and viewing summaries of nutrition components of food consumed by a beneficiary within a pair. The second version also contained all the aforementioned features of logbook with an added gamification component (Figure \ref{figure:gameapp}). A gamification component consisted of a leader board (points' score board), badges,avatars, message board, botanical gardens, and fish tanks (aquarium). The rules for rewards were were as follows:
+\begin{itemize}
+\item{\textbf{Points}}:Points are earned by an average number of steps/per day walked by a beneficiary participant which are added to usage points. Each day of app usage is equivalent to 1000 usage points.
+\item{\textbf{Badge}}: There were a total of 10 ranked badges. The highest badge was ranked number 1 while the lowest was ranked number 10. To attain a badge that is one step higher than the current badge, there were certain fixed requirements and these are; a pair has to use the app for a minimum number of days required for attaining that badge, and a beneficiary member of a pair needs to have walked a minimum average of number of steps specified for that particular badge. 
+\item{\textbf{Botanical garden}}: A botanical garden had trees on one side and flowers on the other side. Number of trees is determined by the corresponding rank of badge while the size is determined by the number of meals recorded by a pair divided the number of meals of a pair with the highest number. Suppose a pair ``P'' has a badge that is ranked number \emph{`n'}.  The number of trees in a garden for a pair P will be as shown on Equation \ref{equation:numtrees}. Suppose the size of tree is ``z x z in width x height'' when it is big enough, then then the width or height of each tree for a pair P is determined by Equation \ref{equation:sizetrees} of where \emph{`a'} is the total number of meals recorded by pair P ,\emph{`b'} is the highest number of meals recorded by a particular pair lets ''Q'',\emph{`c'} is the ratio of fruits and vegetables in all meals that have been recorded by pair P before, and z is either height or width of a tree when it has grown up to the maximum size( width=50 pixels; height=50 pixels).   For instance pair has a badge that is ranked number 7 will have (10-7) multiply by 10= 30 trees. Lets assume this pair recorded a total of a=7 meals or which its overall nutritions components constitutes of c=0.3 from fruits and vegetables. Also lets assume that a pair that had recorded the highest number of meals had a total of b=12 meals. Then the size of each tree will be; height=((7/12)*height of a tree when it is big enough)+0.3;width=((7/12)*width of a tree when it is big enough)+0.3.  Flowers are determined by the overall usage of the system in number of days. In each day of app usage, a pair receives 10 flowers. The size of each flower is also determined by the Equation \ref{equation:sizetrees}
+\begin{equation}
+\label{equation:numtrees}
+y=((10-n)*10) 
+\end{equation}
+\begin{equation}
+\label{equation:sizetrees}
+y=((a/b)*z)+c 
+\end{equation}
+\item{\textbf{Fish Tanks}}: The rules for garden were the same rules used to determine how many fish will be present in the tank and their sizes. In our previous informative evaluation reported in one study we observed that these rules can actually motivate  intermediaries to use the app and also to persuade their beneficiary participant to live healthy. Ideas that use visualizations similar to the fish tank and botanical garden have been previously studied in HCI \cite{klasnja2009:using,lin2006:fish}
+\end{itemize} 
+There is no systematic procedure of how we arrived to the aforementioned rules. These rules were just arbitrary.  We just invented them based on insights from a preliminary evaluation of the gamified prototype.\newline
+Both versions of the systems implemented reminders. In the logbook version, SMS were sent to remind intermediary participants to assist their respective beneficiary participants in self-monitoring of their steps and diet. In addition, those logbook reminders consisted of the current average number of steps walked per day by a beneficiary participant since the first day of using the app. In the gamified version, SMS were sent to remind pairs what they need to do in order to achieve rewards, and also what they have done so far (current status), and what remains to be done in order to attain a much higher status. For instance children can be reminded that recording more fruits and vegetable from their parents will give them a better botanical garden.\newline    
+In order to compare the two versions of the system, the experimental design was within group which uses the same group of participants to test both system: (1)logbook only; and (2) the one that includes both logbook and gamified components. In order to minimize the impact of the learning effect on one experimental condition,each pair of participant was randomly assigned to one of the two experimental sequences. The first sequence consisted of individual pairs of participants that started with the logbook version and finished with the gamified version. This sequence is referred to as ``LG'' group. The second sequence  consisted of individual pairs of participants that started with the gamified version and finished with the logbook version. This sequence is referred to as ``GL'' group. A total of seven pairs of participants were assigned to the LG group while the remaining seven pairs were assigned to the GL group. 
+\subsection{Data collection} 
+Prior to data collection each intermediary participant from the 14 pairs was given an android phone that they could use with their adult participants. Each pair of participants was allocated 1.3 GB of data to use through the duration of experiments. In addition each beneficiary participant was given a total of ZAR 240 (approx. US \$20) as a compensation for transport and their time for the duration of the study.\newline
+We carried out this evaluation for a period of six weeks starting from Mid October 2015 running up to the last week of November 2015. The first four weeks were spent on logbook version for the ``LG'' group and  gamified version for the ``GL'' group. Thereafter, pairs in LG group were switched to gamified version while pairs in ``GL'' group were switched to logbook. Both versions of the app were used for two weeks after the aforementioned switching.\newline
+We collected data through triangulation of usage logs for the two versions of the prototype,intrinsic motivation inventory(IMI) questionnaires, and interviews. We developed the IMI questionnaires with guidance of materials found on a ``Self-Determination Theory''\footnote{http://www.selfdeterminationtheory.org/intrinsic-motivation-inventory/} website which is maintained by researchers working on the theory including Richard Ryan and Edward Deci\cite{deci1985intrinsic} whom were early pioneers in developing the theory. These questionnaires were pretested in one of our early pilot studies.\newline
+There were two sets of questionnaires, one for adult (beneficiaries) participants , and another one for children (intermediaries)  participants. Both questionnaires were administered at three points: (1) baseline (before experiments); (2) midline (the fourth week, before switching of experimental conditions; (3) endline (after concluding usage experiment at the end of the sixth week).\newline
+The baseline questionnaire for the intermediary participants assesses the perceived enjoyment of intermediaries in helping other people with cellphone related tasks. The midline questionnaire for the intermediary participants assesses the ability of the two prototype to support the three basic psychological needs postulated by the self-determination theory: (1) autonomy, (2) competence, and (3) relatedness. Therefore we selected three sub-scales from the IMI questionnaire and these were (1)perceived autonomy, (2) perceived competence, and (3) perceived relatedness. The endline questionnaire for intermediaries was the same as the midline one.\newline
+The baseline questionnaire for beneficiary assesses the the overall average IMI scores for: (1)self-monitoring of diet; (2)self-monitoring of activity. The IMI questionnaire included the following sub-scales;perceived competence, perceived autonomy, perceived relatedness, perceived enjoyment, perceived important, and perceived usefulness. The midline and endline questionnaire include the same baseline questionnaire. In addition, we assesses beneficiaries' perceived usefulness in using the family wellness app at midline and endline.
+\section{Findings}
+On this findings section we report first report on the general use of the app, secondly we report on the impact of the two versions of the app in satisfying intermediaries intrinsic motivation needs through fulfilment of the three basic psychological needs. The third outcome we explore if beneficiaries find the app to be useful for their health. And the fourth and the last outcome is the impact of the versions of the app in self-monitoring of diet and activity.\newline
+
+\subsection{Usage Trend} 
+The experimental duration was 27 days in the first experimental condition from a particular sequence, 14 days in the second experimental condition for a sequence as there were two sequences namely ``LG' and ``GL'' groups. Therefore, the sum is 41 days (6 weeks).\newline 
+In this period of six weeks, the average utilization of the app regardless of experimental conditions was 10.5 (SD=7.39) days. The most active usage was from a pair that utilized the app for a total of 26 days while the less active usage was from a pair that had used the app for only two days out of 41 days.\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.3\textwidth]{scatter_daily_sessions.png}
+    \rule{26em}{0.5pt}
+  \caption{Total daily number of sessions from the two experimental conditions.}
+  \label{figure:usagedailysessions}
+\end{figure}\newline
+\begin{table*}[h!]
+  \begin{center}
+    \caption{Daily usage comparison between Logbook and Gamified systems for 41 days}
+    \label{table:usagedays}
+	\begin{tabular}{|L{3cm}|c|c|c|c|c|c|}
+		\hline
+		Groups&N&Rank Average&Sum Ranks&U&Z&P\\
+		\hline
+   		Daily logbook sessions&41&33.72&1701.5&\multirow{2}{*}{1159.5}&\multirow{2}{*}{-2.9538}& \multirow{2}{*}{0.00318}\\\cline{1-4} 
+   		 		    Daily gamification sessions&41&49.28& 1701.5&&&\\
+\hline
+	\end{tabular}
+  \end{center}
+\end{table*}
+\newline 
+I contrasted usage in each day between the ``Logbook App'' and ``Gamified App'' by computing the daily total number of sessions from all users in each of the two experimental conditions. The beginning of a new session is defined as the a continuous period of time where the end user interacts with the app without interruption. This period is whereby there is user's activities detected on the app while there was no user activities for the past one hour. If delay between activities is less than one hour it is then assumed that the last session is still active. If a user comes back after one hour has elapsed since the last detected user's activity then it is assumed they went away from the app and now they are coming back for a new session. There were 41 days of app usage in total. Therefore, each experimental condition had a total number of sessions for each day as shown on Figure \ref{figure:usagedailysessions}. After the fourth week there was a decline in the daily total number of sessions in each of the two experimental conditions as the result of the learning effect. The decline was more apparent to users who where switched from gamification to logbook since the switching happened at the end of the fourth week of usage.\newline
+We expanded the comparison of Figure \ref {figure:usagedailysessions} by carrying out an inferential statistical test in order to determine if the daily total of number of sessions differs in between logbook and gamification conditions. Before deciding on which test to use, I applied``\emph{Shapiro-Wilk Normality Test}''\footnote{http://sdittami.altervista.org/shapirotest/ShapiroTest.html} to test for normal distribution in both daily logbook and gamification sessions. The distributions of the two independent samples were both not normal. An attempt to transform the data using transformation algorithms didn't yield to normal distributions. Therefore, we adopted a non-parametric test called Mann-Whitney U Test. The  daily number of sessions in gamification condition were significantly higher than in logbook condition as shown on Table \ref{table:usagedays} above.\newline
+Another usage comparison that was carried out contrasted between `Logbook'' usage and``Gamification'' usage in each pair of users as the analysis on Table \ref{table:usagedays} compared totals sessions from the two systems by treating days as individual subjects, hence, it  was not specifically examining on the performance of individual pairs. This analysis excluded four pairs of users because they various technical problems that hindered their full participation in both experimental conditions. The list of pairs that were excluded and reasons for their exclusion are summarised on Table \ref{table:usageproblems}. \newline
+We compared usage by counting the number of sessions from each experimental condition. We computed the relative number of sessions since the number of days on which pairs of users spent on a particular experimental condition differ between LG and GL group. For instance the LG group spent nearly four weeks in logbook and two weeks in gamification while the GL group spent four weeks in gamification and two weeks in logbook. Therefore, we use number of session per day which is obtained using Equation \ref{equation:sessions}.\newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Pairs with usability/technical problems that hinder their participation}
+    \label{table:usageproblems}
+	\begin{tabular}{|l|p{1cm}|p{2cm}|p{3.5cm}|}
+		\hline
+		&Pair&Sequence&Problem\\
+		\hline
+		1&Pair A&GL group &App not loading due to poor Internet signal\\
+		\hline
+		2&Pair B&GL group& Miss-allocation of data bundles  \\
+		\hline
+		3&Pair C & LG group.& Pedometer never transmitted data to the server.\\
+		\hline
+		4&Pair D & LG group.& Pedometer stopped transmitting data to the server during the fourth week.\\
+	\hline
+	\end{tabular}
+  \end{center}
+\end{table}
+\begin{equation}
+\label{equation:sessions}
+y=t\SB{i n}/d\SB{i n}
+\end{equation} \newline
+where:\newline
+\emph{y} is number of sessions per day\newline
+\emph{t\SB{n i}} is total number of sessions for pair ``n'' in experimental condition ``i''\newline
+\emph{d\SB{n i}} is total number of days on which experimental condition ``i'' was available for pair ``n''.\newline
+For instance, suppose pair one is from a LG group. This means they had  a logbook system for 27 days and a gamified system for 14 days. Suppose the number of sessions in logbook was 50 and the number of sessions in Gamified system was 30 then the relative number of sessions per day spent on logbook is going to be ``\textbf{50} divide by \textbf{27} days'' and the relative number of sessions spent on  a gamified system is going to be ``\textbf{30} divide by \textbf{27}.\newline
+The differences on number of sessions per day didn't have a normal distribution shape. In order to get a normal distirbution shape of the differences, data was transformed using the natural log equation \ref{equation:log}. The differences between transformed logbook and gamification data had normal distribution shape. We performed a paired t test on the transformed data and the results showed that the Log mean of number of sessions per day was significantly higher on gamification condition when compared to logbook condition as shown on Table \ref{table:usagewellness2s}. What this finding suggests is that there was an indication of an increase in frequency of daily usage when pairs where in gamification condition.\newline
+\begin{equation}
+\label{equation:log}
+y=log (x+1)
+\end{equation}\newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Sessions comparison between logbook and gamification for 10 pairs of users}
+    \label{table:usagewellness2s}
+	\begin{tabular}{|L{3.3cm}|L{1.6cm}|L{1.6cm}|}
+		\hline
+		Log mean &Logbook&Gamified\\
+		\hline
+		 \multirow{3}{*}{Number of sessions/day}&M=0.201 ;SD=0.196&M=0.459; SD=0.336\\\cline{2-3} 
+		
+		 &\multicolumn{2}{|l|}{t(9)= 2.6593 ; p= 0.0261 ;} \\
+		  &\multicolumn{2}{|l|}{95\% CI=  -0.477 to -0.039 } \\
+\hline
+	\end{tabular}
+  \end{center}
+ \end{table}
+\begin{figure*}[htbp]
+  \centering
+    \includegraphics[width=0.6\textwidth]{self_monitoring_usage.png}
+    \rule{35em}{0.5pt}
+  \caption{Total clicks on feedback features for self-monitoring of wellness: ``Logbook App'' versus ``Gamified App''.}
+  \label{figure:self_monitoring_usage}
+\end{figure*}\newline
+Another dimension of usage analysis was on utilization of different self-monitoring functionality. There was an interesting phenomenon on usage of feedback features. Figure \ref{figure:self_monitoring_usage} shows during gamification condition, usage of the main self-monitoring features for steps and diet decreased compared to when users where in logbook condition. This happens as users started to spend time on virtual rewards which provided indirect feedbacks on steps and diet through badges, gardens etc. However, the trend in recording of diet/meals continued to remain the same between the two experimental conditions as the process of recording meals played instrumental in earning some of the virtual rewards, therefore, intermediary users had to continue using that feature while in gamification condition. Figure \ref{figure:clicks_distr} shows the distribution of clicks among feedback features of the "Gamified Wellness App" and "The Logbook App".\newline 
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.45\textwidth]{clicks_distr.png}
+    \rule{26em}{0.5pt}
+  \caption{Total clicks on feedback features in the two experimental conditions : self-monitoring features versus rewards features.}
+  \label{figure:clicks_distr}
+\end{figure}\newline
+From Figure \ref{figure:clicks_distr}, one can see that the number of clicks on the main self-monitoring feedback features had decreased and this because intermediary users became interested to feedbacks provided by virtual rewards features more than the main self-monitoring features. This provides an explanation why usage on Figure \ref{figure:usagedailysessions} above showed the decline of logbook conditions  after users who had been using gamified version of the app before logbook version became less interested with the "Logbook App" after being switched to it. If we examine this decline in usage by age groups (age \textgreater=median(15.5 years and age \textless 15.5 year), the drop appears to be almost the same for both age group. Contrary to this finding is that the trend on average sessions between the two age groups indicates more sessions in pairs that consisted of younger intermediary participants as shown on Figure \ref{figure:gambyage}.\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{gambyage.png}
+    \rule{26em}{0.5pt}
+  \caption{Average number of gamification sessions on  14 pairs by intermediaries' age: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:gambyage}
+\end{figure}\newline
+\begin{figure}[htbp]      
+  \centering
+    \includegraphics[width=0.4\textwidth]{gambyage_mod.png}
+    \rule{26em}{0.5pt}
+  \caption{Average number of gamification sessions on  10 pairs by intermediaries' age: Age \textgreater= median age(=15.5) versus Age \textless median age.}
+  \label{figure:gambyage_mod}
+\end{figure}\newline
+Intermediaries from both age group were distributed almost evenly to the two experimental sequences, therefore, the relativity of number of sessions doesn't matter on this trend. Also the overall average trend on usage of the app during the six weeks shows an indication that younger intermediaries (age \textless median age) tend to have more sessions compared their older counterparts since more session are reported in gamification condition.\newline 
+If we look at a different trend (Figure \ref{figure:gambyage_mod}) that exclude the four pairs who had usage problems (Table \ref{table:usageproblems}), still there is an indication that young intermediaries are likely to have more sessions on average while in gamification condition. Koivisto and Hamari \cite{koivisto2014demographic} studied the use of gamification in marketing and found that younger participants appears to be more interested in gamification compared to their older counterparts. In addition, the use gamification was found to be highly affected by the novelty effect which was inversely proportional to participants' 
+\subsection{User Experience}
+From the previous, there was an indication of young intermediaries (age\textless median=15.5 years) to have more number of sessions on average, but contrary to this trend is that, at baseline the trend on average perceived enjoyment on helping with cellphone related tasks indicated more sessions in intermediaries with age\textgreater=median compared to intermediaries with age\textless median for the 14 intermediary users as shown on Figure \ref{figure:PE_HELP_Age}. The trend in younger intermediaries' average perceived enjoyment to use the wellness app (Figure \ref{figure:PE_Interm_App})  appears to be more compared to the older counterparts despite the fact that these younger intermediaries showed less interest at baseline. This trend resonates with aforementioned usage of the app.\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{PE_HELP_Age.png}
+    \rule{26em}{0.5pt}
+  \caption{Intermediaries' average perceived enjoyment to help others with cellphone tasks versus age group}
+  \label{figure:PE_HELP_Age}
+\end{figure}\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{PE_Interm_App.png}
+    \rule{26em}{0.5pt}
+  \caption{Intermediaries' average perceived enjoyment in using the app versus age group.}
+  \label{figure:PE_Interm_App}
+\end{figure}\newline
+There are factors that played an instrumental role in motivating usage of the app in the two experimental condition and these factors are regardless of the age group of intermediaries. But some these mediating factors appeared to had more effect on young intermediaries. The list of the factors is as follows:
+\begin{enumerate}
+\item{\textbf{Self-monitoring task}}: The task itself of self-monitoring without rewards sparked interests of some intermediary users. This might be as the result of the novelty effect of visualization mechanisms. For instance one intermediary user who happened to be the youngest among all intermediaries reported the highest perceived enjoyment during logbook condition compared to other intermediary users. In addition it seems the phone also had an impact on triggering her interests.
+\item{\textbf{Informal comparisons}}: Comparison on steps graphs can be another source motivation. For intermediaries who were close, they did this form of informal comparison. In the absence of gamification, still intermediaries thought that they were competing with each other, therefore those intermediary participants who were friend before had face to face interactions of where comparison with one another took place. 
+\item{\textbf{Gamification rewards and  competitions}}: This kind of comparison increased the number of times intermediary user checked the app. The ``Gamified App'' was designed in such a way that a pair will earn rewards based on usage and the average number of steps walked by a beneficiary participant who is a member of the pair. The purpose of rewards was to foster users' intrinsic experiences such as competitiveness and a sense of autonomy which are predictors of intrinsic motivation. Rewards depended on four parameters and these were the number of steps walked by a beneficiary user, the number of days the app has been used by an intermediary to either to record meals or to view feedback on meals, points, steps, gardens, etc. During interviews, the researcher discovered that in one pair not only the beneficiary participant was using the pedometer, an intermediary was also taking turns to use the pedometer, therefore they were collaborating in accumulating steps. Both an intermediary user and a beneficiary user had discussions of whether the person whose turn it was had walk enough steps. They did this to accumulate more steps than other pairs.
+\item{\textbf{Requests from beneficiary users}}:There were times where intermediary users engaged with the app only upon receiving requests from beneficiaries.  We observed cases of where intermediary participants autonomy was violated as requests came at the time where intermediary participants were either studying for exams or doing something else and they felt it was not the right time to fulfil those requests. This made intermediary participant to feel that their parents were nagging them.
+\end{enumerate}
+However, despite higher frequency of usage in gamification condition, the trend on average perceived enjoyment in logbook appears to be higher than in logbook condition for both age groups as shown on Figure \ref{figure:PE_Interm_App_exp_seq} and this is because not all intermediary participants had a positive user experience on utilizing gamification. We observed two factors that contributed  to this. The first factor is that there were pairs that had usage problems as we have seen on Table \ref{table:usageproblems} above. Among these four pairs, the user experience was severely bad in the users from pairs ``A'' and, ``C''.\newline
+For pair A the app demotivated the intermediary of this pair because it was not stable  and it was always failing to load. This happened at the beginning of the experiments and as the result this pair terminated their usage after using the app for only two days of which both days were during the gamification condition.\newline
+For pair C, the pedometer never transmitted a single reading to the server but this pair continued to use the app throughout the logbook condition. There are several reasons which include the fact that the intermediary user from this pair was close to another intermediary from pair D which also experienced problems with pedometer but not so severe like an intermediary user from Pair C. Therefore, an intermediary user from pair C continued use the app although the steps never got transmitted to the server. However, steps were being displayed as raw numbers on a native pedometer app. The two intermediary participants from pairs C, D shared their progress about steps walked by their respective beneficiary participants. And this happened whenever they met.  This explained why the pedometer problem didn't affect the usage of the app by the intermediary user from pair C. After pair C was switched to gamification, the inability of the pedometer to transmit steps to the server resulted to negative user experience to the intermediary user from this pair. The reason is that steps played a role in achievement of rewards. And this intermediary user had done a lot of efforts with expectations that their pair will be rewarded once switched to gamification condition. This finding about expectations was shared by another intermediary user from pair E who was living close  to the two intermediaries from pairs C, D. She was concerned about the gamification system as she worried that the system was not fair because her peers had done more efforts compared to her but she was ahead of them and she didn't understand why was it the case. She was referring to what she had observed during logbook condition,  therefore she was expecting the efforts of her pears to transmute into rewards after they were both switched to gamification condition.  As the result the problems on pairs C, D had a multiplier  effect on the perceived enjoyment of this intermediary user from pair E hence her motivation to use the gamified app was negatively affected.\newline 
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.5\textwidth]{PE_Interm_App_exp_seq.png}
+    \rule{26em}{0.5pt}
+  \caption{Intermediaries' average perceived enjoyment in using the app versus age group (Logbook and Gamification).}
+  \label{figure:PE_Interm_App_exp_seq}
+\end{figure}\newline
+Gamification condition didn't harm motivation of only users with severe usability problems (pairs A, C) as there was  a very intriguing phenomenon on two other intermediary users from \textbf{Pair F} and \textbf{Pair G}. The two intermediary users had used the app more often in gamification condition  compared to when they were in logbook condition but had reported both lower scores in perceived enjoyment, and perceived competence when in gamified condition compared to when they were in logbook condition. On reviewing their performance on gamification, it was observed that these two users never attained any advancement in badges despite their efforts during gamification condition. The reason for this is that their beneficiary participants were not walking enough steps despite the fact that these intermediaries had put  more efforts in using the App during gamification condition. Badges were earned in combination of both the app usage and average number of steps walked by a beneficiary user. Therefore the absence of rewards harmed both their interest to use the "Family Wellness App" while in gamification condition. We attribute this negative experience to failure of our gamification system to match challenges with abilities. i.e. efforts of beneficiaries differed hence challenges should have matched with individual abilities of beneficiaries within pairs. When challenges are too difficult as they don't match users' skills, end users can become demotivated \cite{zhang2008:motivational}.\newline
+We also compared the ability of the two versions of the app to afford the three basic psychological needs. In this comparison we excluded pairs A, C, F, and G due the reasons we have mentioned above. The results for this comparison is shown on Table \ref{table:imiwellnessinterm}.
+\begin{table}[h!]
+  \begin{center}
+    \caption{Comparison of 10 intermediaries' scores on sub-scales of perceived competence (PC), perceived autonomy (PE), and perceived relatedness (PR) in using the ``Family Wellness App}
+    \label{table:imiwellnessinterm}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Mean &Logbook&Gamification\\
+		\hline
+		 \multirow{2}{*}{PC}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
+
+		 &\multicolumn{2}{|l|}{t(9)=-3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+\hline
+		 \multirow{2}{*}{PA}&M=3.95; SD=0.86&M=3.96; SD=0.94\\\cline{2-3} 
+
+		 &\multicolumn{2}{|l|}{t(9)= -0.0269; p= 0.9792; 95\% CI= -0.596 to 0.582} \\
+\hline
+
+		 \multirow{2}{*}{PR}&M=4.22; SD=0.63&M=4.37; SD=0.9\\\cline{2-3} 
+		 &\multicolumn{2}{|l|}{t(9)= -0.7193; p=0.4902; 95\% CI= -0.622 to 0.322 } \\
+\hline
+	\end{tabular}
+  \end{center}
+\end{table}
+\newline
+Perceived competence of intermediaries in using the ``Family Wellness App'' was significantly higher in the gamified condition than in the logbook condition. This means a gamified system gave intermediary users challenges and these challenges motivated an increase in frequency of using the app. There ware no significant difference on both perceived autonomy and relatedness. Perceived autonomy doesn't differ because in both experimental conditions usage was either self-initiated by beneficiary user some of the time but there were also cases of were requests to initiate interaction came from beneficiary participants. perceived relatedness also doesn't differ and the reason for this is most users where already close friends before this intervention hence either versions of the app didn't change anything about how they relate to each other.\newline  
+\subsection{User Experience of Beneficiaries} 
+Since most beneficiary participants relied on their intermediary participants to access the app it was difficult to assess whether the versions of the prototype fulfil the three basic psychological needs or not. However, we observed situations of where beneficiary had negative experience, especially when they need help and intermediary participants feel they are being bothered. This happened even in gamification especially for users who didn't enjoy gamification.\newline
+We also compared the overall impact of the app for self-monitoring at midline and endline with comparison to baseline on motivation to self-monitor diet and activity. We used the IMI questionnaire with six sub-scales; perceive competence, perceived autonomy,perceived relatedness, perceived enjoyment,  perceived usefulness, and perceived effort. The overall IMI score was computed by averaging scores from individual sub-scales.
+Only ten beneficiary participants were considered for analysis. Four were excluded because of usage problems highlighted on Table \ref{table:usageproblems} as it affected their ability to self-monitor their wellness.\newline
+The first comparison was on self-monitoring of diet at baseline, midline, and endline. I used one way ANOVA with repeated measures. The results on self-monitoring of diet (baseline, midline, and endline) are shown on Table  \ref{table:imidietbenf}.  The Mauchly's test indicated that the assumption of sphericity was not violated with  $\chi{}$\SP{2}(2)=3.76, p=0.152. The ANOVA showed that there was a significant time effect on average IMI scores  to self-monitoring diet measured at baseline, midline and endline. Also pairwise comparisons with a paired student t-test indicated that the average score was significantly higher at endline when compare to baseline (t(9)=-2.457; p=0.036; 95\% CI= -2.06083 to -0.08517 ). There were no significant differences between midline and baseline (t(9)=-1.298; p=0.227 ; 95\% CI= -1.621 to 0.439), and between midline and endline (t(9)=-1.975; p=0.08 ; 95\% CI= -1.0342 to 0.07017). But if we repeat the ANOVA analysis with baseline, logbook and gamification the difference is not significant. However, the trend on averages shows that both gamification and logbook result into an increase of motivation to self-monitor diet as shown on Figure \ref{figure:imi_diet2}\newline
+\begin{table}[h!]
+  \begin{center}
+    \caption{Comparison of ten beneficiaries' IMI scores in self-monitoring of diet at baseline, midline and endline}
+    \label{table:imidietbenf}
+	\begin{tabular}{|L{3.3cm}|L{1.1cm}|L{1.1cm}|L{1.1cm}|}
+		\hline
+		Mean IMI Score &Baseline&Midline&Endline\\
+		\hline
+		 %\multirow{3}{*}
+		 {Self-monitoring of Diet}&M=4.48; SD=1.24&M=5.07; SD=1.19;&M=5.55; SD=0.95\\\cline{2-4} 
+
+		&\multicolumn{3}{|l|}{F(2,18)=3.787; p=0.042} \\
+\hline	\end{tabular}
+  \end{center}
+\end{table}\newline
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{imi_diet2.png}]
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Diet at Baseline, Logbook, and Gamification.}
+  \label{figure:imi_diet2}
+\end{figure}
+\section{Discussion}
+\section{Conclusions}
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional 
+
+\section{Acknowledgments} 
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to\ref{equation:sizetrees}
+% produce the bibliography for the citations in your paper.
+%small{
+\bibliographystyle{abbrv}
+\bibliography{sigproc} %} % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+
+\end{document}
