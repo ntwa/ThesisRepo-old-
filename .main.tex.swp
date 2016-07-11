@@ -209,6 +209,8 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
 \textbf{BBM} & \textbf{B}lack \textbf{B}erry \textbf{M}essenger \\
+\textbf{ICT} & \textbf{I}nformation and \textbf{C}ommunications \textbf{T}echnology \\
+\textbf{MMS} & \textbf{M}ultimedia \textbf{M}essaging \textbf{S}ervice \\
 \textbf{USSD} & \textbf{U}nstructured \textbf{S}upplementary \textbf{S}ervice \textbf{D}ata \\
 %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 }
@@ -269,7 +271,9 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 % Include the chapters of the thesis as separate files from the Chapters folder
 % Uncomment the lines as you write the chapters
-
+\input{Chapters/Introduction}
+\input{Chapters/RelatedWork}
+\input{Chapters/StudyContext}
 \input{Chapters/ContextEnqChapter}
 \input{Chapters/Prototype1Chapter}
 \input{Chapters/Prototype2Chapter}
