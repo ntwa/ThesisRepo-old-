@@ -42,7 +42,14 @@
 \def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB{#2}}
 \def\SP#1{\textsuperscript{\textcolor{black}{#1}}}
 \def\SB#1{\textsubscript{\textcolor{black}{#1}}}
-
+\newenvironment{myquote}
+               {\list{}{\rightmargin   \leftmargin
+                        \parsep        0in }%
+                \item\relax}
+               {\endlist}
+\newcommand{\userquote}[2]{\begin{samepage}\begin{myquote} 
+     \em{\small{#2\begin{flushright}---#1\end{flushright}}}
+   \end{myquote}\end{samepage}}
 \newcolumntype{x}[1]
             {>{\raggedright}p{#1}}
 \newcommand{\tn}{\tabularnewline}
@@ -147,10 +154,10 @@ Date:\\
 
 \null\vfill % Add some space to move the quote down the page a bit
 
-\textit{``Thanks to my solid academic training, today I can write hundreds of words on virtually any topic without possessing a shred of information, which is how I got a good job in journalism."}
+\textit{``Education is what remains after one has forgotten what one has learned in school.''}
 
 \begin{flushright}
-Dave Barry
+Albert Einstein
 \end{flushright}
 
 \vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
@@ -209,8 +216,12 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 \listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
 {
 \textbf{BBM} & \textbf{B}lack \textbf{B}erry \textbf{M}essenger \\
+\textbf{CHW} & \textbf{C}ommunity \textbf{H}ealth \textbf{W}orkets\\
 \textbf{ICT} & \textbf{I}nformation and \textbf{C}ommunications \textbf{T}echnology \\
+\textbf{ICTD} & \textbf{I}nformation and \textbf{C}ommunications \textbf{T}echnology and \textbf{D}evelopment \\
 \textbf{MMS} & \textbf{M}ultimedia \textbf{M}essaging \textbf{S}ervice \\
+\textbf{PSD} & \textbf{P}ersuasive \textbf{S}ystem \textbf{D}esign \\
+\textbf{SMS} & \textbf{S}hort \textbf{M}essaging \textbf{S}ervice \\
 \textbf{USSD} & \textbf{U}nstructured \textbf{S}upplementary \textbf{S}ervice \textbf{D}ata \\
 \textbf{URL} & \textbf{U}niform \textbf{R}esource \textbf{L}ocator\\
 %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
@@ -231,7 +242,7 @@ Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$
 }
 
 %----------------------------------------------------------------------------------------
-%	SYMBOLSAlthough I don't know the context of the post but I think the Recce squad is a specialized unit of GSU. Specialized units cost more money to train that is why they are called special units and not everybody has what it takes to be part of that unit..
+%	SYMBOLS..
 %----------------------------------------------------------------------------------------
 
 \clearpage % Start a new page
@@ -258,8 +269,8 @@ $\omega$ & angular frequency & rads$^{-1}$ \\
 
 \pagestyle{empty} % Page style needs to be empty for this page
 
-\dedicatory{For/Dedicated to/To my\ldots} % Dedication text
-Although I don't know the context of the post but I think the Recce squad is a specialized unit of GSU. Specialized units cost more money to train that is why they are called special units and not everybody has what it takes to be part of that unit..
+\dedicatory{This work is dedicated to my great parents, my father, Andalwisye, and my late mother, Mary for supporting me throughout my academic journey\ldots} % Dedication text
+
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
 %----------------------------------------------------------------------------------------
