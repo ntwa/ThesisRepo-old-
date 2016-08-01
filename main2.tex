@@ -1,3 +1,299 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 1.43 (17/5/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and••••••••
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, oneside]{Thesis} % The default font size and one-sided printing (no margin offsets)
+
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+
+\usepackage[comma, sort&compress]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+
+%\usepackage{booktabs}
+%\usepackage{array}
+\usepackage{amsmath,array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+%\usepackage{apacite}
+\usepackage{multirow}
+\usepackage{fixltx2e}
+\usepackage{enumerate}
+\def\SPSB#1#2{\rlap{\textsuperscript{\textcolor{red}{#1}}}\SB{#2}}
+\def\SP#1{\textsuperscript{\textcolor{black}{#1}}}
+\def\SB#1{\textsubscript{\textcolor{black}{#1}}}
+\newenvironment{myquote}
+               {\list{}{\rightmargin   \leftmargin
+                        \parsep        0in }%
+                \item\relax}
+               {\endlist}
+\newcommand{\userquote}[2]{\begin{samepage}\begin{myquote} 
+     \em{\small{#2\begin{flushright}---#1\end{flushright}}}
+   \end{myquote}\end{samepage}}
+\newcolumntype{x}[1]
+            {>{\raggedright}p{#1}}
+\newcommand{\tn}{\tabularnewline}
+
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\textsc{\LARGE \univname}\\[1.5cm] % University name
+\textsc{\Large Doctoral Thesis}\\[0.5cm] % Thesis type
+
+\HRule \\[0.5cm] % Horizontal line
+{\huge \bfseries \ttitle}\\[0.4cm] % Thesis title
+\HRule \\[1.5cm] % Horizontal line
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+{\authornames} % Author name - remove the \href bracket to remove the link
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisors:} \\
+{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\end{flushright}
+\end{minipage}\\[3cm]
+ 
+\large \textit{A thesis submitted in fulfilment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
+\textit{in the}\\[0.4cm]
+\groupname\\\deptname\\[2cm] % Research group name and department name
+ 
+{\large \today}\\[4cm] % Date
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+ 
+\vfill
+\end{center}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+\Declaration{
+
+\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+I, \authornames, declare that this thesis titled, '\ttitle' and the work presented in it are my own. I confirm that:
+
+\begin{itemize} 
+\item[\tiny{$\blacksquare$}] This work was done wholly or mainly while in candidature for a research degree at this University.
+\item[\tiny{$\blacksquare$}] Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
+\item[\tiny{$\blacksquare$}] Where I have consulted the published work of others, this is always clearly attributed.
+\item[\tiny{$\blacksquare$}] Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+\item[\tiny{$\blacksquare$}] I have acknowledged all main sources of help.
+\item[\tiny{$\blacksquare$}] Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
+\end{itemize}
+ 
+Signed:\\
+\rule[1em]{25em}{0.5pt} % This prints a line for the signature
+ 
+Date:\\
+\rule[1em]{25em}{0.5pt} % This prints a line to write the date
+}
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	QUOTATION PAGE
+%----------------------------------------------------------------------------------------
+
+\pagestyle{empty} % No headers or footers for the following pages
+
+\null\vfill % Add some space to move the quote down the page a bit
+
+\textit{``Education is what remains after one has forgotten what one has learned in school.''}
+
+\begin{flushright}
+Albert Einstein
+\end{flushright}
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null % Add some space at the bottom to position the quote just right
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+
+\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+}
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+The acknowledgements and the people to thank go here, don't forget to include your project advisor\ldots
+}
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+
+\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+{
+\textbf{BBM} & \textbf{B}lack \textbf{B}erry \textbf{M}essenger \\
+\textbf{CHW} & \textbf{C}ommunity \textbf{H}ealth \textbf{W}orkets\\
+\textbf{ICT} & \textbf{I}nformation and \textbf{C}ommunications \textbf{T}echnology \\
+\textbf{ICTD} & \textbf{I}nformation and \textbf{C}ommunications \textbf{T}echnology and \textbf{D}evelopment \\
+\textbf{MMS} & \textbf{M}ultimedia \textbf{M}essaging \textbf{S}ervice \\
+\textbf{PSD} & \textbf{P}ersuasive \textbf{S}ystem \textbf{D}esign \\
+\textbf{SMS} & \textbf{S}hort \textbf{M}essaging \textbf{S}ervice \\
+\textbf{USSD} & \textbf{U}nstructured \textbf{S}upplementary \textbf{S}ervice \textbf{D}ata \\
+\textbf{URL} & \textbf{U}niform \textbf{R}esource \textbf{L}ocator\\
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+}
+
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
+
+\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
+{
+Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
+% Constant Name & Symbol & = & Constant Value (with units) \\
+}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS..
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
+
+\listofnomenclature{lll} % Include a list of Symbols (a three column table)
+{
+$a$ & distance & m \\
+$P$ & power & W (Js$^{-1}$) \\
+% Symbol & Name & Unit \\
+
+& & \\ % Gap to separate the Roman symbols from the Greek
+
+$\omega$ & angular frequency & rads$^{-1}$ \\
+% Symbol & Name & Unit \\
+}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Return the line spacing back to 1.3
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\dedicatory{This work is dedicated to my great parents, my father, Andalwisye, and my late mother, Mary for supporting me throughout my academic journey\ldots} % Dedication text
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+%\input{Chapters/Introduction}
+%\input{Chapters/RelatedWork}
+%\input{Chapters/StudyContext}
+%\input{Chapters/ContextEnqChapter}
+%\input{Chapters/Prototype1Chapter}
+%\input{Chapters/Prototype2Chapter}
+%\input{Chapters/SummaEvalChapter}
+%\input{Chapters/Chapter4} 
+%\input{Chapters/Chapter5} 
+%\input{Chapters/Chapter6} 
+%\input{Chapters/Chapter7} 
 % Chapter 1
 
 \chapter{Summative Evaluation} % Main chapter title
@@ -86,7 +382,6 @@ In addition to the aforementioned sub-scales, perceived usefulness and perceived
 In each question from the IMI sub scales, respondents were supposed to rate there experience in a scale of 1 to 7 points which means that 1 implies the statement is "not true at all" and 7 means the statement is "very true".
 
 There were three main objectives of using the IMI questionnaire. The first objective was to assess the ability of the two prototypes in supporting the participants with the three basic psychological needs. The difference in experimental durations was expected not to have any effect on motivations to use either of the two systems since both logbook and gamification were both present in both phases of experiments. Therefore, effects on motivations due to different durations were expected to cancel each other during analysis. I compared between the ability of the two prototypes in affording three basic psychological needs suggested by self-determination theory. In addition, I also included perceptions on enjoyment as it is a direct measure of intrinsic motivation. The corresponding scales from the IMI questionnaire were administered at midline and endline . Therefore, there were four sub-scales; perceived competence, perceived autonomy, perceived enjoyment and perceived relatedness.  For the reason I stated above, I decided to exclude users from  Pair A and C on Table \ref{table:usageproblems} , and Pairs E and F on Table \ref{table:negexprnce}. A total of ten pairs were considered for analysis on the aforementioned intrinsic motivation sub-scales. The hypotheses of interest for intermediaries were:
-
 \begin{enumerate}
 \item{Hypothesis 1}
 \begin{itemize}
@@ -277,7 +572,6 @@ Figures \ref{figure:PE_Interm_App} and \ref{figure:PE_Interm_App_exp_seq}  sugge
 
 There several factors that influence intermediaries to use the app and these are:
 \begin{enumerate}
-
 \item{\textbf{The phone effect}}: The phenomenon of sharing phones was important in nurturing the relationship between intermediaries and beneficiaries. Parents were lending their phones to their kids to access social media sites and games. Having access to a phone while providing help to beneficiary participants can be viewed as one of the motivating factors to intermediary participants who didn't have smart-phones or data bundles in their smart-phones. Some intermediary participants had installed games, other apps on those phones.
 
 \userquote{\textbf{Siyamthanda}, a female intermediary from Langa, 12 yrs old} {``I had freedom [in using the app] because sometimes she left the phone with me and I was able to play games''}
@@ -317,6 +611,7 @@ Rewards were specific for gamification condition by they appeared to also affect
 \userquote{\textbf{Kefiloe}, a female beneficiary from Athlone, 26 years old} {``I think we talk more than before the family wellness app. Before the family wellness app, after work it was just ``Hi'' and then I go to my room but now. But now she would come to my room  and say let me see your phone,  what did you eat today,  and write everything down on the phone. So we are more closer than before because of this. Most of the time she used to say that `we must win this'''} 
 
 \item{\textbf{Requests from beneficiary users}}: There were times where intermediary users engaged with the app only upon receiving requests from beneficiaries. In both absence and presence of gamification, intermediaries had to fulfil requests from beneficiaries.  But during logbook condition, intermediaries appeared to be less enthusiastic in handling those requests. Some beneficiaries complained that there were several incidences of where intermediaries were refusing to fulfil these requests and it happened more often during logbook condition. It was observed that in most of these cases, intermediary participants' autonomy was violated as requests came at times where intermediary participants were either studying for exams or doing something else and they felt it was not the right time to fulfil those requests. This made some of the intermediary participants to feel that their parents were nagging them. For instance, \textbf{Lunga}, a male intermediary participant from Langa, aged 17 years, felt annoyed when his mother insisted they should enter the family wellness app while he was busy using social media through the intervention's phone. This happened during logbook condition. Also a similar situation happened to \textbf{Jennifer}, female intermediary participants from Athlone, aged 18 years who also felt irritated by her mother's constant requests during logbook condition. In addition she felt the app was not that exciting as she said ``\emph{The app was okay first but it started to get boring. You don't want to go into it any more. I think there will be some excitement now if the game comes in. When do we get the game?}''. She was curious to know when they will be switched to gamification because she thought the logbook condition was boring. 
+\end{enumerate} 
 
 Interest of intermediaries or pairs in general varied as some exhibited interests on interacting with others through the app while others where focused on achievements (i.e. dominating others in competitions). Gamification appeared to be the most dominant factor that influenced usage as we have already seen that the frequency of usage showed a higher value in gamification when compared to logbook. 
 
@@ -330,17 +625,14 @@ Only two intermediaries had tried to interact with others using social features 
 
 However, not all intermediaries had a positive user experience on utilizing gamification, that is why the average perceived enjoyment appears to be lower for both age groups while in gamification condition compared to the logbook condition (Figure \ref{figure:PE_Interm_App_exp_seq}).
 
-\end{enumerate} 
-
 Leader-board can demotivate those users that are at the bottom but it can foster aspects of relatedness for all users\citep{sailer2013:psychological}. In this case there were users who never made any advancement in badges hence they appeared at the bottom of the leader board. Some participants it was due to technical problems as reported on Table \ref{table:usageproblems}. But there few exceptions of which two users had no technical problems but never had any advancement in badges despite their efforts in using the gamified system more than the logbook condition as shown on Figure \ref{figure:badge_failure_2}. One user was from the `LG' group (Keller), while the other one was from the `GL' group (Leon).  Their beneficiary participants were not walking enough steps despite the fact that these two intermediaries had put  more efforts in using the app during gamification condition than in logbook condition.
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.7\textwidth]{Figures/badgesfailures2.png}
+    \includegraphics[width=0.4\textwidth]{Figures/badgesfailures2.png}
     \rule{35em}{0.5pt}
   \caption{Logbook Vs Gamification for two users that had no technical problems but never had any badge advancement.}
   \label{figure:badge_failure_2}
 \end{figure}
-
 Badges were earned in combination of both the app usage and average number of steps walked by a beneficiary user. One beneficiary who was working with one of these intermediary users also reported in interviews that there was always a contention with her intermediary when this beneficiary wanted to see what was going in the app as the intermediary was not voluntarily willing to help some of the time. It is hypothesized that this could be one of the factors that played a role in demotivating some participants during gamification condition. There were also cases of  where intermediaries doubted the credibility of the system because their peers appeared to be more engaged with the app, but were at lower positions on the leader board. 
 
 \userquote{\textbf{Akhona}, a female intermediary from Langa, 16 yrs old} {``It [The experience in using the app] was the same as last time (during gamification) except for the game part. I was actually above some of the others. That was weird. Because they were more interested in the app than me.''} 
@@ -423,7 +715,13 @@ A finding from a pairwise comparisons (a paired student t-test) indicated that t
 		\hline
 		Mean &Baseline&Endline\\
 		\hline
-		 \multirow{2}{*}{IMI Score}&M=4.48; SD=1.24&M=5.55; SD=0.95\\\cline{2-3} 
+		 \multirow{2}{*}{IMI Score}&M=4.48\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=0.4\textwidth]{Figures/imi_diet.png}
+    \rule{35em}{0.5pt}
+  \caption{Trend on Average IMI Scores of Self-Monitoring of Diet at Baseline, Midline, and Endline.}
+  \label{figure:imi_diet}
+\end{figure}; SD=1.24&M=5.55; SD=0.95\\\cline{2-3} 
 
 		 &\multicolumn{2}{|l|}{t(9)=-2.457; p=0.036 ; 95\% CI= -2.06083 to -0.08517} \\
 \hline
@@ -527,3 +825,37 @@ The finding from an analysis (N=9) that examined if there is a difference among 
 \begin{flushright}
 \end{flushright}
 
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+%\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\label{Bibliography}
+
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\end{document}  
