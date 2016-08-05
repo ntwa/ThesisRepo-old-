@@ -1,4 +1,4 @@
-% Chapter 1
+        % Chapter 1
 
 \chapter{Summative Evaluation} % Main chapter title
 
@@ -53,55 +53,62 @@ In the second comparison, it was pairwise comparison of users' sessions in betwe
 \end{table}
 For \textbf{Pair A}, the app failed to load every time their intermediary user tried to use it. What was observed from the house where this pair lived in is that there was a poor Internet signal, hence the app was always failing to load most of the time. The second pair (\textbf{Pair B}), data was allocated to the wrong phone number at the beginning of experiments but they never reported on time. These two pairs (Pair A and Pair B) had the lowest usage days which were 2 and 3 days respectively and they they had used the app only in gamification condition.
 
-For the last two pairs (\textbf{Pairs C} and \textbf{D}) on Table \ref{table:usageproblems}, their pedometers were not transmitting steps' data to the server. Steps data were important for advancement of badges, and improvement of both the fish tank and botanical garden in gamification condition. Pair C's pedometer never transmitted any readings to the server even in logbook condition.  Pair D's pedometer stopped transmitting steps data on the fourth week of running the experiments and this was before this particular user was switched to gamification condition. The two intermediary users from Pair C and Pair D were close friends. Although the pedometer never transmitted data in Pair C  since the beginning of experiments, an intermediary user from this pair continued to use the wellness app because of the informal comparison with an intermediary user from Pair D while they were both still in logbook condition. The usage in Pair C and Pair D were both eleven days. Their drop out started during gamification condition. Pair C used the app for only three days and Pair D used it for only one day. Since gamification depended on transmission of steps to the server, pedometer problems affected Pair C and Pair D motivations to participate in gamification phase despite their efforts during logbook condition. The learning effect coupled with problems with their pedometers mediated their decrease in usage with the app.  An intermediary user from another pair in "LG" group who happened to live close to the Pair D and Pair C, shared her concerns about the rewards from the gamified app. This was during the endline interviews. This particular intermediary user didn't appreciate her advancement in badges because she admitted that her peers (the two intermediary users from Pair C and Pair D) did more efforts than her but they were not getting anything so she didn't understand why she was ahead of them. She was referring to their usage during logbook condition as they were both using the ``logbook App'' at the same time.  This proves that usability problems played a role to the some extent in demotivating participation in gamification condition  of intermediary users from Pair C and Pair D.
-\subsubsection{Questionnaires}\label{methodsquestionnaire}
-The reaserch team administered questionnaires at baseline, mid-line (during switching of experimental conditions), and end-line. The list of questionnaires is provided below.
+For the last two pairs (\textbf{Pairs C} and \textbf{D}) on Table \ref{table:usageproblems}, their pedometers were not transmitting steps' data to the server. Steps data were important for advancement of badges, and improvement of both the fish tank and botanical garden in gamification condition. Pair C's pedometer never transmitted any readings to the server even in logbook condition.  Pair D's pedometer stopped transmitting steps data on the fourth week of running the experiments and this was before this particular user was switched to gamification condition. The two intermediary users from Pair C and Pair D were close friends. Although the pedometer never transmitted data in Pair C  since the beginning of experiments, an intermediary user from this pair continued to use the wellness app because of the informal comparison with an intermediary user from Pair D while they were both still in logbook condition. The usage in Pair C and Pair D were both eleven days. Their drop out started during gamification condition. Pair C used the app for only three days and Pair D used it for only one day. Since gamification depended on transmission of steps to the server, pedometer problems affected Pair C and Pair D motivations to participate in gamification phase despite their efforts during logbook condition. The learning effect coupled with problems with their pedometers mediated their decrease in usage with the app.  An intermediary user from another pair in "LG" group who happened to live close to the Pair D and Pair C, shared her concerns about the rewards from the gamified app. This was during the endline interviews. This particular intermediary user didn't appreciate her advancement in badges because she admitted that her peers (the two intermediary users from Pair C and Pair D) did more efforts than her but they were not getting anything so she didn't understand why she was ahead of them. She was referring to their usage during logbook condition as they were both using the ``logbook App'' at the same time.  This proves that usability problems played a role to the some extent in demotivating participation in gamification condition  of intermediary users from Pair C and Pair D. So to compare usage the hypothesis of interest is:
+
 \begin{enumerate}
-\item{\textbf{Baseline Questionnaires}}
-
-At baseline both intermediary and beneficiary participants filled their respective questionnaires. 
+\item{Hypothesis 1}
 \begin{itemize}
-\item{\textbf{Intermediaries}}: Intermediaries participants' baseline questionnaire had three sections. The first section captured demographic information such as age,gender, and number services/apps used on cellphones. The second section included an IMI (Intrinsic Motivation Inventory) questionnaire  to assess participants' intrinsic motivation in using cellphones. The third section included an IMI questionnaire to assess participants' intrinsic motivation in helping their parents with cellphone based tasks.
-\item{\textbf{Beneficiaries}}: Beneficiary participants' baseline questionnaire had four sections. The first section captured demographic information such as age,gender, and number services/apps used on cellphones. The second section included an IMI questionnaire to assess participants' intrinsic motivation in using cellphones. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition. The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
-\end{itemize}
-\item{\textbf{Midline Questionnaires}}
-
-Also at midline both intermediary and beneficiary participants filled their respective questionnaires. 
-\begin{itemize}
-\item{\textbf{Intermediaries}}: Intermediaries participants' midline questionnaire had only one section which included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app.
-\item{\textbf{Beneficiaries}}: Beneficiary participants' baseline questionnaire had four sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition. The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
-\end{itemize}
-\item{\textbf{Endline Questionnaires}}
-
-At endline both intermediary and beneficiary participants filled their respective questionnaires. 
-\begin{itemize}
-\item{\textbf{Intermediaries}}: Intermediaries participants' endline questionnaire had only one section which included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app.
-\item{\textbf{Beneficiaries}}: Beneficiary participants' endline questionnaire had three sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition.The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
+\item{H\SB{0}}:There is no difference in number of sessions between a logbook app and gamified app
+\item{H\SB{A}}:There is a difference in number of sessions between a logbook app and gamified app
 \end{itemize}
 \end{enumerate}
+\subsubsection{Questionnaires}\label{methodsquestionnaire}
+The research team administered questionnaires at baseline, mid-line (during switching of experimental conditions), and end-line. These questionnaires targeted both intermediary and beneficiary participants. The list of questionnaires is provided below.
+\begin{enumerate}
+\item{\textbf{Intermediaries}}
+Intermediaries had three questionnaires that were administered at baseline, midline, and endline.
+ 
+\begin{itemize}
+\item{\textbf{Baseline Questionnaire}}: Intermediaries participants' baseline questionnaire had three sections. The first section captured demographic information such as age,gender, and number services/apps used on cellphones.The second section included an IMI (Intrinsic Motivation Inventory) questionnaire  to assess participants' intrinsic motivation in using cellphones. The third section included an IMI questionnaire to assess participants' intrinsic motivation in helping their parents with cellphone based tasks. 
+
+\item{\textbf{Midline Questionnaire}}: Intermediaries participants' midline questionnaire had only one section which included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app.
+
+\item{\textbf{Endline Questionnaire}}: Intermediaries participants' endline questionnaire had only one section which included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app.
+\end{itemize}
+
+\item{\textbf{Beneficiaries}}
+
+\begin{itemize}
+\item{\textbf{Baseline Questionnaire}}: Beneficiary participants' baseline questionnaire had four sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition. The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
+
+\item{\textbf{Midline Questionnaire}}:Beneficiary participants' midline questionnaire had three sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition.The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
+
+\item{\textbf{Endline Questionnaire}}: Beneficiary participants' endline questionnaire had three sections. The first section included an IMI questionnaire  to assess participants' intrinsic motivation in using the family wellness app. The third section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of diet/nutrition.The fourth section included an IMI questionnaire to assess participants' intrinsic motivation in self-monitoring of physical activity.
+\end{itemize}
+\end{enumerate}
+
 I developed the IMI questionnaires with the guidance of materials found on a ``Self-Determination Theory''\footnote{http://www.selfdeterminationtheory.org/intrinsic-motivation-inventory/} website which is maintained by researchers working on the theory including Richard Ryan and Edward Deci\citep{deci1985intrinsic} whom were early pioneers in developing the theory. I pretested these questionnaires during the informative evaluation of prototype II in chapter \ref{prototytpe2chapter}.  The most most important sub-scales for our theoretical construct were perceived competence and perceived autonomy which are part of the three basic psychological needs. The relatedness sub-scale is not yet validated but it was included in all questionnaires. Other sub-scale that was included in all questionnaires is perceived enjoyment. Perceived enjoyment is the only direct measure of intrinsic motivation while perceived competence and perceived autonomy are predictors of intrinsic motivation. Self-Determination theory suggests that a behaviour can be started as externally motivated and if external motivators support the three basic psychological needs which are relatedness, competitiveness, and autonomy then a behaviour that was once externally motivated can be internalized and users will start doing it because it is a good thing to do.
 
-In addition to the aforementioned sub-scales, perceived usefulness and perceived efforts also appear in specific questionnaires (i.e self-monitoring of diet and activity, use of cellphone). These specific questionnaires don't assess specific constructs of self-determination theory as they focus on the overall intrinsic motivation. The overall IMI scores were computed by averaging the scores from each sub-scales.
+In addition to the aforementioned sub-scales, perceived usefulness and perceived efforts also appear in specific questionnaires (i.e self-monitoring of diet and activity, use of cellphone). These specific questionnaires don't assess specific constructs of self-determination theory as they focus on the overall intrinsic motivation. 
+The overall IMI scores were computed by averaging the scores from each sub-scales. In each question from the IMI sub scales, respondents were supposed to rate there experience in a scale of 1 to 7 points which means that 1 implies the statement is "not true at all" and 7 means the statement is "very true".
 
-In each question from the IMI sub scales, respondents were supposed to rate there experience in a scale of 1 to 7 points which means that 1 implies the statement is "not true at all" and 7 means the statement is "very true".
+There were two main objectives of using the IMI questionnaire. The first objective was to assess the ability of the two prototypes in supporting the participants with the three basic psychological needs. The difference in experimental durations was expected not to have any effect on motivations to use either of the two systems since both logbook and gamification were both present in both phases of experiments. Therefore, effects on motivations due to different durations were expected to cancel each other during analysis. I compared between the ability of the two prototypes in affording three basic psychological needs suggested by self-determination theory. In addition, I also included perceptions on enjoyment as it is a direct measure of intrinsic motivation. The corresponding scales from the IMI questionnaire were administered at midline and endline . Therefore, there were four sub-scales; perceived competence, perceived autonomy, perceived enjoyment and perceived relatedness. 
 
-There were three main objectives of using the IMI questionnaire. The first objective was to assess the ability of the two prototypes in supporting the participants with the three basic psychological needs. The difference in experimental durations was expected not to have any effect on motivations to use either of the two systems since both logbook and gamification were both present in both phases of experiments. Therefore, effects on motivations due to different durations were expected to cancel each other during analysis. I compared between the ability of the two prototypes in affording three basic psychological needs suggested by self-determination theory. In addition, I also included perceptions on enjoyment as it is a direct measure of intrinsic motivation. The corresponding scales from the IMI questionnaire were administered at midline and endline . Therefore, there were four sub-scales; perceived competence, perceived autonomy, perceived enjoyment and perceived relatedness.  For the reason I stated above, I decided to exclude users from  Pair A and C on Table \ref{table:usageproblems} , and Pairs E and F on Table \ref{table:negexprnce}. A total of ten pairs were considered for analysis on the aforementioned intrinsic motivation sub-scales. The hypotheses of interest for intermediaries were:
+The second objective of using IMI questionnaires was to assess motivations/self-determinations of beneficiaries in self-monitoring of diet and activity, and motivation/self-determination to use cellphone of both intermediaries and beneficiaries. These IMI questionnaires included perceptions of beneficiaries on competence, autonomy, relatedness, enjoyment, effort, and usefulness.
+
+The hypotheses of interest for both intermediaries and beneficiaries on usage of the app were:
 
 \begin{enumerate}
-\item{Hypothesis 1}
+ \setcounter{enumi}{1}
+\item{Hypothesis 2}
 \begin{itemize}
 \item{H\SB{0}}:There is no difference in perceived competence in using the app between a logbook app and gamified app
-\item{H\SB{A}}:There is a difference in perceived competence in using the app between a logbook app and gamified app
-\end{itemize}
-\item{Hypothesis 1}
-\begin{itemize}
-\item{H\SB{0}}:There is no difference in perceived autonomy in using the app between a logbook app and gamified app
-\item{H\SB{A}}:There is a difference in perceived autonomy in using the app between a logbook app and gamified app
+\item{H\SB{A}}:There is a difference in perceived competence in using the app between a logbook app and gamified app.
 \end{itemize}
 \item{Hypothesis 3}
 \begin{itemize}
-\item{H\SB{0}}:There is no difference in perceived enjoyment in using the app between a logbook app and gamified app
-\item{H\SB{A}}:There is a difference in perceived enjoyment in using the app between a logbook app and gamified app
+\item{H\SB{0}}:There is no difference in perceived autonomy in using the app between a logbook app and gamified app
+\item{H\SB{A}}:There is a difference in perceived autonomy in using the app between a logbook app and gamified app
 \end{itemize}
 \item{Hypothesis 4}
 \begin{itemize}
@@ -110,7 +117,21 @@ There were three main objectives of using the IMI questionnaire. The first objec
 \end{itemize}
 \end{enumerate}
 
-The second objective of having IMI questionnaires was to use the overall IMI scores in assessing motivations of beneficiaries in self-monitoring of diet and activity, and motivations to use cellphone of both intermediaries and beneficiaries. These IMI questionnaires included perceptions of beneficiaries on competence, autonomy, relatedness, enjoyment, effort, and usefulness. I also examined motivation of intermediaries to help at baseline through a perceived enjoyment sub-scale of IMI questionnaire.
+The hypotheses of interest for beneficiaries in self-monitoring of behaviours were:
+
+\begin{enumerate}
+ \setcounter{enumi}{4}
+\item{Hypothesis 5}
+\begin{itemize}
+\item{H\SB{0}}:There is no difference in the overall self-determination to self-monitor diet of between a logbook app and gamified app
+\item{H\SB{A}}:There is a difference in the overall self-determination to self-monitor diet of between a logbook app and gamified app
+\end{itemize}
+\item{Hypothesis 6}
+\begin{itemize}
+\item{H\SB{0}}:There is no difference in the overall self-determination to self-monitor activity of between a logbook app and gamified app
+\item{H\SB{A}}:There is a difference in the overall self-determination to self-monitor activity of between a logbook app and gamified app
+\end{itemize}
+\end{enumerate}
 
 In motivations to self-monitor diet and activity, I excluded pairs (A,B, C, and D) from Table \ref{table:usageproblems} with problems that led to discontinuation of usage. In total only ten out of fourteen beneficiaries had their results included for analysis. In the comparison for self-monitoring of diet and activity, the first IMI comparison  entailed comparing the IMI score of each participant at baseline, midline, and endline regardless of an experimental condition. In the second comparison I compared scores at baseline, logbook, and gamification condition. The IMI score was computed from the average of all scores from sub-scales of perceived competence, perceived autonomy, perceived relatedness, perceived enjoyment, perceived effort,  and perceived usefulness. I  used one way ANOVA with repeated measures to test if there was a difference  between scores at: (1) baseline, midline, and endline, and (2)baseline, logbook and gamification. I used Mauchy's test\footnote{Read more on how Mauchy's test is used from http://www.statisticshell.com/docs/repeatedmeasures.pdf} to checked if different measuring points had the same covariance in each ANOVA test I carried out and this helped in deciding of whether to ``Sphericity Assumed'',``Greenhouse-Geisser'', or ``Huynh-Feldt'' of SPSS output.
 \subsubsection{Interviews}
@@ -306,7 +327,7 @@ The competition also led intermediaries to work closer with their beneficiaries.
 
 In one scenario a beneficiary described how serious her son was about the competition and the son was always reminding her to carry the pedometer whenever she wants to go out as shown on the following excerpt.
 
-\userquote{\textbf{Jenner}, a female beneficiary from Athlone, 45 yrs old} {``Sometimes may be I forget to take the phone when I go walking and he would ask me `did you take the phone with you?' Ooh Gosh I forgot.  Because when I walk to park town to exercise and sometimes  I am in such a hurry I forget the phone, he will be crossed with me. ''} 
+\userquote{\textbf{Jenner}, a female beneficiary from Athlone, 45 yrs old} {``Sometimes may be I forget to take the phone when I go walking and he would ask me `did you take the phone with you' Ooh Gosh I forgot.  Because when I walk to park town to exercise and sometimes  I am in such a hurry I forget the phone, he will be crossed with me. ''} 
 
 There was a scenario of one pair of whereby not only the beneficiary was using the pedometer, an intermediary was also taking turns to use the pedometer, therefore they were collaborating in accumulating steps. Both an intermediary user and a beneficiary user had discussions of whether the person whose turn it was had walk enough steps. They did this to accumulate more steps than other pairs. In addition to comparison other intermediary users came to the app to the gamified app to connect to other users.
 
@@ -314,9 +335,9 @@ There was a scenario of one pair of whereby not only the beneficiary was using t
 
 Rewards were specific for gamification condition by they appeared to also affected pairs that had started with logbook conditions as some intermediary users were pushing their beneficiaries to do more by expecting to get rewards once they are switched to gamification condition.
 
-\userquote{\textbf{Kefiloe}, a female beneficiary from Athlone, 26 years old} {``I think we talk more than before the family wellness app. Before the family wellness app, after work it was just ``Hi'' and then I go to my room but now. But now she would come to my room  and say let me see your phone,  what did you eat today,  and write everything down on the phone. So we are more closer than before because of this. Most of the time she used to say that `we must win this'''} 
+\userquote{\textbf{Kefiloe}, a female beneficiary from Langa, 26 years old} {``I think we talk more than before the family wellness app. Before the family wellness app, after work it was just ``Hi'' and then I go to my room but now. But now she would come to my room  and say let me see your phone,  what did you eat today,  and write everything down on the phone. So we are more closer than before because of this. Most of the time she used to say that `we must win this'''} 
 
-\item{\textbf{Requests from beneficiary users}}: There were times where intermediary users engaged with the app only upon receiving requests from beneficiaries. In both absence and presence of gamification, intermediaries had to fulfil requests from beneficiaries.  But during logbook condition, intermediaries appeared to be less enthusiastic in handling those requests. Some beneficiaries complained that there were several incidences of where intermediaries were refusing to fulfil these requests and it happened more often during logbook condition. It was observed that in most of these cases, intermediary participants' autonomy was violated as requests came at times where intermediary participants were either studying for exams or doing something else and they felt it was not the right time to fulfil those requests. This made some of the intermediary participants to feel that their parents were nagging them. For instance, \textbf{Lunga}, a male intermediary participant from Langa, aged 17 years, felt annoyed when his mother insisted they should enter the family wellness app while he was busy using social media through the intervention's phone. This happened during logbook condition. Also a similar situation happened to \textbf{Jennifer}, female intermediary participants from Athlone, aged 18 years who also felt irritated by her mother's constant requests during logbook condition. In addition she felt the app was not that exciting as she said ``\emph{The app was okay first but it started to get boring. You don't want to go into it any more. I think there will be some excitement now if the game comes in. When do we get the game?}''. She was curious to know when they will be switched to gamification because she thought the logbook condition was boring. 
+\item{\textbf{Requests from beneficiary users}}: There were times where intermediary users engaged with the app only upon receiving requests from beneficiaries. In both absence and presence of gamification, intermediaries had to fulfil requests from beneficiaries.  But during logbook condition, intermediaries appeared to be less enthusiastic in handling those requests. Some beneficiaries complained that there were several incidences of where intermediaries were refusing to fulfil these requests and it happened more often during logbook condition. It was observed that in most of these cases, intermediary participants' autonomy was violated as requests came at times where intermediary participants were either studying for exams or doing something else and they felt it was not the right time to fulfil those requests. This made some of the intermediary participants to feel that their parents were nagging them. For instance, \textbf{Lunga}, a male intermediary participant from Langa, aged 17 years, felt annoyed when his mother insisted they should enter the family wellness app while he was busy using social media through the intervention's phone. This happened during logbook condition. Also a similar situation happened to \textbf{Jennifer}, female intermediary participants from Athlone, aged 18 years who also felt irritated by her mother's constant requests during logbook condition. In addition she felt the app was not that exciting as she said ``\emph{The app was okay first but it started to get boring. You don't want to go into it any more. I think there will be some excitement now if the game comes in. When do we get the game}''. She was curious to know when they will be switched to gamification because she thought the logbook condition was boring.
 
 Interest of intermediaries or pairs in general varied as some exhibited interests on interacting with others through the app while others where focused on achievements (i.e. dominating others in competitions). Gamification appeared to be the most dominant factor that influenced usage as we have already seen that the frequency of usage showed a higher value in gamification when compared to logbook. 
 
@@ -343,13 +364,16 @@ Leader-board can demotivate those users that are at the bottom but it can foster
 
 Badges were earned in combination of both the app usage and average number of steps walked by a beneficiary user. One beneficiary who was working with one of these intermediary users also reported in interviews that there was always a contention with her intermediary when this beneficiary wanted to see what was going in the app as the intermediary was not voluntarily willing to help some of the time. It is hypothesized that this could be one of the factors that played a role in demotivating some participants during gamification condition. There were also cases of  where intermediaries doubted the credibility of the system because their peers appeared to be more engaged with the app, but were at lower positions on the leader board. 
 
-\userquote{\textbf{Akhona}, a female intermediary from Langa, 16 yrs old} {``It [The experience in using the app] was the same as last time (during gamification) except for the game part. I was actually above some of the others. That was weird. Because they were more interested in the app than me.''} 
+\userquote{\textbf{Akhona}, a female intermediary from Langa, 16 yrs old} {``It [The experience in using the gamified app] was the same as last time (during logbook condition) except for the game part. I was actually above some of the others. That was weird. Because they were more interested in the app than me.''} 
 
 On the aforementioned excerpt, \emph{Akhona} was referring to the two intermediaries from pairs C , and D that had usage problem (Table \ref{table:usageproblems}) as these two users used the app more in logbook condition, therefore, Akhona's anticipation was that they would be more competent than her but surprisingly she was ahead of them.  Therefore, even in perceived competence Akhona reported lower score in gamification compared to logbook despite using gamification for 7 out of 14 days and logbook for only 4 out of 27 days.
 
-Therefore, in comparing the support for the three basic psychological needs, pairs that never had any advancement in badges were not considered. An assumption was that a negative experience was the result of failure of the gamification design to match challenges with abilities. i.e. efforts of beneficiaries differed hence challenges should have matched with individual abilities of beneficiaries within pairs. When challenges are too difficult as they don't match users' skills, end users can become demotivated \citep{zhang2008motivational}. In addition, some of those that had technical problems, their problems were so severe to the extent that they were unable to participate fairly in gamification condition. A total of five intermediary users never had any advancement in badges, therefore, they were excluded in the analysis of motivation of which three are from those that had technical problems (Pairs A, C and D on Table) and two, they had dome more efforts in using the gamified system but there less steps detected from their beneficiaries. As result only nine intermediary users were considered in the main sub scales of intrinsic motivation (autonomy, competence, and enjoyment).    
+Therefore, in comparing the support for the three basic psychological needs, pairs that never had any advancement in badges were not considered on aspects of perceived competence and autonomy since majority of them appeared to have a lower perceived enjoyment in gamification when compared to logbook. Autonomy and competence are major predictors of perceived enjoyment. An assumption was that a negative experience was the result of failure of the gamification design to match challenges with abilities. i.e. efforts of beneficiaries differed hence challenges should have matched with individual abilities of beneficiaries within pairs. When challenges are too difficult as they don't match users' skills, end users can become demotivated \citep{zhang2008motivational}. In addition, some of those that had technical problems, their problems were so severe to the extent that they were unable to participate fairly in gamification condition. A total of five intermediary users never had any advancement in badges, therefore, they were excluded in the analysis of motivation of which three are from those that had technical problems (Pairs A, C and D on Table) and two, they had dome more efforts in using the gamified system but there less steps detected from their beneficiaries. As result only nine intermediary users were considered in the perceived competence, and perceived autonomy.
+
+On the aspect of relatedness, all intermediaries were considered because all of them had directly or indirectly use at least one of relatedness features such as receiving SMS showing which teams have advanced in badges, viewing a leader board that shows teams' points, viewing gardens or tanks of different people, and display of badges from each team. These are some of mechanisms to support an aspect of relatedness\citep{sailer2013:psychological}. But in additional, there are intermediary users who knew each other before, and they talked about thinks on the app such as steps comparisons. However there are this that interfered with experiments.     
   
-The findings (Table \ref{table:imiwellnessinterm}) indicate that perceived competence of intermediaries in using the ``Family Wellness App'' was significantly higher in the gamified condition than in the logbook condition in the ten intermediaries that were analysed. Perceived autonomy, perceived enjoyment, and perceived relatedness were all not different between gamification condition and logbook condition. For perceived enjoyment and autonomy, there are cases were the self-monitoring task was interesting enough on itself or when combined with informal comparison of steps among intermediary users. Therefore, there some intermediaries who felt more enjoyment while they were in logbook condition, which is also the same case for perceived autonomy. For perceived relatedness, the app brought users together regardless of an experimental condition especially the ones that already knew each other before. Therefore increase in relatedness happened in both versions of the prototype.
+The findings (Table \ref{table:imiwellnessinterm}) indicate that perceived competence of intermediaries in using the ``Family Wellness App'' was significantly higher in the gamified condition than in the logbook condition in the nine intermediaries that were analysed. Perceived autonomy and perceived relatedness were all not different between gamification condition and logbook condition. When I compared perceived autonomy during phase 1 of experiments (at midline point) and during phase 2 of experiments (endline), the perceived autonomy was significantly higher at midline (M=4.44; S.D=0.93) than at endline (M=3.89; S.D=0.76), (t(8)= 2.5298; p=0.0353; 95\% CI= 0.049 to 1.062). Several reasons contributed to this, and these include (1)the learning effect as users became used to the application and the whole exercise was not exciting any more, and (2) most intermediaries were writing exams, and felt that they had no time to do the app, although their beneficiaries kept on pushing them to do the app.
+
 \begin{table}[h!]
   \begin{center}
     \caption{Comparison of ten intermediaries' scores on sub-scales of competence, autonomy, enjoyment, and relatedness in using the ``Family Wellness App}
@@ -358,20 +382,20 @@ The findings (Table \ref{table:imiwellnessinterm}) indicate that perceived compe
 		\hline
 		Mean &Logbook App&Gamified App\\
 		\hline
-		 \multirow{2}{*}{Perceived competence}&M=5.23; SD=1.02&M=5.96; SD=0.66\\\cline{2-3} 
+		 \multirow{2}{*}{Perceived competence}&M=5.42; SD=0.88&M=6.03; SD=0.65\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)=-3.4949; p=0.0068 ; 95\% CI= -1.204 to -0.258} \\
+		 &\multicolumn{2}{|l|}{t(8)=3.1418; p=0.0138 ; 95\% CI= -1.0712 to -0.1643 } \\
 \hline
-		 \multirow{2}{*}{Perceived autonomy}&M=3.95; SD=0.86&M=3.96; SD=0.94\\\cline{2-3} 
+		 \multirow{2}{*}{Perceived autonomy}&M=4.0; SD=0.92&M=4.33; SD=0.84\\\cline{2-3} 
 
-		 &\multicolumn{2}{|l|}{t(9)= -0.0269; p= 0.9792; 95\% CI= -0.596 to 0.582} \\
-\hline
-		 \multirow{2}{*}{Perceived enjoyment}&M=4.18; SD=1.11&M=4.75; SD=1.32\\\cline{2-3} 
-
-		 &\multicolumn{2}{|l|}{t(9)=-1.6930;  p=0.1247; ; 95\% CI= -1.343 to 0.193 } \\
+		 &\multicolumn{2}{|l|}{t(8)= 1.2344; p= 0.2521; 95\% CI=  -0.956 to 0.289 } \\
 \hline
 		 \multirow{2}{*}{Perceived relatedness}&M=4.22; SD=0.63&M=4.37; SD=0.9\\\cline{2-3} 
 		 &\multicolumn{2}{|l|}{t(9)= -0.7193; p=0.4902; 95\% CI= -0.622 to 0.322 } \\
+\hline
+		 \multirow{2}{*}{Perceived enjoyment}&M=4.25; SD=1.15&M=4.72; SD=1.39\\\cline{2-3} 
+
+		 &\multicolumn{2}{|l|}{t(8)= 1.3048;  p=0.2282; ; 95\% CI= -1.307 to 0.362 } \\
 \hline
 	\end{tabular}
   \end{center}
